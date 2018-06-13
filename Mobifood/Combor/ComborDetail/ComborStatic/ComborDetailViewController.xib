@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ComborDetailViewController" customModule="Mobifood" customModuleProvider="target">
+            <connections>
+                <outlet property="btlExtends" destination="ctz-NS-9Sv" id="6hp-zg-7S4"/>
+                <outlet property="comborImage" destination="QMd-p4-MjZ" id="bIf-Jp-2Hl"/>
+                <outlet property="comborTypeTableView" destination="aOe-fe-etb" id="GiM-VI-OLh"/>
+                <outlet property="lblComborName" destination="tCh-NA-KDx" id="OcY-Xr-yfM"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="red2" translatesAutoresizingMaskIntoConstraints="NO" id="QMd-p4-MjZ">
+                    <rect key="frame" x="75.5" y="51" width="225" height="169"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="QMd-p4-MjZ" secondAttribute="height" multiplier="1:0.75" id="Vx4-M7-nEw"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Combor 1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tCh-NA-KDx">
+                    <rect key="frame" x="150.5" y="230" width="74" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="aOe-fe-etb">
+                    <rect key="frame" x="65" y="259" width="244" height="233.5"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="fVy-E7-6r5"/>
+                        <outlet property="delegate" destination="-1" id="rip-3L-k6E"/>
+                    </connections>
+                </tableView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ctz-NS-9Sv">
+                    <rect key="frame" x="16" y="607" width="343" height="50"/>
+                    <color key="backgroundColor" red="1" green="0.57810515169999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                    <state key="normal" title="EXTENDS">
+                        <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Giảm 10% khi mua từ 2 combor" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dQP-7e-Ern">
+                    <rect key="frame" x="68" y="574" width="238.5" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" red="0.11249457465277778" green="0.65098039215686276" blue="0.90196078431372551" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aKq-To-l2y">
+                    <rect key="frame" x="16" y="20" width="25" height="25"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="25" id="DVX-JD-fFx"/>
+                        <constraint firstAttribute="height" constant="25" id="TaB-8I-jsd"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                    <state key="normal" title="←"/>
+                    <connections>
+                        <action selector="back:" destination="-1" eventType="touchUpInside" id="545-Fq-dnK"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="aKq-To-l2y" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="0Hx-XP-MFU"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="ctz-NS-9Sv" secondAttribute="trailing" constant="16" id="BXB-Qb-VOb"/>
+                <constraint firstItem="tCh-NA-KDx" firstAttribute="top" secondItem="QMd-p4-MjZ" secondAttribute="bottom" constant="10" id="Cnl-p2-Imc"/>
+                <constraint firstItem="ctz-NS-9Sv" firstAttribute="top" secondItem="dQP-7e-Ern" secondAttribute="bottom" constant="12" id="Nl7-UR-LV6"/>
+                <constraint firstItem="QMd-p4-MjZ" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" multiplier="0.6" id="O2N-dM-xh4"/>
+                <constraint firstItem="tCh-NA-KDx" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="PCc-6Q-k46"/>
+                <constraint firstItem="aOe-fe-etb" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" multiplier="0.65" id="VkZ-nz-hxP"/>
+                <constraint firstItem="aOe-fe-etb" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="caV-bB-wdV"/>
+                <constraint firstItem="QMd-p4-MjZ" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="cyn-DD-dFc"/>
+                <constraint firstItem="ctz-NS-9Sv" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="eCs-jJ-uDS"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="ctz-NS-9Sv" secondAttribute="bottom" constant="10" id="hby-bw-Fc6"/>
+                <constraint firstItem="dQP-7e-Ern" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="oJY-v9-uge"/>
+                <constraint firstItem="aKq-To-l2y" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="20" id="sfn-oa-15r"/>
+                <constraint firstItem="aOe-fe-etb" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="0.35" id="sjb-BR-UaK"/>
+                <constraint firstItem="QMd-p4-MjZ" firstAttribute="top" secondItem="aKq-To-l2y" secondAttribute="bottom" constant="6" id="uEt-p1-IVw"/>
+                <constraint firstItem="ctz-NS-9Sv" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="0.075" id="uSs-8B-Vfv"/>
+                <constraint firstItem="aOe-fe-etb" firstAttribute="top" secondItem="tCh-NA-KDx" secondAttribute="bottom" constant="8" id="w33-kd-FbS"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="33.5" y="53.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="red2" width="1080" height="1920"/>
+    </resources>
+</document>

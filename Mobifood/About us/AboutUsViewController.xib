@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AboutUsViewController" customModule="Mobifood" customModuleProvider="target">
+            <connections>
+                <outlet property="aboutUsView" destination="l8O-sL-KNa" id="t3O-RG-MqX"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="913"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="l8O-sL-KNa">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="65"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="About us" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B9G-YU-u1c">
+                            <rect key="frame" x="148.5" y="31" width="78" height="24"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                            <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <nil key="highlightedColor"/>
+                            <variation key="heightClass=regular-widthClass=regular">
+                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                            </variation>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ki3-k9-dPJ">
+                            <rect key="frame" x="16" y="23.5" width="30" height="39"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                            <state key="normal" title="←">
+                                <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </state>
+                            <variation key="heightClass=regular-widthClass=regular">
+                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                            </variation>
+                            <connections>
+                                <action selector="back:" destination="-1" eventType="touchUpInside" id="sul-cK-J74"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="65" id="GHM-hz-7SR"/>
+                        <constraint firstItem="B9G-YU-u1c" firstAttribute="centerY" secondItem="l8O-sL-KNa" secondAttribute="centerY" constant="10" id="Yfh-yH-vUP"/>
+                        <constraint firstItem="B9G-YU-u1c" firstAttribute="centerX" secondItem="l8O-sL-KNa" secondAttribute="centerX" id="blS-BE-G08"/>
+                        <constraint firstItem="ki3-k9-dPJ" firstAttribute="leading" secondItem="l8O-sL-KNa" secondAttribute="leading" constant="16" id="hKR-54-TDE"/>
+                        <constraint firstItem="ki3-k9-dPJ" firstAttribute="centerY" secondItem="l8O-sL-KNa" secondAttribute="centerY" constant="10" id="ibA-Il-DVT"/>
+                    </constraints>
+                </view>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Z5r-H6-bxD">
+                    <rect key="frame" x="0.0" y="65.5" width="375" height="848.5"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tkH-fr-oav">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="849"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="120" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8a1-E0-R4K">
+                                    <rect key="frame" x="0.0" y="103" width="375" height="710.5"/>
+                                    <string key="text">Cuộc sống hàng ngày bộn bề cùng với những bao lo toan chăm sóc gia đình, người thân đã khiến chúng ta không có đủ thờigian chăm sóc đến sức khỏe.
+Mobifood đã ra đời nhằm mục đích giúp bạn vừa có đồ uống nhanh từ rau củ trái cây nguyên chất, bổ sung 100% vitamin hữu cơ tự nhiên tốt cho sức khỏe.
+Và sự khác biệt thực sự đến từ Mobifood là gì?
+- Sự nguyên chất: Tại Mobifood, đồ uống được pha chế hoàn toàn từ nguyên liệu tự nhiên cao cấp không pha thêm nước và các chất bảo quản.
+- Sự tươi ngon: Với việc sử dụng công nghệ Cold-pressed không sinh nhiệt, đồ uống của Mobifood không bị lắng cặn và đảm bảo được chiết xuất tối đa từ hương vị của các loại rau củ trái cây tứ phương.
+- Hàm lượng dinh dưỡng cao: Quá trình pha chế, bảo quản khắt khe tại Mobifood đảm bảo 99% hàm lượng dinh dưỡng và giữ nguyên được hương vị cũng như vitamin có sẵn trong nguyên liệu rau củ trái cây tiêu chuẩn cao
+Mobifood rất hạnh phúc được
+phục vụ khách hàng tại địa điểm thoáng mát cùng với đội ngũ nhân viên thân thiện, nhiệt tình:
+- CS1: 88 Hoàng Văn Thái, Thanh Xuân, Hà Nội Mobifood hy vọng sẽ mang lại cho khách hàng trải nghiệm hoàn toàn mới về cách thức bổ sung 100% vitamin hữu cơ hoàng toàn tự nhiên và gần gũi Và hơn hết, mang đến khách hàng thức uống ngon, tốt cho sức khỏe đi kèm với với chất lượng phục vụ
+văn minh, chuyên nghiệp, đáp ứng mọi nhu cầu của bạn là mục tiêu luôn được ưu tiên tại Mobifood.</string>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                    <variation key="heightClass=regular-widthClass=regular">
+                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                    </variation>
+                                </label>
+                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mobifood" translatesAutoresizingMaskIntoConstraints="NO" id="inh-Bt-aWb">
+                                    <rect key="frame" x="40" y="30" width="294" height="43"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="294" id="OWL-3G-ypL"/>
+                                    </constraints>
+                                </imageView>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="849" id="3u9-NX-ncW"/>
+                                <constraint firstItem="inh-Bt-aWb" firstAttribute="top" secondItem="tkH-fr-oav" secondAttribute="top" constant="30" id="Rl6-SF-bHS"/>
+                                <constraint firstItem="8a1-E0-R4K" firstAttribute="leading" secondItem="tkH-fr-oav" secondAttribute="leading" id="Wrf-6r-Vmy"/>
+                                <constraint firstAttribute="trailing" secondItem="8a1-E0-R4K" secondAttribute="trailing" id="eFb-iy-v7W"/>
+                                <constraint firstItem="8a1-E0-R4K" firstAttribute="top" secondItem="inh-Bt-aWb" secondAttribute="bottom" constant="30" id="mRk-rj-o9x"/>
+                                <constraint firstItem="inh-Bt-aWb" firstAttribute="centerX" secondItem="tkH-fr-oav" secondAttribute="centerX" id="mxT-r0-RGS"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="tkH-fr-oav" secondAttribute="trailing" id="N8Y-Sn-sIt"/>
+                        <constraint firstAttribute="bottom" secondItem="tkH-fr-oav" secondAttribute="bottom" id="PmP-P2-pPN"/>
+                        <constraint firstItem="tkH-fr-oav" firstAttribute="top" secondItem="Z5r-H6-bxD" secondAttribute="top" id="Zez-vn-J1S"/>
+                        <constraint firstItem="tkH-fr-oav" firstAttribute="leading" secondItem="Z5r-H6-bxD" secondAttribute="leading" id="kkp-3P-k8Q"/>
+                    </constraints>
+                </scrollView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="l8O-sL-KNa" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="3cv-M6-vmA"/>
+                <constraint firstItem="Z5r-H6-bxD" firstAttribute="top" secondItem="l8O-sL-KNa" secondAttribute="bottom" id="4TU-Di-acE"/>
+                <constraint firstItem="tkH-fr-oav" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" id="Bet-8U-Hku"/>
+                <constraint firstItem="l8O-sL-KNa" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="DTo-En-4wt"/>
+                <constraint firstItem="l8O-sL-KNa" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="IWD-aX-6LT"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Z5r-H6-bxD" secondAttribute="trailing" id="lFz-wX-YRk"/>
+                <constraint firstItem="Z5r-H6-bxD" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="n9j-BA-1af"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="Z5r-H6-bxD" secondAttribute="bottom" constant="-1" id="rku-KT-juO"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="64.5" y="330.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="mobifood" width="294" height="43"/>
+    </resources>
+</document>

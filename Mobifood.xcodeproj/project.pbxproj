@@ -7,14 +7,88 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		07033F0310E119B4E17B9990 /* Pods_Mobifood.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06AA059A6A22BAD710DDC6C4 /* Pods_Mobifood.framework */; };
+		1802464720CA7DB600B343A6 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1802464620CA7DB600B343A6 /* Product.swift */; };
+		1802464A20CA806B00B343A6 /* ServiceApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1802464920CA806B00B343A6 /* ServiceApi.swift */; };
+		1802464E20CA987900B343A6 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1802464C20CA987900B343A6 /* SettingViewController.swift */; };
+		1802464F20CA987900B343A6 /* SettingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1802464D20CA987900B343A6 /* SettingViewController.xib */; };
+		1802465320CAD4FE00B343A6 /* MyComborViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1802465120CAD4FE00B343A6 /* MyComborViewController.swift */; };
+		1802465420CAD4FE00B343A6 /* MyComborViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1802465220CAD4FE00B343A6 /* MyComborViewController.xib */; };
+		1802465820CAD6AA00B343A6 /* MyComborTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1802465620CAD6AA00B343A6 /* MyComborTableViewCell.swift */; };
+		1802465920CAD6AA00B343A6 /* MyComborTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1802465720CAD6AA00B343A6 /* MyComborTableViewCell.xib */; };
+		1802465D20CADF5200B343A6 /* QRCodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1802465B20CADF5200B343A6 /* QRCodeViewController.swift */; };
+		1802465E20CADF5200B343A6 /* QRCodeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1802465C20CADF5200B343A6 /* QRCodeViewController.xib */; };
+		1802466020CAE91100B343A6 /* gioithieu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1802465F20CAE91100B343A6 /* gioithieu.xib */; };
 		1804A09320C4E56E00E2C9DF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1804A09220C4E56E00E2C9DF /* AppDelegate.swift */; };
 		1804A09520C4E56E00E2C9DF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1804A09420C4E56E00E2C9DF /* ViewController.swift */; };
 		1804A09820C4E56E00E2C9DF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1804A09620C4E56E00E2C9DF /* Main.storyboard */; };
 		1804A09A20C4E56F00E2C9DF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1804A09920C4E56F00E2C9DF /* Assets.xcassets */; };
 		1804A09D20C4E56F00E2C9DF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1804A09B20C4E56F00E2C9DF /* LaunchScreen.storyboard */; };
+		1804A0A620C4EE9D00E2C9DF /* IntroduceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1804A0A520C4EE9D00E2C9DF /* IntroduceViewController.swift */; };
+		1804A0AA20C4FC7600E2C9DF /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1804A0A820C4FC7600E2C9DF /* HomeViewController.swift */; };
+		1804A0AB20C4FC7600E2C9DF /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1804A0A920C4FC7600E2C9DF /* HomeViewController.xib */; };
+		1804A0AF20C5237900E2C9DF /* DrinkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1804A0AD20C5237900E2C9DF /* DrinkViewController.swift */; };
+		1804A0B020C5237900E2C9DF /* DrinkViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1804A0AE20C5237900E2C9DF /* DrinkViewController.xib */; };
+		1804A0B420C523BD00E2C9DF /* FruitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1804A0B220C523BD00E2C9DF /* FruitViewController.swift */; };
+		1804A0B520C523BD00E2C9DF /* FruitViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1804A0B320C523BD00E2C9DF /* FruitViewController.xib */; };
+		1804A0B920C523E600E2C9DF /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1804A0B720C523E600E2C9DF /* MapViewController.swift */; };
+		1804A0BA20C523E600E2C9DF /* MapViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1804A0B820C523E600E2C9DF /* MapViewController.xib */; };
+		1804A0C020C5245600E2C9DF /* ComborViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1804A0BE20C5245600E2C9DF /* ComborViewController.swift */; };
+		1804A0C120C5245600E2C9DF /* ComborViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1804A0BF20C5245600E2C9DF /* ComborViewController.xib */; };
+		1804A0C420C52BEF00E2C9DF /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1804A0C320C52BEF00E2C9DF /* Utils.swift */; };
+		18321E9120C7FF9700BA10B2 /* AboutUsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18321E8F20C7FF9700BA10B2 /* AboutUsViewController.swift */; };
+		18321E9220C7FF9700BA10B2 /* AboutUsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18321E9020C7FF9700BA10B2 /* AboutUsViewController.xib */; };
+		1848904A20CD1A1400E78A23 /* NetWorkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1848904920CD1A1400E78A23 /* NetWorkManager.swift */; };
+		186095E120C635D200EBD26F /* ComborCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 186095DF20C635D200EBD26F /* ComborCollectionViewCell.swift */; };
+		186095E220C635D200EBD26F /* ComborCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 186095E020C635D200EBD26F /* ComborCollectionViewCell.xib */; };
+		186095E420C63A0400EBD26F /* UPCarouselFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 186095E320C63A0400EBD26F /* UPCarouselFlowLayout.swift */; };
+		186095E820C66B1D00EBD26F /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 186095E620C66B1D00EBD26F /* MenuViewController.swift */; };
+		186095EC20C66FBE00EBD26F /* menuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 186095EA20C66FBE00EBD26F /* menuTableViewCell.swift */; };
+		186095ED20C66FBE00EBD26F /* menuTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 186095EB20C66FBE00EBD26F /* menuTableViewCell.xib */; };
+		186095F020C77D8500EBD26F /* Global.swift in Sources */ = {isa = PBXBuildFile; fileRef = 186095EF20C77D8500EBD26F /* Global.swift */; };
+		186095F220C787E000EBD26F /* MenuViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 186095F120C787E000EBD26F /* MenuViewController.xib */; };
+		186095F620C78AE300EBD26F /* DrinkTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 186095F420C78AE300EBD26F /* DrinkTableViewCell.swift */; };
+		186095F720C78AE300EBD26F /* DrinkTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 186095F520C78AE300EBD26F /* DrinkTableViewCell.xib */; };
+		186095FB20C78BE400EBD26F /* DrinkCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 186095F920C78BE400EBD26F /* DrinkCollectionViewCell.swift */; };
+		186095FC20C78BE400EBD26F /* DrinkCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 186095FA20C78BE400EBD26F /* DrinkCollectionViewCell.xib */; };
+		186095FF20C7A41C00EBD26F /* DrinkDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 186095FE20C7A41C00EBD26F /* DrinkDetailView.swift */; };
+		1860960120C7A42900EBD26F /* DrinkDetailView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1860960020C7A42900EBD26F /* DrinkDetailView.xib */; };
+		1860960520C7D81E00EBD26F /* DrinkDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1860960320C7D81E00EBD26F /* DrinkDetailViewController.swift */; };
+		1860960620C7D81E00EBD26F /* DrinkDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1860960420C7D81E00EBD26F /* DrinkDetailViewController.xib */; };
+		18704EFF20C8373B000F0CFD /* ContactView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18704EFE20C8373B000F0CFD /* ContactView.swift */; };
+		18704F0120C83744000F0CFD /* ContactView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18704F0020C83744000F0CFD /* ContactView.xib */; };
+		18704F0620C8418D000F0CFD /* CartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18704F0420C8418D000F0CFD /* CartViewController.swift */; };
+		18704F0720C8418D000F0CFD /* CartViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18704F0520C8418D000F0CFD /* CartViewController.xib */; };
+		18704F0B20C843D9000F0CFD /* CartTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18704F0920C843D9000F0CFD /* CartTableViewCell.swift */; };
+		18704F0C20C843D9000F0CFD /* CartTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18704F0A20C843D9000F0CFD /* CartTableViewCell.xib */; };
+		187509A220CBDB76004B0C56 /* AlertAddSuccessFull.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187509A120CBDB76004B0C56 /* AlertAddSuccessFull.swift */; };
+		187509A420CC3ADE004B0C56 /* CheckInternet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187509A320CC3ADE004B0C56 /* CheckInternet.swift */; };
+		1894FCFA20C9216C0020F7C1 /* ComborDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1894FCF820C9216C0020F7C1 /* ComborDetailViewController.swift */; };
+		1894FCFB20C9216C0020F7C1 /* ComborDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1894FCF920C9216C0020F7C1 /* ComborDetailViewController.xib */; };
+		1894FCFE20C926CB0020F7C1 /* ComborDetailCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1894FCFC20C926CB0020F7C1 /* ComborDetailCellTableViewCell.swift */; };
+		1894FCFF20C926CB0020F7C1 /* ComborDetailCellTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1894FCFD20C926CB0020F7C1 /* ComborDetailCellTableViewCell.xib */; };
+		1894FD0220C92E6A0020F7C1 /* ComborDetailDynamicTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1894FD0020C92E6A0020F7C1 /* ComborDetailDynamicTableViewCell.swift */; };
+		1894FD0320C92E6A0020F7C1 /* ComborDetailDynamicTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1894FD0120C92E6A0020F7C1 /* ComborDetailDynamicTableViewCell.xib */; };
+		1894FD0620C92EC90020F7C1 /* ComborNameCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1894FD0420C92EC90020F7C1 /* ComborNameCollectionViewCell.swift */; };
+		1894FD0720C92EC90020F7C1 /* ComborNameCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1894FD0520C92EC90020F7C1 /* ComborNameCollectionViewCell.xib */; };
+		1894FD0C20C931E60020F7C1 /* ComborDynamicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1894FD0A20C931E60020F7C1 /* ComborDynamicViewController.swift */; };
+		1894FD0D20C931E60020F7C1 /* ComborDynamicViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1894FD0B20C931E60020F7C1 /* ComborDynamicViewController.xib */; };
+		18BD3AC720C5A3F2002DCE22 /* iCarousel.m in Sources */ = {isa = PBXBuildFile; fileRef = 18BD3AC620C5A3F2002DCE22 /* iCarousel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		06AA059A6A22BAD710DDC6C4 /* Pods_Mobifood.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Mobifood.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1802464620CA7DB600B343A6 /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
+		1802464920CA806B00B343A6 /* ServiceApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceApi.swift; sourceTree = "<group>"; };
+		1802464C20CA987900B343A6 /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
+		1802464D20CA987900B343A6 /* SettingViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingViewController.xib; sourceTree = "<group>"; };
+		1802465120CAD4FE00B343A6 /* MyComborViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyComborViewController.swift; sourceTree = "<group>"; };
+		1802465220CAD4FE00B343A6 /* MyComborViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyComborViewController.xib; sourceTree = "<group>"; };
+		1802465620CAD6AA00B343A6 /* MyComborTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyComborTableViewCell.swift; sourceTree = "<group>"; };
+		1802465720CAD6AA00B343A6 /* MyComborTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyComborTableViewCell.xib; sourceTree = "<group>"; };
+		1802465B20CADF5200B343A6 /* QRCodeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRCodeViewController.swift; sourceTree = "<group>"; };
+		1802465C20CADF5200B343A6 /* QRCodeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = QRCodeViewController.xib; sourceTree = "<group>"; };
+		1802465F20CAE91100B343A6 /* gioithieu.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = gioithieu.xib; sourceTree = "<group>"; };
 		1804A08F20C4E56E00E2C9DF /* Mobifood.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Mobifood.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1804A09220C4E56E00E2C9DF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1804A09420C4E56E00E2C9DF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +96,60 @@
 		1804A09920C4E56F00E2C9DF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1804A09C20C4E56F00E2C9DF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1804A09E20C4E56F00E2C9DF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1804A0A520C4EE9D00E2C9DF /* IntroduceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroduceViewController.swift; sourceTree = "<group>"; };
+		1804A0A820C4FC7600E2C9DF /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		1804A0A920C4FC7600E2C9DF /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
+		1804A0AD20C5237900E2C9DF /* DrinkViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinkViewController.swift; sourceTree = "<group>"; };
+		1804A0AE20C5237900E2C9DF /* DrinkViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DrinkViewController.xib; sourceTree = "<group>"; };
+		1804A0B220C523BD00E2C9DF /* FruitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FruitViewController.swift; sourceTree = "<group>"; };
+		1804A0B320C523BD00E2C9DF /* FruitViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FruitViewController.xib; sourceTree = "<group>"; };
+		1804A0B720C523E600E2C9DF /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		1804A0B820C523E600E2C9DF /* MapViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MapViewController.xib; sourceTree = "<group>"; };
+		1804A0BE20C5245600E2C9DF /* ComborViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComborViewController.swift; sourceTree = "<group>"; };
+		1804A0BF20C5245600E2C9DF /* ComborViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ComborViewController.xib; sourceTree = "<group>"; };
+		1804A0C320C52BEF00E2C9DF /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
+		18321E8F20C7FF9700BA10B2 /* AboutUsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutUsViewController.swift; sourceTree = "<group>"; };
+		18321E9020C7FF9700BA10B2 /* AboutUsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AboutUsViewController.xib; sourceTree = "<group>"; };
+		1848904920CD1A1400E78A23 /* NetWorkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetWorkManager.swift; sourceTree = "<group>"; };
+		186095DF20C635D200EBD26F /* ComborCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComborCollectionViewCell.swift; sourceTree = "<group>"; };
+		186095E020C635D200EBD26F /* ComborCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ComborCollectionViewCell.xib; sourceTree = "<group>"; };
+		186095E320C63A0400EBD26F /* UPCarouselFlowLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UPCarouselFlowLayout.swift; sourceTree = "<group>"; };
+		186095E620C66B1D00EBD26F /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
+		186095EA20C66FBE00EBD26F /* menuTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = menuTableViewCell.swift; sourceTree = "<group>"; };
+		186095EB20C66FBE00EBD26F /* menuTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = menuTableViewCell.xib; sourceTree = "<group>"; };
+		186095EF20C77D8500EBD26F /* Global.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Global.swift; sourceTree = "<group>"; };
+		186095F120C787E000EBD26F /* MenuViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MenuViewController.xib; sourceTree = "<group>"; };
+		186095F420C78AE300EBD26F /* DrinkTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinkTableViewCell.swift; sourceTree = "<group>"; };
+		186095F520C78AE300EBD26F /* DrinkTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DrinkTableViewCell.xib; sourceTree = "<group>"; };
+		186095F920C78BE400EBD26F /* DrinkCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinkCollectionViewCell.swift; sourceTree = "<group>"; };
+		186095FA20C78BE400EBD26F /* DrinkCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DrinkCollectionViewCell.xib; sourceTree = "<group>"; };
+		186095FE20C7A41C00EBD26F /* DrinkDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinkDetailView.swift; sourceTree = "<group>"; };
+		1860960020C7A42900EBD26F /* DrinkDetailView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DrinkDetailView.xib; sourceTree = "<group>"; };
+		1860960320C7D81E00EBD26F /* DrinkDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinkDetailViewController.swift; sourceTree = "<group>"; };
+		1860960420C7D81E00EBD26F /* DrinkDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DrinkDetailViewController.xib; sourceTree = "<group>"; };
+		18704EFE20C8373B000F0CFD /* ContactView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactView.swift; sourceTree = "<group>"; };
+		18704F0020C83744000F0CFD /* ContactView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ContactView.xib; sourceTree = "<group>"; };
+		18704F0420C8418D000F0CFD /* CartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartViewController.swift; sourceTree = "<group>"; };
+		18704F0520C8418D000F0CFD /* CartViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CartViewController.xib; sourceTree = "<group>"; };
+		18704F0920C843D9000F0CFD /* CartTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartTableViewCell.swift; sourceTree = "<group>"; };
+		18704F0A20C843D9000F0CFD /* CartTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CartTableViewCell.xib; sourceTree = "<group>"; };
+		187509A120CBDB76004B0C56 /* AlertAddSuccessFull.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertAddSuccessFull.swift; sourceTree = "<group>"; };
+		187509A320CC3ADE004B0C56 /* CheckInternet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckInternet.swift; sourceTree = "<group>"; };
+		1894FCF820C9216C0020F7C1 /* ComborDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComborDetailViewController.swift; sourceTree = "<group>"; };
+		1894FCF920C9216C0020F7C1 /* ComborDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ComborDetailViewController.xib; sourceTree = "<group>"; };
+		1894FCFC20C926CB0020F7C1 /* ComborDetailCellTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComborDetailCellTableViewCell.swift; sourceTree = "<group>"; };
+		1894FCFD20C926CB0020F7C1 /* ComborDetailCellTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ComborDetailCellTableViewCell.xib; sourceTree = "<group>"; };
+		1894FD0020C92E6A0020F7C1 /* ComborDetailDynamicTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComborDetailDynamicTableViewCell.swift; sourceTree = "<group>"; };
+		1894FD0120C92E6A0020F7C1 /* ComborDetailDynamicTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ComborDetailDynamicTableViewCell.xib; sourceTree = "<group>"; };
+		1894FD0420C92EC90020F7C1 /* ComborNameCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComborNameCollectionViewCell.swift; sourceTree = "<group>"; };
+		1894FD0520C92EC90020F7C1 /* ComborNameCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ComborNameCollectionViewCell.xib; sourceTree = "<group>"; };
+		1894FD0A20C931E60020F7C1 /* ComborDynamicViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComborDynamicViewController.swift; sourceTree = "<group>"; };
+		1894FD0B20C931E60020F7C1 /* ComborDynamicViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ComborDynamicViewController.xib; sourceTree = "<group>"; };
+		18BD3AC420C5A3F1002DCE22 /* Mobifood-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Mobifood-Bridging-Header.h"; sourceTree = "<group>"; };
+		18BD3AC520C5A3F2002DCE22 /* iCarousel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iCarousel.h; sourceTree = "<group>"; };
+		18BD3AC620C5A3F2002DCE22 /* iCarousel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iCarousel.m; sourceTree = "<group>"; };
+		3429BEC4352140C1F6CF9971 /* Pods-Mobifood.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mobifood.release.xcconfig"; path = "Pods/Target Support Files/Pods-Mobifood/Pods-Mobifood.release.xcconfig"; sourceTree = "<group>"; };
+		5D97B9177392060FABA77296 /* Pods-Mobifood.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mobifood.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Mobifood/Pods-Mobifood.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +157,74 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				07033F0310E119B4E17B9990 /* Pods_Mobifood.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1802464520CA7D9F00B343A6 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				1802464620CA7DB600B343A6 /* Product.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		1802464820CA803F00B343A6 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				186095EF20C77D8500EBD26F /* Global.swift */,
+				1802464920CA806B00B343A6 /* ServiceApi.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		1802464B20CA986300B343A6 /* Setting */ = {
+			isa = PBXGroup;
+			children = (
+				1802464C20CA987900B343A6 /* SettingViewController.swift */,
+				1802464D20CA987900B343A6 /* SettingViewController.xib */,
+			);
+			path = Setting;
+			sourceTree = "<group>";
+		};
+		1802465020CAD4EC00B343A6 /* My Combor */ = {
+			isa = PBXGroup;
+			children = (
+				1802465520CAD68B00B343A6 /* MyComborCell */,
+				1802465120CAD4FE00B343A6 /* MyComborViewController.swift */,
+				1802465220CAD4FE00B343A6 /* MyComborViewController.xib */,
+			);
+			path = "My Combor";
+			sourceTree = "<group>";
+		};
+		1802465520CAD68B00B343A6 /* MyComborCell */ = {
+			isa = PBXGroup;
+			children = (
+				1802465620CAD6AA00B343A6 /* MyComborTableViewCell.swift */,
+				1802465720CAD6AA00B343A6 /* MyComborTableViewCell.xib */,
+			);
+			path = MyComborCell;
+			sourceTree = "<group>";
+		};
+		1802465A20CADF3100B343A6 /* QRCode */ = {
+			isa = PBXGroup;
+			children = (
+				1802465B20CADF5200B343A6 /* QRCodeViewController.swift */,
+				1802465C20CADF5200B343A6 /* QRCodeViewController.xib */,
+			);
+			path = QRCode;
+			sourceTree = "<group>";
+		};
 		1804A08620C4E56E00E2C9DF = {
 			isa = PBXGroup;
 			children = (
 				1804A09120C4E56E00E2C9DF /* Mobifood */,
 				1804A09020C4E56E00E2C9DF /* Products */,
+				2D15924F64A62C9DEAB0E4BB /* Pods */,
+				EA1C214B1D189142B7DDD3AF /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,6 +239,23 @@
 		1804A09120C4E56E00E2C9DF /* Mobifood */ = {
 			isa = PBXGroup;
 			children = (
+				1804A0C220C52BB500E2C9DF /* Utils */,
+				1802464820CA803F00B343A6 /* Service */,
+				1802464520CA7D9F00B343A6 /* Model */,
+				1848904820CD19F800E78A23 /* Network Manager */,
+				1802465A20CADF3100B343A6 /* QRCode */,
+				1802465020CAD4EC00B343A6 /* My Combor */,
+				1802464B20CA986300B343A6 /* Setting */,
+				18704F0320C84173000F0CFD /* Cart */,
+				18704EFD20C83722000F0CFD /* Contact */,
+				18321E8E20C7FF7C00BA10B2 /* About us */,
+				186095E520C66B0000EBD26F /* Menu */,
+				1804A0BB20C5242000E2C9DF /* Combor */,
+				1804A0B620C523D400E2C9DF /* Map */,
+				1804A0B120C5239200E2C9DF /* Fruit */,
+				1804A0AC20C5231400E2C9DF /* Drink */,
+				1804A0A720C4FC4B00E2C9DF /* Home */,
+				1804A0A420C4EE6600E2C9DF /* Gioi Thieu */,
 				1804A09220C4E56E00E2C9DF /* AppDelegate.swift */,
 				1804A09420C4E56E00E2C9DF /* ViewController.swift */,
 				1804A09620C4E56E00E2C9DF /* Main.storyboard */,
@@ -64,6 +266,231 @@
 			path = Mobifood;
 			sourceTree = "<group>";
 		};
+		1804A0A420C4EE6600E2C9DF /* Gioi Thieu */ = {
+			isa = PBXGroup;
+			children = (
+				1804A0A520C4EE9D00E2C9DF /* IntroduceViewController.swift */,
+				1802465F20CAE91100B343A6 /* gioithieu.xib */,
+			);
+			path = "Gioi Thieu";
+			sourceTree = "<group>";
+		};
+		1804A0A720C4FC4B00E2C9DF /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				1804A0A820C4FC7600E2C9DF /* HomeViewController.swift */,
+				1804A0A920C4FC7600E2C9DF /* HomeViewController.xib */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		1804A0AC20C5231400E2C9DF /* Drink */ = {
+			isa = PBXGroup;
+			children = (
+				186095FD20C7A3A100EBD26F /* DrinkDetail */,
+				186095F820C78BBD00EBD26F /* DrinkCollectionCell */,
+				186095F320C78A5900EBD26F /* DrinkTableCell */,
+				1804A0AD20C5237900E2C9DF /* DrinkViewController.swift */,
+				1804A0AE20C5237900E2C9DF /* DrinkViewController.xib */,
+			);
+			path = Drink;
+			sourceTree = "<group>";
+		};
+		1804A0B120C5239200E2C9DF /* Fruit */ = {
+			isa = PBXGroup;
+			children = (
+				1804A0B220C523BD00E2C9DF /* FruitViewController.swift */,
+				1804A0B320C523BD00E2C9DF /* FruitViewController.xib */,
+			);
+			path = Fruit;
+			sourceTree = "<group>";
+		};
+		1804A0B620C523D400E2C9DF /* Map */ = {
+			isa = PBXGroup;
+			children = (
+				1804A0B720C523E600E2C9DF /* MapViewController.swift */,
+				1804A0B820C523E600E2C9DF /* MapViewController.xib */,
+			);
+			path = Map;
+			sourceTree = "<group>";
+		};
+		1804A0BB20C5242000E2C9DF /* Combor */ = {
+			isa = PBXGroup;
+			children = (
+				1894FCF720C921440020F7C1 /* ComborDetail */,
+				186095DE20C6355C00EBD26F /* ComborCell */,
+				1804A0BE20C5245600E2C9DF /* ComborViewController.swift */,
+				1804A0BF20C5245600E2C9DF /* ComborViewController.xib */,
+				186095E320C63A0400EBD26F /* UPCarouselFlowLayout.swift */,
+			);
+			path = Combor;
+			sourceTree = "<group>";
+		};
+		1804A0C220C52BB500E2C9DF /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				18BD3AC520C5A3F2002DCE22 /* iCarousel.h */,
+				18BD3AC620C5A3F2002DCE22 /* iCarousel.m */,
+				187509A320CC3ADE004B0C56 /* CheckInternet.swift */,
+				1804A0C320C52BEF00E2C9DF /* Utils.swift */,
+				18BD3AC420C5A3F1002DCE22 /* Mobifood-Bridging-Header.h */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		18321E8E20C7FF7C00BA10B2 /* About us */ = {
+			isa = PBXGroup;
+			children = (
+				18321E8F20C7FF9700BA10B2 /* AboutUsViewController.swift */,
+				18321E9020C7FF9700BA10B2 /* AboutUsViewController.xib */,
+			);
+			path = "About us";
+			sourceTree = "<group>";
+		};
+		1848904820CD19F800E78A23 /* Network Manager */ = {
+			isa = PBXGroup;
+			children = (
+				1848904920CD1A1400E78A23 /* NetWorkManager.swift */,
+			);
+			path = "Network Manager";
+			sourceTree = "<group>";
+		};
+		186095DE20C6355C00EBD26F /* ComborCell */ = {
+			isa = PBXGroup;
+			children = (
+				186095DF20C635D200EBD26F /* ComborCollectionViewCell.swift */,
+				186095E020C635D200EBD26F /* ComborCollectionViewCell.xib */,
+			);
+			path = ComborCell;
+			sourceTree = "<group>";
+		};
+		186095E520C66B0000EBD26F /* Menu */ = {
+			isa = PBXGroup;
+			children = (
+				186095E620C66B1D00EBD26F /* MenuViewController.swift */,
+				186095EA20C66FBE00EBD26F /* menuTableViewCell.swift */,
+				186095EB20C66FBE00EBD26F /* menuTableViewCell.xib */,
+				186095F120C787E000EBD26F /* MenuViewController.xib */,
+			);
+			path = Menu;
+			sourceTree = "<group>";
+		};
+		186095F320C78A5900EBD26F /* DrinkTableCell */ = {
+			isa = PBXGroup;
+			children = (
+				186095F420C78AE300EBD26F /* DrinkTableViewCell.swift */,
+				186095F520C78AE300EBD26F /* DrinkTableViewCell.xib */,
+			);
+			path = DrinkTableCell;
+			sourceTree = "<group>";
+		};
+		186095F820C78BBD00EBD26F /* DrinkCollectionCell */ = {
+			isa = PBXGroup;
+			children = (
+				186095F920C78BE400EBD26F /* DrinkCollectionViewCell.swift */,
+				186095FA20C78BE400EBD26F /* DrinkCollectionViewCell.xib */,
+			);
+			path = DrinkCollectionCell;
+			sourceTree = "<group>";
+		};
+		186095FD20C7A3A100EBD26F /* DrinkDetail */ = {
+			isa = PBXGroup;
+			children = (
+				186095FE20C7A41C00EBD26F /* DrinkDetailView.swift */,
+				1860960020C7A42900EBD26F /* DrinkDetailView.xib */,
+				1860960320C7D81E00EBD26F /* DrinkDetailViewController.swift */,
+				1860960420C7D81E00EBD26F /* DrinkDetailViewController.xib */,
+			);
+			path = DrinkDetail;
+			sourceTree = "<group>";
+		};
+		18704EFD20C83722000F0CFD /* Contact */ = {
+			isa = PBXGroup;
+			children = (
+				18704EFE20C8373B000F0CFD /* ContactView.swift */,
+				18704F0020C83744000F0CFD /* ContactView.xib */,
+			);
+			path = Contact;
+			sourceTree = "<group>";
+		};
+		18704F0320C84173000F0CFD /* Cart */ = {
+			isa = PBXGroup;
+			children = (
+				187509A020CBDB39004B0C56 /* AlertAddSuccessful */,
+				18704F0820C843B9000F0CFD /* CartCell */,
+				18704F0420C8418D000F0CFD /* CartViewController.swift */,
+				18704F0520C8418D000F0CFD /* CartViewController.xib */,
+			);
+			path = Cart;
+			sourceTree = "<group>";
+		};
+		18704F0820C843B9000F0CFD /* CartCell */ = {
+			isa = PBXGroup;
+			children = (
+				18704F0920C843D9000F0CFD /* CartTableViewCell.swift */,
+				18704F0A20C843D9000F0CFD /* CartTableViewCell.xib */,
+			);
+			path = CartCell;
+			sourceTree = "<group>";
+		};
+		187509A020CBDB39004B0C56 /* AlertAddSuccessful */ = {
+			isa = PBXGroup;
+			children = (
+				187509A120CBDB76004B0C56 /* AlertAddSuccessFull.swift */,
+			);
+			path = AlertAddSuccessful;
+			sourceTree = "<group>";
+		};
+		1894FCF720C921440020F7C1 /* ComborDetail */ = {
+			isa = PBXGroup;
+			children = (
+				1894FD0920C931B00020F7C1 /* ComborDynamic */,
+				1894FD0820C931720020F7C1 /* ComborStatic */,
+			);
+			path = ComborDetail;
+			sourceTree = "<group>";
+		};
+		1894FD0820C931720020F7C1 /* ComborStatic */ = {
+			isa = PBXGroup;
+			children = (
+				1894FCF820C9216C0020F7C1 /* ComborDetailViewController.swift */,
+				1894FCF920C9216C0020F7C1 /* ComborDetailViewController.xib */,
+				1894FCFC20C926CB0020F7C1 /* ComborDetailCellTableViewCell.swift */,
+				1894FCFD20C926CB0020F7C1 /* ComborDetailCellTableViewCell.xib */,
+			);
+			path = ComborStatic;
+			sourceTree = "<group>";
+		};
+		1894FD0920C931B00020F7C1 /* ComborDynamic */ = {
+			isa = PBXGroup;
+			children = (
+				1894FD0020C92E6A0020F7C1 /* ComborDetailDynamicTableViewCell.swift */,
+				1894FD0120C92E6A0020F7C1 /* ComborDetailDynamicTableViewCell.xib */,
+				1894FD0420C92EC90020F7C1 /* ComborNameCollectionViewCell.swift */,
+				1894FD0520C92EC90020F7C1 /* ComborNameCollectionViewCell.xib */,
+				1894FD0A20C931E60020F7C1 /* ComborDynamicViewController.swift */,
+				1894FD0B20C931E60020F7C1 /* ComborDynamicViewController.xib */,
+			);
+			path = ComborDynamic;
+			sourceTree = "<group>";
+		};
+		2D15924F64A62C9DEAB0E4BB /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5D97B9177392060FABA77296 /* Pods-Mobifood.debug.xcconfig */,
+				3429BEC4352140C1F6CF9971 /* Pods-Mobifood.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		EA1C214B1D189142B7DDD3AF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				06AA059A6A22BAD710DDC6C4 /* Pods_Mobifood.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -71,9 +498,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1804A0A120C4E56F00E2C9DF /* Build configuration list for PBXNativeTarget "Mobifood" */;
 			buildPhases = (
+				ED44F8E8485474AA968D30D1 /* [CP] Check Pods Manifest.lock */,
 				1804A08B20C4E56E00E2C9DF /* Sources */,
 				1804A08C20C4E56E00E2C9DF /* Frameworks */,
 				1804A08D20C4E56E00E2C9DF /* Resources */,
+				C94DBB28E968A9F310ACD38F /* [CP] Embed Pods Frameworks */,
+				0DCCD465B09E1EC730E2F70C /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -96,6 +526,7 @@
 				TargetAttributes = {
 					1804A08E20C4E56E00E2C9DF = {
 						CreatedOnToolsVersion = 9.3;
+						LastSwiftMigration = 0930;
 					};
 				};
 			};
@@ -122,21 +553,157 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				186095ED20C66FBE00EBD26F /* menuTableViewCell.xib in Resources */,
 				1804A09D20C4E56F00E2C9DF /* LaunchScreen.storyboard in Resources */,
+				186095F720C78AE300EBD26F /* DrinkTableViewCell.xib in Resources */,
+				1804A0B020C5237900E2C9DF /* DrinkViewController.xib in Resources */,
+				18704F0120C83744000F0CFD /* ContactView.xib in Resources */,
+				1860960620C7D81E00EBD26F /* DrinkDetailViewController.xib in Resources */,
+				186095FC20C78BE400EBD26F /* DrinkCollectionViewCell.xib in Resources */,
+				1894FCFB20C9216C0020F7C1 /* ComborDetailViewController.xib in Resources */,
+				186095E220C635D200EBD26F /* ComborCollectionViewCell.xib in Resources */,
+				1804A0C120C5245600E2C9DF /* ComborViewController.xib in Resources */,
 				1804A09A20C4E56F00E2C9DF /* Assets.xcassets in Resources */,
+				18704F0720C8418D000F0CFD /* CartViewController.xib in Resources */,
+				1802465920CAD6AA00B343A6 /* MyComborTableViewCell.xib in Resources */,
+				1894FD0320C92E6A0020F7C1 /* ComborDetailDynamicTableViewCell.xib in Resources */,
+				1804A0B520C523BD00E2C9DF /* FruitViewController.xib in Resources */,
+				1894FD0D20C931E60020F7C1 /* ComborDynamicViewController.xib in Resources */,
+				1894FCFF20C926CB0020F7C1 /* ComborDetailCellTableViewCell.xib in Resources */,
+				186095F220C787E000EBD26F /* MenuViewController.xib in Resources */,
+				1860960120C7A42900EBD26F /* DrinkDetailView.xib in Resources */,
+				18321E9220C7FF9700BA10B2 /* AboutUsViewController.xib in Resources */,
+				1804A0BA20C523E600E2C9DF /* MapViewController.xib in Resources */,
 				1804A09820C4E56E00E2C9DF /* Main.storyboard in Resources */,
+				1802464F20CA987900B343A6 /* SettingViewController.xib in Resources */,
+				1894FD0720C92EC90020F7C1 /* ComborNameCollectionViewCell.xib in Resources */,
+				18704F0C20C843D9000F0CFD /* CartTableViewCell.xib in Resources */,
+				1802465420CAD4FE00B343A6 /* MyComborViewController.xib in Resources */,
+				1802465E20CADF5200B343A6 /* QRCodeViewController.xib in Resources */,
+				1802466020CAE91100B343A6 /* gioithieu.xib in Resources */,
+				1804A0AB20C4FC7600E2C9DF /* HomeViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0DCCD465B09E1EC730E2F70C /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Mobifood/Pods-Mobifood-resources.sh",
+				"${PODS_ROOT}/GoogleMaps/Maps/Frameworks/GoogleMaps.framework/Resources/GoogleMaps.bundle",
+				"${PODS_ROOT}/GooglePlaces/Frameworks/GooglePlaces.framework/Resources/GooglePlaces.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleMaps.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GooglePlaces.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Mobifood/Pods-Mobifood-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C94DBB28E968A9F310ACD38F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Mobifood/Pods-Mobifood-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/BarcodeScanner/BarcodeScanner.framework",
+				"${BUILT_PRODUCTS_DIR}/ImageSlideshow/ImageSlideshow.framework",
+				"${BUILT_PRODUCTS_DIR}/PromiseKit/PromiseKit.framework",
+				"${BUILT_PRODUCTS_DIR}/ReachabilitySwift/Reachability.framework",
+				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
+				"${BUILT_PRODUCTS_DIR}/SKActivityIndicatorView/SKActivityIndicatorView.framework",
+				"${BUILT_PRODUCTS_DIR}/SlideMenuControllerSwift/SlideMenuControllerSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/XLPagerTabStrip/XLPagerTabStrip.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BarcodeScanner.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ImageSlideshow.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PromiseKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Reachability.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SKActivityIndicatorView.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SlideMenuControllerSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/XLPagerTabStrip.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Mobifood/Pods-Mobifood-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		ED44F8E8485474AA968D30D1 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Mobifood-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		1804A08B20C4E56E00E2C9DF /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				18321E9120C7FF9700BA10B2 /* AboutUsViewController.swift in Sources */,
+				187509A420CC3ADE004B0C56 /* CheckInternet.swift in Sources */,
+				186095EC20C66FBE00EBD26F /* menuTableViewCell.swift in Sources */,
+				1804A0A620C4EE9D00E2C9DF /* IntroduceViewController.swift in Sources */,
+				1894FCFE20C926CB0020F7C1 /* ComborDetailCellTableViewCell.swift in Sources */,
+				186095E120C635D200EBD26F /* ComborCollectionViewCell.swift in Sources */,
+				18704EFF20C8373B000F0CFD /* ContactView.swift in Sources */,
+				1802465820CAD6AA00B343A6 /* MyComborTableViewCell.swift in Sources */,
+				186095E420C63A0400EBD26F /* UPCarouselFlowLayout.swift in Sources */,
+				186095FF20C7A41C00EBD26F /* DrinkDetailView.swift in Sources */,
+				18BD3AC720C5A3F2002DCE22 /* iCarousel.m in Sources */,
 				1804A09520C4E56E00E2C9DF /* ViewController.swift in Sources */,
+				1804A0C420C52BEF00E2C9DF /* Utils.swift in Sources */,
 				1804A09320C4E56E00E2C9DF /* AppDelegate.swift in Sources */,
+				186095F020C77D8500EBD26F /* Global.swift in Sources */,
+				1860960520C7D81E00EBD26F /* DrinkDetailViewController.swift in Sources */,
+				1802464A20CA806B00B343A6 /* ServiceApi.swift in Sources */,
+				186095E820C66B1D00EBD26F /* MenuViewController.swift in Sources */,
+				1802464720CA7DB600B343A6 /* Product.swift in Sources */,
+				1804A0AA20C4FC7600E2C9DF /* HomeViewController.swift in Sources */,
+				18704F0B20C843D9000F0CFD /* CartTableViewCell.swift in Sources */,
+				1802465D20CADF5200B343A6 /* QRCodeViewController.swift in Sources */,
+				1804A0AF20C5237900E2C9DF /* DrinkViewController.swift in Sources */,
+				1894FD0C20C931E60020F7C1 /* ComborDynamicViewController.swift in Sources */,
+				1804A0B420C523BD00E2C9DF /* FruitViewController.swift in Sources */,
+				1804A0C020C5245600E2C9DF /* ComborViewController.swift in Sources */,
+				1894FD0220C92E6A0020F7C1 /* ComborDetailDynamicTableViewCell.swift in Sources */,
+				18704F0620C8418D000F0CFD /* CartViewController.swift in Sources */,
+				186095F620C78AE300EBD26F /* DrinkTableViewCell.swift in Sources */,
+				1802464E20CA987900B343A6 /* SettingViewController.swift in Sources */,
+				1804A0B920C523E600E2C9DF /* MapViewController.swift in Sources */,
+				187509A220CBDB76004B0C56 /* AlertAddSuccessFull.swift in Sources */,
+				1894FCFA20C9216C0020F7C1 /* ComborDetailViewController.swift in Sources */,
+				186095FB20C78BE400EBD26F /* DrinkCollectionViewCell.swift in Sources */,
+				1802465320CAD4FE00B343A6 /* MyComborViewController.swift in Sources */,
+				1894FD0620C92EC90020F7C1 /* ComborNameCollectionViewCell.swift in Sources */,
+				1848904A20CD1A1400E78A23 /* NetWorkManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -278,9 +845,12 @@
 		};
 		1804A0A220C4E56F00E2C9DF /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5D97B9177392060FABA77296 /* Pods-Mobifood.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = KNPSWR43QN;
 				INFOPLIST_FILE = Mobifood/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -288,6 +858,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.da2.app.Mobifood;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Mobifood/Utils/Mobifood-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -295,9 +867,12 @@
 		};
 		1804A0A320C4E56F00E2C9DF /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3429BEC4352140C1F6CF9971 /* Pods-Mobifood.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = KNPSWR43QN;
 				INFOPLIST_FILE = Mobifood/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -305,6 +880,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.da2.app.Mobifood;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Mobifood/Utils/Mobifood-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

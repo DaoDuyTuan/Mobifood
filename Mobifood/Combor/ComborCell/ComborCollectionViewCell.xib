@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="slideCell" id="gTV-IL-0wX" customClass="ComborCollectionViewCell" customModule="Mobifood" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="213" height="312"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="213" height="312"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pea-lx-efQ">
+                        <rect key="frame" x="0.0" y="0.0" width="213" height="312"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F8V-C8-Qfx">
+                                <rect key="frame" x="32" y="256" width="149" height="31"/>
+                                <color key="backgroundColor" red="1" green="0.57810515169999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="300.000">
+                                    <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <variation key="heightClass=regular-widthClass=regular">
+                                    <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                </variation>
+                                <connections>
+                                    <action selector="buyiTEM:" destination="gTV-IL-0wX" eventType="touchUpInside" id="LvA-Oa-qLI"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="LBw-TU-G2m">
+                                <rect key="frame" x="0.0" y="12" width="213" height="234"/>
+                            </imageView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="LBw-TU-G2m" firstAttribute="top" secondItem="pea-lx-efQ" secondAttribute="top" constant="12" id="7Th-IA-AmR"/>
+                            <constraint firstAttribute="trailing" secondItem="LBw-TU-G2m" secondAttribute="trailing" id="JaV-rP-77b"/>
+                            <constraint firstItem="LBw-TU-G2m" firstAttribute="leading" secondItem="pea-lx-efQ" secondAttribute="leading" id="SJb-Yc-ZBc"/>
+                            <constraint firstItem="F8V-C8-Qfx" firstAttribute="centerX" secondItem="pea-lx-efQ" secondAttribute="centerX" id="hIx-V3-got"/>
+                            <constraint firstItem="F8V-C8-Qfx" firstAttribute="top" secondItem="LBw-TU-G2m" secondAttribute="bottom" constant="10" id="pCS-W6-kY9"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="F8V-C8-Qfx" firstAttribute="width" secondItem="gTV-IL-0wX" secondAttribute="width" multiplier="0.7" id="BdQ-AU-rLq"/>
+                <constraint firstAttribute="trailing" secondItem="pea-lx-efQ" secondAttribute="trailing" id="X6s-HI-FEd"/>
+                <constraint firstItem="LBw-TU-G2m" firstAttribute="height" secondItem="gTV-IL-0wX" secondAttribute="height" multiplier="0.75" id="ZgH-NM-UbS"/>
+                <constraint firstItem="pea-lx-efQ" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="ZxN-bA-ak6"/>
+                <constraint firstItem="pea-lx-efQ" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="fW8-Uy-pai"/>
+                <constraint firstAttribute="bottom" secondItem="pea-lx-efQ" secondAttribute="bottom" id="mgH-0j-B6N"/>
+                <constraint firstItem="F8V-C8-Qfx" firstAttribute="height" secondItem="gTV-IL-0wX" secondAttribute="height" multiplier="0.1" id="yKY-q1-K6L"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <size key="customSize" width="213" height="312"/>
+            <connections>
+                <outlet property="btnBuyItem" destination="F8V-C8-Qfx" id="EYt-WS-q9s"/>
+                <outlet property="comborImageView" destination="LBw-TU-G2m" id="D2g-x0-muD"/>
+            </connections>
+            <point key="canvasLocation" x="-31.5" y="51"/>
+        </collectionViewCell>
+    </objects>
+</document>

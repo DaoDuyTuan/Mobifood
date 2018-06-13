@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="ipad12_9" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="drinkCollectionCell" id="gTV-IL-0wX" customClass="DrinkCollectionViewCell" customModule="Mobifood" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="186" height="285"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="186" height="285"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="OWI-ow-btZ">
+                        <rect key="frame" x="15" y="16" width="157" height="142.5"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="OWI-ow-btZ" secondAttribute="height" multiplier="1.1:1" id="PzD-5X-S7b"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nước ép táo" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZFQ-FF-q0D">
+                        <rect key="frame" x="0.5" y="170.5" width="186" height="30"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                        <variation key="heightClass=regular-widthClass=regular">
+                            <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                        </variation>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="20.000đ" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wO0-Gc-mGw">
+                        <rect key="frame" x="45" y="208.5" width="97.5" height="30"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <color key="textColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                        <variation key="heightClass=regular-widthClass=regular">
+                            <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                        </variation>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Size: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RaL-Lc-eAs">
+                        <rect key="frame" x="37.5" y="246.5" width="58" height="30"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                        <variation key="heightClass=regular-widthClass=regular">
+                            <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                        </variation>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="M" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7sC-Dr-eIf">
+                        <rect key="frame" x="92" y="247" width="62" height="30"/>
+                        <color key="backgroundColor" red="0.75406885150000003" green="0.75408679249999999" blue="0.75407713649999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="62" id="gMN-3b-hXW"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="13"/>
+                        <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                        <variation key="heightClass=regular-widthClass=regular">
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                        </variation>
+                    </label>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="RaL-Lc-eAs" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" constant="-27" id="0pr-l2-8WP"/>
+                <constraint firstItem="ZFQ-FF-q0D" firstAttribute="width" secondItem="gTV-IL-0wX" secondAttribute="width" id="1I3-K0-lbs"/>
+                <constraint firstItem="OWI-ow-btZ" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="1ki-wN-Lp0"/>
+                <constraint firstItem="ZFQ-FF-q0D" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="2nN-fx-MWY"/>
+                <constraint firstItem="OWI-ow-btZ" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="16" id="CbT-Xt-85o"/>
+                <constraint firstItem="RaL-Lc-eAs" firstAttribute="top" secondItem="wO0-Gc-mGw" secondAttribute="bottom" constant="8" id="Deb-Tm-3cK"/>
+                <constraint firstItem="ZFQ-FF-q0D" firstAttribute="top" secondItem="OWI-ow-btZ" secondAttribute="bottom" constant="12" id="JJp-Mp-Rxd"/>
+                <constraint firstItem="7sC-Dr-eIf" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" constant="30" id="Jts-iv-QuO"/>
+                <constraint firstItem="wO0-Gc-mGw" firstAttribute="top" secondItem="ZFQ-FF-q0D" secondAttribute="bottom" constant="8" id="P6x-Ym-s4A"/>
+                <constraint firstItem="7sC-Dr-eIf" firstAttribute="centerY" secondItem="RaL-Lc-eAs" secondAttribute="centerY" id="Z5v-Sk-1Tf"/>
+                <constraint firstItem="wO0-Gc-mGw" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="crm-sr-Ytd"/>
+                <constraint firstItem="OWI-ow-btZ" firstAttribute="height" secondItem="gTV-IL-0wX" secondAttribute="height" multiplier="0.5" id="fcy-B9-d4s"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <size key="customSize" width="186" height="285"/>
+            <connections>
+                <outlet property="imageFruitImageView" destination="OWI-ow-btZ" id="RRR-cM-NuA"/>
+                <outlet property="lblNameFruit" destination="ZFQ-FF-q0D" id="XHS-1t-ruX"/>
+                <outlet property="lblPriceFruit" destination="wO0-Gc-mGw" id="r9j-0a-kWc"/>
+                <outlet property="lblSize" destination="RaL-Lc-eAs" id="3Bc-YK-KYr"/>
+                <outlet property="lblSizeFruit" destination="7sC-Dr-eIf" id="KfK-C7-lXo"/>
+                <outlet property="lblSizeType" destination="7sC-Dr-eIf" id="1gR-XD-8x3"/>
+            </connections>
+            <point key="canvasLocation" x="33" y="116.5"/>
+        </collectionViewCell>
+    </objects>
+</document>
