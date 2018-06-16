@@ -11,8 +11,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DrinkViewController" customModule="Mobifood" customModuleProvider="target">
             <connections>
-                <outlet property="drinkTableView" destination="fzQ-wb-y70" id="R2R-gB-qcv"/>
-                <outlet property="loadingIndicator" destination="vXB-Rs-Nlb" id="Xbf-fK-3Lc"/>
+                <outlet property="drinkCollectionView" destination="wK6-oW-lhz" id="HtU-Ea-IlS"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -21,30 +20,30 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="589"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="fzQ-wb-y70">
-                    <rect key="frame" x="0.0" y="8" width="375" height="580.5"/>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="wK6-oW-lhz">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="589"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="JEX-Hu-aWR">
+                        <size key="itemSize" width="50" height="50"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
                     <connections>
-                        <outlet property="dataSource" destination="-1" id="MiN-gg-C0d"/>
-                        <outlet property="delegate" destination="-1" id="Rjs-nE-sCO"/>
+                        <outlet property="dataSource" destination="-1" id="0W0-DP-RcU"/>
+                        <outlet property="delegate" destination="-1" id="mfy-iU-9Nd"/>
                     </connections>
-                </tableView>
-                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="vXB-Rs-Nlb">
-                    <rect key="frame" x="178" y="285" width="20" height="20"/>
-                    <color key="color" red="0.37055522200000002" green="0.37056469920000001" blue="0.37055957319999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                </activityIndicatorView>
+                </collectionView>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="fzQ-wb-y70" firstAttribute="bottom" secondItem="i5M-Pr-FkT" secondAttribute="bottom" id="Dxx-2v-dFo"/>
-                <constraint firstItem="fzQ-wb-y70" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="8" id="Fe2-rM-kNf"/>
-                <constraint firstItem="fzQ-wb-y70" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="J6x-Hc-06C"/>
-                <constraint firstItem="fzQ-wb-y70" firstAttribute="trailing" secondItem="i5M-Pr-FkT" secondAttribute="trailing" id="J73-MV-bCx"/>
-                <constraint firstItem="vXB-Rs-Nlb" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="cEn-yZ-bS1"/>
-                <constraint firstItem="vXB-Rs-Nlb" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="qDJ-q5-8K4"/>
+                <constraint firstItem="wK6-oW-lhz" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="E0h-zQ-JIs"/>
+                <constraint firstAttribute="trailing" secondItem="wK6-oW-lhz" secondAttribute="trailing" id="ek9-Wa-xlx"/>
+                <constraint firstAttribute="bottom" secondItem="wK6-oW-lhz" secondAttribute="bottom" id="rJp-Bx-Le5"/>
+                <constraint firstItem="wK6-oW-lhz" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="yuv-GD-cCD"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-            <point key="canvasLocation" x="33.5" y="54"/>
+            <point key="canvasLocation" x="33.5" y="53.5"/>
         </view>
     </objects>
 </document>

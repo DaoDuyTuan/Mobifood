@@ -78,6 +78,7 @@ extension ComborViewController: UICollectionViewDelegate, UICollectionViewDataSo
         let comborDetailVC = ComborDynamicViewController(nibName: "ComborDynamicViewController", bundle: nil)
         self.navigationController?.pushViewController(comborDetailVC, animated: true)
     }
+    
     func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
         let layout = self.slideCollectionView.collectionViewLayout as! UPCarouselFlowLayout
         let pageSide = (layout.scrollDirection == .horizontal) ? self.pageSize.width : self.pageSize.height

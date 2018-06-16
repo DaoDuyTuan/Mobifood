@@ -12,8 +12,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FruitViewController" customModule="Mobifood" customModuleProvider="target">
             <connections>
-                <outlet property="fruitTableView" destination="Dfc-RI-ZnH" id="IJY-jc-LeY"/>
-                <outlet property="loadingIndicator" destination="lIO-D5-uMP" id="yqB-HK-qMl"/>
+                <outlet property="fruitCollectionView" destination="zCt-tc-MQJ" id="Shw-4P-kzp"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -22,27 +21,27 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="588"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Dfc-RI-ZnH">
-                    <rect key="frame" x="0.0" y="8" width="414" height="580.5"/>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="zCt-tc-MQJ">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="588"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Nt6-Hb-Dhb">
+                        <size key="itemSize" width="50" height="50"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
                     <connections>
-                        <outlet property="dataSource" destination="-1" id="k5Q-AA-dTp"/>
-                        <outlet property="delegate" destination="-1" id="EwR-Tq-GdO"/>
+                        <outlet property="dataSource" destination="-1" id="fwX-Qr-z8E"/>
+                        <outlet property="delegate" destination="-1" id="Ee9-85-DgU"/>
                     </connections>
-                </tableView>
-                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="lIO-D5-uMP">
-                    <rect key="frame" x="197.5" y="284" width="20" height="20"/>
-                    <color key="color" red="0.37055522200000002" green="0.37056469920000001" blue="0.37055957319999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                </activityIndicatorView>
+                </collectionView>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="Dfc-RI-ZnH" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" id="84F-bB-Jro"/>
-                <constraint firstItem="Dfc-RI-ZnH" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="DE6-3u-KAo"/>
-                <constraint firstItem="Dfc-RI-ZnH" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="MAK-Ri-jIn"/>
-                <constraint firstItem="lIO-D5-uMP" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="NJ3-vg-e0B"/>
-                <constraint firstItem="lIO-D5-uMP" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="feP-Vr-vqp"/>
-                <constraint firstItem="Dfc-RI-ZnH" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="8" id="wYy-tE-K2C"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="zCt-tc-MQJ" secondAttribute="trailing" id="6Nf-c5-GD5"/>
+                <constraint firstItem="zCt-tc-MQJ" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="8DN-pp-z6V"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="zCt-tc-MQJ" secondAttribute="bottom" id="a4B-yS-8lw"/>
+                <constraint firstItem="zCt-tc-MQJ" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="nal-fe-x8O"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>

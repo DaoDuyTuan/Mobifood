@@ -20,19 +20,24 @@ class DrinkViewController: UIViewController, IndicatorInfoProvider {
     
     @IBOutlet weak var loadingIndicator: UIActivityIndicatorView!
     @IBOutlet weak var drinkTableView: UITableView!
-    let images = ["1", "2", "3", "4", "5", "6", "7"]
-    var drinks = [[Product]]()
+    @IBOutlet weak var drinkCollectionView: UICollectionView!
+    var drinks = [Product]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        let nibTableViewCell = UINib(nibName: "DrinkTableViewCell", bundle: nil)
-        self.drinkTableView.register(nibTableViewCell, forCellReuseIdentifier: "drinkTableCell")
-        self.loadingIndicator.hidesWhenStopped = true
+        let nib = UINib(nibName: "DrinkCollectionViewCell", bundle: nil)
+        self.drinkCollectionView.register(nib, forCellWithReuseIdentifier: "drinkCollectionCell")
+        
+        let layout = UICollectionViewFlowLayout()
+        layout.minimumLineSpacing = 10
+        layout.minimumInteritemSpacing = 5
+        layout.sectionInset = UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
+        self.drinkCollectionView.collectionViewLayout = layout
+        
         NetworkManager.whenNoConnection()
         NetworkManager.sharedInstance.reachability.whenReachable = {_ in
             Utils.warning(title: "Success", message: "Connected Internet", addActionOk: true, addActionCancel: false)
-            self.drinks = [[Product]]()
-            self.drinkTableView.reloadData()
+            self.drinks = [Product]()
             self.loadDrink()
         }
         NetworkManager.isReachable(completed: {_ in
@@ -41,29 +46,14 @@ class DrinkViewController: UIViewController, IndicatorInfoProvider {
     }
 }
 
-extension DrinkViewController: UITableViewDelegate, UITableViewDataSource {
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.drinks.count
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "drinkTableCell", for: indexPath) as! DrinkTableViewCell
-        cell.setCollectionViewDataSourceDelegate(self, forRow: indexPath.row)
-        return cell
-    }
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 0.48 * self.view.frame.height
-    }
-}
-
 extension DrinkViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return self.drinks[section].count
+        return self.drinks.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "drinkCollectionCell" , for: indexPath) as! DrinkCollectionViewCell
-        let drink = self.drinks[collectionView.tag][indexPath.row]
+        let drink = self.drinks[indexPath.row]
         cell.lblNameFruit.text = drink.productTitle
             cell.lblPriceFruit.text = "\(drink.productVariants.price)"
         
@@ -73,15 +63,12 @@ extension DrinkViewController: UICollectionViewDelegate, UICollectionViewDataSou
         return cell
     }
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: collectionView.frame.width * 0.48, height: collectionView.frame.height)
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-        return 0.04 * collectionView.frame.width
+        let width = (self.view.frame.width / 2) - 15
+        return CGSize(width: width, height: self.view.frame.height * 0.48 * 0.93)
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let drink = self.drinks[collectionView.tag][indexPath.row]
+        let drink = self.drinks[indexPath.row]
         let vc = DrinkDetailViewController(nibName: "DrinkDetailViewController", bundle: nil)
         vc.drinkDetail = drink
         Utils.setAnimation(view: self.view)
@@ -102,9 +89,9 @@ extension DrinkViewController {
         firstly {
             Alamofire.request(url, method: .get, headers: headers).responseDecodable(ProductList.self)
         }.done { products in
-            Utils.settingShowDataForDrinkAndFruit(dataService: products.products, drinkOrFruit: &self.drinks, table: self.drinkTableView)
+            self.drinks = products.products
         }.ensure {
-            self.drinkTableView.reloadData()
+            self.drinkCollectionView.reloadData()
             SKActivityIndicator.dismiss()
             
         }.catch { error in

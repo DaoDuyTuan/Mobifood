@@ -19,12 +19,15 @@ class Utils: NSObject {
         UIApplication.shared.endIgnoringInteractionEvents()
     }
     static func setAnimation(view: UIView) {
+        
+        CATransaction.begin()
         let transition: CATransition = CATransition()
         transition.duration = 0.3
         transition.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseInEaseOut)
         transition.type = kCATransitionReveal
         transition.subtype = kCATransitionFade
         view.window!.layer.add(transition, forKey: nil)
+        CATransaction.commit()
     }
 
     static func setBorder(table: UITableView ,width: CGFloat, radius: CGFloat, color: UIColor) {

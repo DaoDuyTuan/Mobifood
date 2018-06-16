@@ -17,6 +17,10 @@ class IntroduceViewController: UIViewController {
     @IBOutlet weak var introImageSlide: ImageSlideshow!
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        introImageSlide.scrollView.alwaysBounceHorizontal = true
+        introImageSlide.scrollView.bounces = false
+        
         introImageSlide.setImageInputs([
             ImageSource(image: UIImage(named: "green1")!),
             ImageSource(image: UIImage(named: "red2")!),

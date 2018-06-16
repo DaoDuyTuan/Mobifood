@@ -52,7 +52,7 @@ extension MenuViewController: UITableViewDelegate, UITableViewDataSource {
             self.present(barcodeVC, animated: true, completion: nil)
         case 3:
             let vcSetting = SettingViewController(nibName: "SettingViewController", bundle: nil)
-//            Utils.setAnimation(view: self.view)
+            Utils.setAnimation(view: self.view)
             self.navigationController?.pushViewController(vcSetting, animated: true)
         case 4:
             let vc = AboutUsViewController(nibName: "AboutUsViewController", bundle: nil)
@@ -63,7 +63,7 @@ extension MenuViewController: UITableViewDelegate, UITableViewDataSource {
         slideMenuController()?.closeLeft()
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 0.1 * UIScreen.main.bounds.height
+        return 0.15 * UIScreen.main.bounds.height
     }
 }
 extension MenuViewController: BarcodeScannerCodeDelegate, BarcodeScannerErrorDelegate, BarcodeScannerDismissalDelegate {

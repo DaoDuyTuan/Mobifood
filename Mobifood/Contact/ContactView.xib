@@ -6,7 +6,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
-        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -25,53 +24,12 @@
                     <rect key="frame" x="20" y="167" width="335" height="334"/>
                     <subviews>
                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_call_dialog" translatesAutoresizingMaskIntoConstraints="NO" id="lUI-8t-TXx">
-                            <rect key="frame" x="128" y="-53" width="79" height="79"/>
+                            <rect key="frame" x="127.5" y="-53" width="80" height="80"/>
                             <constraints>
-                                <constraint firstAttribute="width" secondItem="lUI-8t-TXx" secondAttribute="height" multiplier="1:1" id="3F8-5e-Gsc"/>
-                                <constraint firstAttribute="width" constant="79" id="8fV-Yx-Ke8"/>
-                                <constraint firstAttribute="height" constant="79" id="xk3-5a-CFn"/>
+                                <constraint firstAttribute="width" constant="80" id="oOq-le-ZNa"/>
+                                <constraint firstAttribute="height" constant="80" id="q6U-qf-auW"/>
                             </constraints>
                         </imageView>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Liên hệ Mobifood" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DX7-QQ-2Xg">
-                            <rect key="frame" x="92.5" y="56" width="151" height="24"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                            <nil key="textColor"/>
-                            <nil key="highlightedColor"/>
-                            <variation key="heightClass=regular-widthClass=regular">
-                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
-                            </variation>
-                        </label>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0961025656" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vfz-kO-yee">
-                            <rect key="frame" x="108" y="96" width="119.5" height="24"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                            <nil key="textColor"/>
-                            <nil key="highlightedColor"/>
-                            <variation key="heightClass=regular-widthClass=regular">
-                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
-                            </variation>
-                        </label>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B8r-Dj-mMp">
-                            <rect key="frame" x="201" y="136" width="33" height="34"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                            <state key="normal" title="YES"/>
-                            <variation key="heightClass=regular-widthClass=regular">
-                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
-                            </variation>
-                            <connections>
-                                <action selector="call:" destination="iN0-l3-epB" eventType="touchUpInside" id="Mi3-8d-qI8"/>
-                            </connections>
-                        </button>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OTK-wg-vFJ">
-                            <rect key="frame" x="102.5" y="136" width="30" height="33"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                            <state key="normal" title="NO"/>
-                            <variation key="heightClass=regular-widthClass=regular">
-                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
-                            </variation>
-                            <connections>
-                                <action selector="cancel:" destination="iN0-l3-epB" eventType="touchUpInside" id="Kbj-ya-iGL"/>
-                            </connections>
-                        </button>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Gọi cho chúng tôi để được tư vấn miễn phí về dịch vụ, tất cả các ngày trong tuần" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zo5-wu-zxz">
                             <rect key="frame" x="16" y="253" width="303" height="61"/>
                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -88,27 +46,78 @@
                                 <constraint firstAttribute="height" constant="1" id="IDH-nH-4Ux"/>
                             </constraints>
                         </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="B1r-J1-kln">
+                            <rect key="frame" x="47" y="20" width="241" height="167"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Liên hệ Mobifood" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DX7-QQ-2Xg">
+                                    <rect key="frame" x="45" y="17" width="151" height="24"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                    <variation key="heightClass=regular-widthClass=regular">
+                                        <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                    </variation>
+                                </label>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B8r-Dj-mMp">
+                                    <rect key="frame" x="154" y="124.5" width="33" height="34"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                    <state key="normal" title="YES"/>
+                                    <variation key="heightClass=regular-widthClass=regular">
+                                        <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                    </variation>
+                                    <connections>
+                                        <action selector="call:" destination="iN0-l3-epB" eventType="touchUpInside" id="Mi3-8d-qI8"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OTK-wg-vFJ">
+                                    <rect key="frame" x="55.5" y="125" width="30" height="33"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <state key="normal" title="NO"/>
+                                    <variation key="heightClass=regular-widthClass=regular">
+                                        <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                    </variation>
+                                    <connections>
+                                        <action selector="cancel:" destination="iN0-l3-epB" eventType="touchUpInside" id="Kbj-ya-iGL"/>
+                                    </connections>
+                                </button>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0961025656" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vfz-kO-yee">
+                                    <rect key="frame" x="61" y="71" width="119.5" height="24"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                    <variation key="heightClass=regular-widthClass=regular">
+                                        <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                    </variation>
+                                </label>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstItem="OTK-wg-vFJ" firstAttribute="top" secondItem="vfz-kO-yee" secondAttribute="bottom" constant="30" id="3uN-QP-k68"/>
+                                <constraint firstItem="OTK-wg-vFJ" firstAttribute="centerX" secondItem="B1r-J1-kln" secondAttribute="centerX" constant="-50" id="66c-eh-AMy"/>
+                                <constraint firstItem="B8r-Dj-mMp" firstAttribute="centerY" secondItem="OTK-wg-vFJ" secondAttribute="centerY" id="91P-Lj-jA7"/>
+                                <constraint firstItem="vfz-kO-yee" firstAttribute="centerX" secondItem="B1r-J1-kln" secondAttribute="centerX" id="KwD-fm-2HI"/>
+                                <constraint firstItem="vfz-kO-yee" firstAttribute="centerY" secondItem="B1r-J1-kln" secondAttribute="centerY" id="LMz-66-yE7"/>
+                                <constraint firstItem="DX7-QQ-2Xg" firstAttribute="centerX" secondItem="B1r-J1-kln" secondAttribute="centerX" id="doU-Tk-Jsl"/>
+                                <constraint firstItem="B8r-Dj-mMp" firstAttribute="centerX" secondItem="B1r-J1-kln" secondAttribute="centerX" constant="50" id="dxf-vh-QtO"/>
+                                <constraint firstItem="vfz-kO-yee" firstAttribute="top" secondItem="DX7-QQ-2Xg" secondAttribute="bottom" constant="30" id="fwl-iN-DvJ"/>
+                            </constraints>
+                        </view>
                     </subviews>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
-                        <constraint firstItem="OTK-wg-vFJ" firstAttribute="centerX" secondItem="thH-fe-iEd" secondAttribute="centerX" constant="-50" id="8Ju-fN-Y2Z"/>
-                        <constraint firstItem="DX7-QQ-2Xg" firstAttribute="top" secondItem="thH-fe-iEd" secondAttribute="top" constant="56" id="ABC-0A-ZNF"/>
-                        <constraint firstItem="lUI-8t-TXx" firstAttribute="centerX" secondItem="thH-fe-iEd" secondAttribute="centerX" id="B5N-p7-6xe"/>
-                        <constraint firstItem="vfz-kO-yee" firstAttribute="top" secondItem="DX7-QQ-2Xg" secondAttribute="bottom" constant="16" id="DI7-Rj-mgj"/>
+                        <constraint firstItem="B1r-J1-kln" firstAttribute="height" secondItem="thH-fe-iEd" secondAttribute="height" multiplier="0.5" id="6T8-fJ-4zN"/>
+                        <constraint firstItem="B1r-J1-kln" firstAttribute="width" secondItem="thH-fe-iEd" secondAttribute="width" multiplier="0.72" id="AxC-d3-Dqm"/>
+                        <constraint firstItem="B1r-J1-kln" firstAttribute="top" secondItem="thH-fe-iEd" secondAttribute="top" constant="20" id="NFZ-uV-0V7"/>
                         <constraint firstItem="zo5-wu-zxz" firstAttribute="top" secondItem="4Fy-6K-dx2" secondAttribute="bottom" constant="30" id="P83-tj-GfU"/>
                         <constraint firstItem="zo5-wu-zxz" firstAttribute="leading" secondItem="thH-fe-iEd" secondAttribute="leading" constant="16" id="QOf-oB-gpq"/>
                         <constraint firstAttribute="bottom" secondItem="zo5-wu-zxz" secondAttribute="bottom" constant="20" id="UsD-d6-E7x"/>
+                        <constraint firstItem="lUI-8t-TXx" firstAttribute="top" secondItem="thH-fe-iEd" secondAttribute="top" constant="-53" id="Y5R-SX-Y1q"/>
                         <constraint firstAttribute="trailing" secondItem="zo5-wu-zxz" secondAttribute="trailing" constant="16" id="Z0O-Bc-TB8"/>
-                        <constraint firstItem="DX7-QQ-2Xg" firstAttribute="centerX" secondItem="thH-fe-iEd" secondAttribute="centerX" id="dix-Ms-e8J"/>
-                        <constraint firstItem="DX7-QQ-2Xg" firstAttribute="top" secondItem="lUI-8t-TXx" secondAttribute="bottom" constant="30" id="e6U-Xj-e77"/>
-                        <constraint firstItem="B8r-Dj-mMp" firstAttribute="top" secondItem="vfz-kO-yee" secondAttribute="bottom" constant="16" id="ke2-sC-7JO"/>
-                        <constraint firstItem="OTK-wg-vFJ" firstAttribute="top" secondItem="vfz-kO-yee" secondAttribute="bottom" constant="16" id="lPc-gM-iLQ"/>
-                        <constraint firstItem="vfz-kO-yee" firstAttribute="centerX" secondItem="thH-fe-iEd" secondAttribute="centerX" id="pi5-a9-qbw"/>
+                        <constraint firstItem="lUI-8t-TXx" firstAttribute="centerX" secondItem="thH-fe-iEd" secondAttribute="centerX" id="eVX-JY-O1t"/>
                         <constraint firstAttribute="trailing" secondItem="4Fy-6K-dx2" secondAttribute="trailing" id="r45-g8-es9"/>
+                        <constraint firstItem="B1r-J1-kln" firstAttribute="centerX" secondItem="thH-fe-iEd" secondAttribute="centerX" id="rWQ-yJ-LCN"/>
                         <constraint firstItem="zo5-wu-zxz" firstAttribute="centerX" secondItem="thH-fe-iEd" secondAttribute="centerX" id="u9o-la-Ins"/>
-                        <constraint firstItem="lUI-8t-TXx" firstAttribute="top" secondItem="thH-fe-iEd" secondAttribute="top" constant="-53" id="vs3-85-Gob"/>
                         <constraint firstItem="4Fy-6K-dx2" firstAttribute="leading" secondItem="thH-fe-iEd" secondAttribute="leading" id="yem-TG-uRW"/>
-                        <constraint firstItem="B8r-Dj-mMp" firstAttribute="centerX" secondItem="thH-fe-iEd" secondAttribute="centerX" constant="50" id="zwJ-zn-StR"/>
                     </constraints>
                 </view>
             </subviews>

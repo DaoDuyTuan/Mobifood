@@ -34,6 +34,7 @@
                     </collectionViewFlowLayout>
                 </collectionView>
             </subviews>
+            <color key="backgroundColor" red="0.83741801979999997" green="0.83743780850000005" blue="0.83742713930000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="m38-UA-4kh" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="6El-hR-LiJ"/>
                 <constraint firstItem="m38-UA-4kh" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Cbi-bv-ujP"/>

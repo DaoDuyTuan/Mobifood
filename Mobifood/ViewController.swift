@@ -14,6 +14,7 @@ class ViewController: SlideMenuController {
     override func awakeFromNib() {
         self.mainViewController = HomeViewController(nibName: "HomeViewController", bundle: nil)
         self.leftViewController = MenuViewController(nibName: "MenuViewController", bundle: nil)
+        SlideMenuOptions.leftViewWidth = self.view.frame.width * 0.7
         super.awakeFromNib()
     }
     
