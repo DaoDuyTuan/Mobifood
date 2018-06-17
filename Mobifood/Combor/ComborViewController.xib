@@ -24,7 +24,7 @@
             <subviews>
                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="m38-UA-4kh">
                     <rect key="frame" x="0.0" y="29.5" width="414" height="529.5"/>
-                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <color key="backgroundColor" red="0.83741801979999997" green="0.83743780850000005" blue="0.83742713930000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <viewLayoutGuide key="safeArea" id="iSJ-xi-EX4"/>
                     <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="4Yg-ue-xp6">
                         <size key="itemSize" width="50" height="50"/>
@@ -34,7 +34,6 @@
                     </collectionViewFlowLayout>
                 </collectionView>
             </subviews>
-            <color key="backgroundColor" red="0.83741801979999997" green="0.83743780850000005" blue="0.83742713930000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="m38-UA-4kh" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="6El-hR-LiJ"/>
                 <constraint firstItem="m38-UA-4kh" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Cbi-bv-ujP"/>

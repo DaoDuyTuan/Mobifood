@@ -17,9 +17,9 @@ class CartViewController: UIViewController {
     @IBOutlet weak var MyCartHeader: UIView!
     @IBOutlet weak var btnBuy: UIButton!
     private var isCheckAll = false
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
         let cartCell = UINib(nibName: "CartTableViewCell", bundle: nil)
         self.cartTableView.register(cartCell, forCellReuseIdentifier: "cartCell")
     }
@@ -28,6 +28,7 @@ class CartViewController: UIViewController {
         self.lblIsSelectedAll.layer.cornerRadius = self.lblIsSelectedAll.frame.width/2
         self.lblIsSelectedAll.layer.borderWidth = 1.0
         self.lblIsSelectedAll.layer.borderColor = UIColor.black.cgColor
+        self.lblIsSelectedAll.layer.backgroundColor = UIColor.clear.cgColor
         Utils.setHeader(view: MyCartHeader)
         Utils.setHeader(view: footerCartView)
     }
@@ -36,26 +37,28 @@ class CartViewController: UIViewController {
         self.navigationController?.popViewController(animated: true)
     }
     @IBAction func buy(_ sender: Any) {
-        
+        let vc = CustormerViewController(nibName: "CustormerViewController", bundle: nil)
+        Utils.setAnimation(view: self.view)
+        self.present(vc, animated: true, completion: nil)
     }
     @IBAction func chooseAll(_ sender: UIButton) {
         guard CartViewController.cart.count > 0 else {
             return
         }
         
-//        if  !isCheckAll {
+        if  !isCheckAll {
             for index in 0...CartViewController.cart.count - 1 {
                 CartViewController.cart[index].isChecked = true
             }
             self.lblIsSelectedAll.layer.backgroundColor = UIColor.myGreen.cgColor
-//            self.isCheckAll = true
-//        } else {
-//            for index in 0...CartViewController.cart.count - 1 {
-//                CartViewController.cart[index].isChecked = false
-//            }
-//            self.lblIsSelectedAll.backgroundColor = UIColor.white
-//            self.isCheckAll = false
-//        }
+            self.isCheckAll = true
+        } else {
+            for index in 0...CartViewController.cart.count - 1 {
+                CartViewController.cart[index].isChecked = false
+            }
+            self.lblIsSelectedAll.layer.backgroundColor = UIColor.clear.cgColor
+            self.isCheckAll = false
+        }
         self.cartTableView.reloadData()
     }
 }

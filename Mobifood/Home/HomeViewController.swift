@@ -30,11 +30,11 @@ class HomeViewController: ButtonBarPagerTabStripViewController {
             case 0:
                 self.titleScreen.text = "COMBOR"
             case 1:
-                self.titleScreen.text = "DRINK"
+                self.titleScreen.text = "ĐỒ UỐNG"
             case 2:
-                self.titleScreen.text = "FRUIT"
+                self.titleScreen.text = "TRÁI CÂY"
             case 3:
-                self.titleScreen.text = "MAP"
+                self.titleScreen.text = "BẢN ĐỒ"
             default:
                 print("afdasdf")
             }
@@ -43,12 +43,12 @@ class HomeViewController: ButtonBarPagerTabStripViewController {
             
             if animated {
                 UIView.animate(withDuration: 0.1, animations: { () -> Void in
-                    newCell?.transform = CGAffineTransform(scaleX: 1.2, y: 1.2)
+                    newCell?.transform = CGAffineTransform(scaleX: 1.1, y: 1.1)
                     oldCell?.transform = CGAffineTransform(scaleX: 0.8, y: 0.8)
                 })
             }
             else {
-                newCell?.transform = CGAffineTransform(scaleX: 1.2, y: 1.1)
+                newCell?.transform = CGAffineTransform(scaleX: 1.1, y: 1.1)
                 oldCell?.transform = CGAffineTransform(scaleX: 0.8, y: 0.8)
             }
         }

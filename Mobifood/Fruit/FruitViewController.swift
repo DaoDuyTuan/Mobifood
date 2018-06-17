@@ -93,7 +93,8 @@ extension FruitViewController {
                 self.fruitCollectionView.reloadData()
                 SKActivityIndicator.dismiss()
             }.catch { error in
-                Utils.warning(title: "Warning", message: "Data error", addActionOk: true, addActionCancel: false)
+                print(error)
+                Utils.warning(title: "Thông báo", message: "Lỗi dữ liệu", addActionOk: true, addActionCancel: false)
         }
     }
     func loadImages(data: [[Product]], container: inout [[UIImageView]]) {

@@ -10,14 +10,14 @@ import UIKit
 import Reachability
 
 class NetworkManager: NSObject {
-    var reachability: Reachability!
+    var reachability: ReachabilityForMobiFood!
     // Create a singleton instance
     static let sharedInstance: NetworkManager = { return NetworkManager() }()
     override init() {
         super.init()
         
         // Initialise reachability
-        reachability = Reachability()!
+        reachability = ReachabilityForMobiFood()!
         
         // Register an observer for the network status
         NotificationCenter.default.addObserver(

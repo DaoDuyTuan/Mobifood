@@ -87,7 +87,7 @@
                             </variation>
                         </label>
                         <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xyQ-ei-L14">
-                            <rect key="frame" x="203" y="266" width="27" height="131"/>
+                            <rect key="frame" x="206" y="266" width="21" height="131"/>
                             <color key="backgroundColor" red="0.83741801979999997" green="0.83743780850000005" blue="0.83742713930000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <connections>
                                 <outlet property="dataSource" destination="-1" id="R5s-dA-Roi"/>
@@ -98,14 +98,14 @@
                             <rect key="frame" x="8" y="372.5" width="327" height="97.5"/>
                             <subviews>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dz5-H7-NWe">
-                                    <rect key="frame" x="16" y="24" width="295" height="48.5"/>
+                                    <rect key="frame" x="16" y="15" width="295" height="48"/>
                                     <color key="backgroundColor" red="1" green="0.57810515169999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                    <state key="normal" title="ADD TO CART">
+                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                    <state key="normal" title="THÊM VÀO GIỎ HÀNG">
                                         <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </state>
                                     <variation key="heightClass=regular-widthClass=regular">
-                                        <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="37"/>
                                     </variation>
                                     <connections>
                                         <action selector="addToCard:" destination="-1" eventType="touchUpInside" id="Ae0-87-Apw"/>
@@ -114,10 +114,9 @@
                             </subviews>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
-                                <constraint firstItem="Dz5-H7-NWe" firstAttribute="height" secondItem="8Vw-7J-Vd9" secondAttribute="height" multiplier="0.5" id="Bso-U1-MBd"/>
                                 <constraint firstAttribute="trailing" secondItem="Dz5-H7-NWe" secondAttribute="trailing" constant="16" id="FqH-Td-Xm6"/>
                                 <constraint firstItem="Dz5-H7-NWe" firstAttribute="leading" secondItem="8Vw-7J-Vd9" secondAttribute="leading" constant="16" id="WKG-eD-l08"/>
-                                <constraint firstItem="Dz5-H7-NWe" firstAttribute="centerY" secondItem="8Vw-7J-Vd9" secondAttribute="centerY" id="fQJ-X6-b5T"/>
+                                <constraint firstItem="Dz5-H7-NWe" firstAttribute="centerY" secondItem="8Vw-7J-Vd9" secondAttribute="centerY" constant="-10" id="fQJ-X6-b5T"/>
                             </constraints>
                         </view>
                     </subviews>
@@ -135,7 +134,7 @@
                         <constraint firstItem="05x-sW-Gf2" firstAttribute="width" secondItem="1lE-cp-sMm" secondAttribute="width" id="PsO-6m-PtU"/>
                         <constraint firstItem="05x-sW-Gf2" firstAttribute="top" secondItem="7aK-3v-6Ug" secondAttribute="bottom" constant="16" id="RGu-7Z-yZJ"/>
                         <constraint firstItem="67a-DQ-Qas" firstAttribute="centerX" secondItem="1lE-cp-sMm" secondAttribute="centerX" id="TYf-h0-zTI"/>
-                        <constraint firstItem="xyQ-ei-L14" firstAttribute="width" secondItem="1lE-cp-sMm" secondAttribute="width" multiplier="0.08" id="VVZ-Dc-sAW"/>
+                        <constraint firstItem="xyQ-ei-L14" firstAttribute="width" secondItem="1lE-cp-sMm" secondAttribute="width" multiplier="0.06" id="VVZ-Dc-sAW"/>
                         <constraint firstItem="7aK-3v-6Ug" firstAttribute="top" secondItem="1lE-cp-sMm" secondAttribute="top" constant="18" id="aya-gz-oaN"/>
                         <constraint firstItem="7aK-3v-6Ug" firstAttribute="centerX" secondItem="1lE-cp-sMm" secondAttribute="centerX" id="bEu-rz-9Bi"/>
                         <constraint firstAttribute="bottom" secondItem="8Vw-7J-Vd9" secondAttribute="bottom" id="dba-q4-ZP8"/>
@@ -157,6 +156,7 @@
                 <constraint firstItem="1lE-cp-sMm" firstAttribute="height" secondItem="vab-4U-L8g" secondAttribute="height" multiplier="0.73" constant="-16.909999999999968" id="WVV-Yu-0aG"/>
                 <constraint firstItem="3Q5-8v-RhW" firstAttribute="top" secondItem="vab-4U-L8g" secondAttribute="top" id="aZ6-OQ-CB5"/>
                 <constraint firstItem="3Q5-8v-RhW" firstAttribute="leading" secondItem="vab-4U-L8g" secondAttribute="leading" id="ae9-gh-aRg"/>
+                <constraint firstItem="Dz5-H7-NWe" firstAttribute="height" secondItem="vab-4U-L8g" secondAttribute="height" multiplier="0.072" id="gI8-eU-f16"/>
                 <constraint firstItem="3Q5-8v-RhW" firstAttribute="bottom" secondItem="vab-4U-L8g" secondAttribute="bottom" id="o3t-op-bJX"/>
             </constraints>
             <point key="canvasLocation" x="-160.5" y="-66.5"/>

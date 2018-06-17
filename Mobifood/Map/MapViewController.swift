@@ -59,7 +59,7 @@ class MapViewController: UIViewController, IndicatorInfoProvider {
                 SKActivityIndicator.dismiss()
             }.catch { error in
                 SKActivityIndicator.dismiss()
-                Utils.warning(title: "Warning", message: "Location error", addActionOk: true, addActionCancel: false)
+                Utils.warning(title: "Thông báo", message: "Lỗi vị trí", addActionOk: true, addActionCancel: false)
         }
     }
 }

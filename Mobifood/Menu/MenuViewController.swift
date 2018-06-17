@@ -14,7 +14,7 @@ class MenuViewController: UIViewController {
 
     @IBOutlet weak var menuTableView: UITableView!
     let images = ["ic_mycombor", "ic_policy", "ic_qr", "ic_settings", "ic_aboutus"]
-    let labels = ["My Combor", "Policy", "QR Code", "Setting", "About us"]
+    let labels = ["My Combor", "Chính sách", "QR Code", "Cài đặt", "Về chúng tôi"]
     override func viewDidLoad() {
         super.viewDidLoad()
         let nib = UINib(nibName: "menuTableViewCell", bundle: nil)

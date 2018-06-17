@@ -25,6 +25,7 @@ struct Variant: Codable {
     }
 }
 struct Product: Codable {
+    private var id: Float?
     private var title: String?
     private var variants: [Variant]?
     private var images: [Image]?
@@ -36,6 +37,12 @@ struct Product: Codable {
                 return check
             }
             return false
+        }
+    }
+    
+    var productID: Float {
+        get {
+            return id!
         }
     }
     
@@ -55,7 +62,6 @@ struct Product: Codable {
 
     }
     
-    
     var productPrice: (isNumber: Int, isString: String) {
         get {            
             return (self.productVariants.price, Utils.formmatCurrentcy(fommater: "", price: self.productVariants.price as NSNumber))
@@ -71,12 +77,10 @@ struct Product: Codable {
         }
     }
     
-    
-    
-    
     enum CodingProduct: String, CodingKey {
         case title
         case images
         case variants
+        case id
     }
 }

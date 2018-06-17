@@ -95,7 +95,7 @@ extension DrinkViewController {
             SKActivityIndicator.dismiss()
             
         }.catch { error in
-            Utils.warning(title: "Warning", message: "Data error", addActionOk: true, addActionCancel: false)
+            Utils.warning(title: "Thông báo", message: "Lỗi dữ liệu", addActionOk: true, addActionCancel: false)
         }
     }
 }
