@@ -26,8 +26,12 @@
                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_call_dialog" translatesAutoresizingMaskIntoConstraints="NO" id="lUI-8t-TXx">
                             <rect key="frame" x="127.5" y="-53" width="80" height="80"/>
                             <constraints>
-                                <constraint firstAttribute="width" constant="80" id="oOq-le-ZNa"/>
-                                <constraint firstAttribute="height" constant="80" id="q6U-qf-auW"/>
+                                <constraint firstAttribute="width" constant="80" id="oOq-le-ZNa">
+                                    <variation key="heightClass=regular-widthClass=regular" constant="120"/>
+                                </constraint>
+                                <constraint firstAttribute="height" constant="80" id="q6U-qf-auW">
+                                    <variation key="heightClass=regular-widthClass=regular" constant="120"/>
+                                </constraint>
                             </constraints>
                         </imageView>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Gọi cho chúng tôi để được tư vấn miễn phí về dịch vụ, tất cả các ngày trong tuần" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zo5-wu-zxz">
@@ -36,7 +40,7 @@
                             <color key="textColor" red="0.59215686274509804" green="0.59215686274509804" blue="0.59215686274509804" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <nil key="highlightedColor"/>
                             <variation key="heightClass=regular-widthClass=regular">
-                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
                             </variation>
                         </label>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4Fy-6K-dx2">
@@ -55,7 +59,7 @@
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
                                     <variation key="heightClass=regular-widthClass=regular">
-                                        <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                     </variation>
                                 </label>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B8r-Dj-mMp">
@@ -63,7 +67,7 @@
                                     <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                     <state key="normal" title="YES"/>
                                     <variation key="heightClass=regular-widthClass=regular">
-                                        <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="35"/>
                                     </variation>
                                     <connections>
                                         <action selector="call:" destination="iN0-l3-epB" eventType="touchUpInside" id="Mi3-8d-qI8"/>
@@ -74,7 +78,7 @@
                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                     <state key="normal" title="NO"/>
                                     <variation key="heightClass=regular-widthClass=regular">
-                                        <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="35"/>
                                     </variation>
                                     <connections>
                                         <action selector="cancel:" destination="iN0-l3-epB" eventType="touchUpInside" id="Kbj-ya-iGL"/>
@@ -86,7 +90,7 @@
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
                                     <variation key="heightClass=regular-widthClass=regular">
-                                        <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                     </variation>
                                 </label>
                             </subviews>
@@ -111,7 +115,9 @@
                         <constraint firstItem="zo5-wu-zxz" firstAttribute="top" secondItem="4Fy-6K-dx2" secondAttribute="bottom" constant="30" id="P83-tj-GfU"/>
                         <constraint firstItem="zo5-wu-zxz" firstAttribute="leading" secondItem="thH-fe-iEd" secondAttribute="leading" constant="16" id="QOf-oB-gpq"/>
                         <constraint firstAttribute="bottom" secondItem="zo5-wu-zxz" secondAttribute="bottom" constant="20" id="UsD-d6-E7x"/>
-                        <constraint firstItem="lUI-8t-TXx" firstAttribute="top" secondItem="thH-fe-iEd" secondAttribute="top" constant="-53" id="Y5R-SX-Y1q"/>
+                        <constraint firstItem="lUI-8t-TXx" firstAttribute="top" secondItem="thH-fe-iEd" secondAttribute="top" constant="-53" id="Y5R-SX-Y1q">
+                            <variation key="heightClass=regular-widthClass=regular" constant="-90"/>
+                        </constraint>
                         <constraint firstAttribute="trailing" secondItem="zo5-wu-zxz" secondAttribute="trailing" constant="16" id="Z0O-Bc-TB8"/>
                         <constraint firstItem="lUI-8t-TXx" firstAttribute="centerX" secondItem="thH-fe-iEd" secondAttribute="centerX" id="eVX-JY-O1t"/>
                         <constraint firstAttribute="trailing" secondItem="4Fy-6K-dx2" secondAttribute="trailing" id="r45-g8-es9"/>

@@ -7,7 +7,6 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
-        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -24,7 +23,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="213" height="312"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F8V-C8-Qfx">
-                                <rect key="frame" x="32" y="256" width="149" height="31"/>
+                                <rect key="frame" x="32" y="275.5" width="149" height="31"/>
                                 <color key="backgroundColor" red="1" green="0.57810515169999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="300.000">
@@ -38,11 +37,11 @@
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="LBw-TU-G2m">
-                                <rect key="frame" x="0.0" y="12" width="213" height="234"/>
+                                <rect key="frame" x="0.0" y="16" width="213" height="249.5"/>
                             </imageView>
                         </subviews>
                         <constraints>
-                            <constraint firstItem="LBw-TU-G2m" firstAttribute="top" secondItem="pea-lx-efQ" secondAttribute="top" constant="12" id="7Th-IA-AmR"/>
+                            <constraint firstItem="LBw-TU-G2m" firstAttribute="top" secondItem="pea-lx-efQ" secondAttribute="top" constant="16" id="7Th-IA-AmR"/>
                             <constraint firstAttribute="trailing" secondItem="LBw-TU-G2m" secondAttribute="trailing" id="JaV-rP-77b"/>
                             <constraint firstItem="LBw-TU-G2m" firstAttribute="leading" secondItem="pea-lx-efQ" secondAttribute="leading" id="SJb-Yc-ZBc"/>
                             <constraint firstItem="F8V-C8-Qfx" firstAttribute="centerX" secondItem="pea-lx-efQ" secondAttribute="centerX" id="hIx-V3-got"/>
@@ -54,13 +53,12 @@
             <constraints>
                 <constraint firstItem="F8V-C8-Qfx" firstAttribute="width" secondItem="gTV-IL-0wX" secondAttribute="width" multiplier="0.7" id="BdQ-AU-rLq"/>
                 <constraint firstAttribute="trailing" secondItem="pea-lx-efQ" secondAttribute="trailing" id="X6s-HI-FEd"/>
-                <constraint firstItem="LBw-TU-G2m" firstAttribute="height" secondItem="gTV-IL-0wX" secondAttribute="height" multiplier="0.75" id="ZgH-NM-UbS"/>
+                <constraint firstItem="LBw-TU-G2m" firstAttribute="height" secondItem="gTV-IL-0wX" secondAttribute="height" multiplier="0.8" id="ZgH-NM-UbS"/>
                 <constraint firstItem="pea-lx-efQ" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="ZxN-bA-ak6"/>
                 <constraint firstItem="pea-lx-efQ" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="fW8-Uy-pai"/>
                 <constraint firstAttribute="bottom" secondItem="pea-lx-efQ" secondAttribute="bottom" id="mgH-0j-B6N"/>
                 <constraint firstItem="F8V-C8-Qfx" firstAttribute="height" secondItem="gTV-IL-0wX" secondAttribute="height" multiplier="0.1" id="yKY-q1-K6L"/>
             </constraints>
-            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <size key="customSize" width="213" height="312"/>
             <connections>
                 <outlet property="btnBuyItem" destination="F8V-C8-Qfx" id="EYt-WS-q9s"/>

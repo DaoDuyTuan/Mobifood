@@ -22,7 +22,7 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <tableView clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" alwaysBounceVertical="YES" scrollEnabled="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="xrk-IG-Ohm">
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="xrk-IG-Ohm">
                     <rect key="frame" x="0.0" y="130" width="375" height="537"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <connections>
@@ -36,14 +36,18 @@
                         <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mobifood" translatesAutoresizingMaskIntoConstraints="NO" id="LUO-aZ-tBA">
                             <rect key="frame" x="42" y="56" width="199" height="28"/>
                             <constraints>
-                                <constraint firstAttribute="height" constant="28" id="lNP-5u-BUA"/>
+                                <constraint firstAttribute="height" constant="28" id="lNP-5u-BUA">
+                                    <variation key="heightClass=regular-widthClass=regular" constant="50"/>
+                                </constraint>
                             </constraints>
                         </imageView>
                     </subviews>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
                         <constraint firstItem="LUO-aZ-tBA" firstAttribute="centerY" secondItem="oSa-Zw-cBQ" secondAttribute="centerY" constant="5" id="Mrf-Dj-diL"/>
-                        <constraint firstItem="LUO-aZ-tBA" firstAttribute="width" secondItem="oSa-Zw-cBQ" secondAttribute="width" multiplier="0.49" constant="15.25" id="iEe-jq-JRv"/>
+                        <constraint firstItem="LUO-aZ-tBA" firstAttribute="width" secondItem="oSa-Zw-cBQ" secondAttribute="width" multiplier="0.49" constant="15.25" id="iEe-jq-JRv">
+                            <variation key="heightClass=regular-widthClass=regular" constant="100"/>
+                        </constraint>
                         <constraint firstItem="LUO-aZ-tBA" firstAttribute="leading" secondItem="oSa-Zw-cBQ" secondAttribute="leading" constant="42" id="waH-rl-gfJ"/>
                     </constraints>
                 </view>

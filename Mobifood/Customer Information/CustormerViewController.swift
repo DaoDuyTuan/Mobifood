@@ -10,6 +10,9 @@ import UIKit
 
 class CustormerViewController: UIViewController {
 
+    
+    @IBOutlet weak var heightScrollView: NSLayoutConstraint!
+    @IBOutlet var viewContainer: UIView!
     @IBOutlet weak var btnConfirm: UIButton!
     @IBOutlet var inforCollectionTF: [UITextField]!
     override func viewDidLoad() {
@@ -28,6 +31,11 @@ class CustormerViewController: UIViewController {
         self.dismiss(animated: true, completion: nil)
     }
     
+    override func viewDidLayoutSubviews() {
+        if UIScreen.main.bounds.height > 1000 {
+            self.heightScrollView.constant = UIScreen.main.bounds.height + 100
+        }
+    }
     @IBAction func confirm(_ sender: Any) {
         for info in self.inforCollectionTF {
             if (info.text?.trimmingCharacters(in: .whitespacesAndNewlines).elementsEqual(""))! {

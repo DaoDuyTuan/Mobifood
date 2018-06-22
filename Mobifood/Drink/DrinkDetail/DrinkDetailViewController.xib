@@ -65,7 +65,7 @@
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                             <variation key="heightClass=regular-widthClass=regular">
-                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
                             </variation>
                         </label>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="40.000đ" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="67a-DQ-Qas">
@@ -74,21 +74,26 @@
                             <color key="textColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <nil key="highlightedColor"/>
                             <variation key="heightClass=regular-widthClass=regular">
-                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
                             </variation>
                         </label>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Số lượng:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IeS-xg-PT3">
-                            <rect key="frame" x="50" y="321" width="96" height="21.5"/>
+                            <rect key="frame" x="50" y="321" width="77" height="21.5"/>
                             <fontDescription key="fontDescription" type="system" pointSize="18"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                             <variation key="heightClass=regular-widthClass=regular">
-                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
                             </variation>
                         </label>
                         <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xyQ-ei-L14">
-                            <rect key="frame" x="206" y="266" width="21" height="131"/>
+                            <rect key="frame" x="201.5" y="266" width="30" height="131"/>
                             <color key="backgroundColor" red="0.83741801979999997" green="0.83743780850000005" blue="0.83742713930000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="30" id="UDD-Jt-wrh">
+                                    <variation key="heightClass=regular-widthClass=regular" constant="50"/>
+                                </constraint>
+                            </constraints>
                             <connections>
                                 <outlet property="dataSource" destination="-1" id="R5s-dA-Roi"/>
                                 <outlet property="delegate" destination="-1" id="Bl9-5F-ssI"/>
@@ -105,7 +110,7 @@
                                         <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </state>
                                     <variation key="heightClass=regular-widthClass=regular">
-                                        <fontDescription key="fontDescription" type="system" pointSize="37"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                     </variation>
                                     <connections>
                                         <action selector="addToCard:" destination="-1" eventType="touchUpInside" id="Ae0-87-Apw"/>
@@ -130,11 +135,12 @@
                         <constraint firstItem="05x-sW-Gf2" firstAttribute="centerX" secondItem="1lE-cp-sMm" secondAttribute="centerX" id="Ezj-ky-Dvm"/>
                         <constraint firstItem="8Vw-7J-Vd9" firstAttribute="top" secondItem="IeS-xg-PT3" secondAttribute="bottom" constant="30" id="H2C-GN-QbF"/>
                         <constraint firstItem="67a-DQ-Qas" firstAttribute="top" secondItem="05x-sW-Gf2" secondAttribute="bottom" constant="16" id="Nzn-JX-bnS"/>
-                        <constraint firstItem="IeS-xg-PT3" firstAttribute="leading" secondItem="1lE-cp-sMm" secondAttribute="leading" constant="50" id="OOe-1b-6lo"/>
+                        <constraint firstItem="IeS-xg-PT3" firstAttribute="leading" secondItem="1lE-cp-sMm" secondAttribute="leading" constant="50" id="OOe-1b-6lo">
+                            <variation key="heightClass=regular-widthClass=regular" constant="150"/>
+                        </constraint>
                         <constraint firstItem="05x-sW-Gf2" firstAttribute="width" secondItem="1lE-cp-sMm" secondAttribute="width" id="PsO-6m-PtU"/>
                         <constraint firstItem="05x-sW-Gf2" firstAttribute="top" secondItem="7aK-3v-6Ug" secondAttribute="bottom" constant="16" id="RGu-7Z-yZJ"/>
                         <constraint firstItem="67a-DQ-Qas" firstAttribute="centerX" secondItem="1lE-cp-sMm" secondAttribute="centerX" id="TYf-h0-zTI"/>
-                        <constraint firstItem="xyQ-ei-L14" firstAttribute="width" secondItem="1lE-cp-sMm" secondAttribute="width" multiplier="0.06" id="VVZ-Dc-sAW"/>
                         <constraint firstItem="7aK-3v-6Ug" firstAttribute="top" secondItem="1lE-cp-sMm" secondAttribute="top" constant="18" id="aya-gz-oaN"/>
                         <constraint firstItem="7aK-3v-6Ug" firstAttribute="centerX" secondItem="1lE-cp-sMm" secondAttribute="centerX" id="bEu-rz-9Bi"/>
                         <constraint firstAttribute="bottom" secondItem="8Vw-7J-Vd9" secondAttribute="bottom" id="dba-q4-ZP8"/>
@@ -143,7 +149,6 @@
                         <constraint firstItem="VXP-OD-bdJ" firstAttribute="top" secondItem="1lE-cp-sMm" secondAttribute="top" constant="4" id="j20-4f-g38"/>
                         <constraint firstItem="IeS-xg-PT3" firstAttribute="top" secondItem="67a-DQ-Qas" secondAttribute="bottom" constant="20" id="o1l-ZA-VT0"/>
                         <constraint firstItem="xyQ-ei-L14" firstAttribute="centerX" secondItem="1lE-cp-sMm" secondAttribute="centerX" constant="45" id="qYP-dx-gEg"/>
-                        <constraint firstItem="IeS-xg-PT3" firstAttribute="width" secondItem="1lE-cp-sMm" secondAttribute="width" multiplier="0.28" id="sft-KP-bum"/>
                     </constraints>
                 </view>
             </subviews>

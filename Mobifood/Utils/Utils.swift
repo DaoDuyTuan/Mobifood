@@ -126,6 +126,12 @@ class Utils: NSObject {
         }
 
     }
+    
+    static var loadingImage: UIImage {
+        let img = UIImageView(image: UIImage(named: "loading"))
+        img.contentMode = .scaleAspectFit
+        return img.image!
+    }
 }
 
 extension UIColor {

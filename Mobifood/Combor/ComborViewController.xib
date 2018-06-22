@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina4_7" orientation="portrait">
+    <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -19,13 +19,12 @@
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
-            <rect key="frame" x="0.0" y="0.0" width="414" height="588"/>
+            <rect key="frame" x="0.0" y="0.0" width="375" height="588"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="m38-UA-4kh">
-                    <rect key="frame" x="0.0" y="29.5" width="414" height="529.5"/>
-                    <color key="backgroundColor" red="0.83741801979999997" green="0.83743780850000005" blue="0.83742713930000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                    <viewLayoutGuide key="safeArea" id="iSJ-xi-EX4"/>
+                    <rect key="frame" x="0.0" y="29.666666666666686" width="375" height="529.33333333333326"/>
+                    <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="4Yg-ue-xp6">
                         <size key="itemSize" width="50" height="50"/>
                         <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -34,6 +33,7 @@
                     </collectionViewFlowLayout>
                 </collectionView>
             </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
                 <constraint firstItem="m38-UA-4kh" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="6El-hR-LiJ"/>
                 <constraint firstItem="m38-UA-4kh" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Cbi-bv-ujP"/>
@@ -41,7 +41,8 @@
                 <constraint firstAttribute="trailing" secondItem="m38-UA-4kh" secondAttribute="trailing" id="lxh-ya-zI0"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-            <point key="canvasLocation" x="26.5" y="13.5"/>
+            <viewLayoutGuide key="safeArea" id="kqI-ZE-kKf"/>
+            <point key="canvasLocation" x="26" y="13"/>
         </view>
     </objects>
 </document>

@@ -24,9 +24,13 @@ class DrinkDetailViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        for index in 1...50 {
+        for index in  stride(from: 50, through: 1, by: -1) {
             self.images.append("\(index)")
         }
+        for index in  stride(from: 50, through: 1, by: -1) {
+            self.images.append("\(index)")
+        }
+        numberPickerView.selectRow(images.count / 2 - 1, inComponent: 0, animated: true)
         
         self.btnClose.layer.cornerRadius = self.btnClose.frame.width/2
         self.btnClose.layer.masksToBounds = true
@@ -86,13 +90,14 @@ extension DrinkDetailViewController: UIPickerViewDelegate, UIPickerViewDataSourc
     }
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return self.images[row]
+        return String(row % 10)
     }
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         self.newPrice = (Int(images[row])! * drinkDetail.productVariants.price)
         self.newAmount = Int(images[row])!
         self.lblPrice.text = "\(Utils.formmatCurrentcy(fommater: "", price: newPrice as NSNumber))"
+        
     }
     func pickerView(_ pickerView: UIPickerView, viewForRow row: Int, forComponent component: Int, reusing view: UIView?) -> UIView {
         let view = UIView()

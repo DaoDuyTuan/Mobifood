@@ -47,12 +47,8 @@
 		186095ED20C66FBE00EBD26F /* menuTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 186095EB20C66FBE00EBD26F /* menuTableViewCell.xib */; };
 		186095F020C77D8500EBD26F /* Global.swift in Sources */ = {isa = PBXBuildFile; fileRef = 186095EF20C77D8500EBD26F /* Global.swift */; };
 		186095F220C787E000EBD26F /* MenuViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 186095F120C787E000EBD26F /* MenuViewController.xib */; };
-		186095F620C78AE300EBD26F /* DrinkTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 186095F420C78AE300EBD26F /* DrinkTableViewCell.swift */; };
-		186095F720C78AE300EBD26F /* DrinkTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 186095F520C78AE300EBD26F /* DrinkTableViewCell.xib */; };
 		186095FB20C78BE400EBD26F /* DrinkCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 186095F920C78BE400EBD26F /* DrinkCollectionViewCell.swift */; };
 		186095FC20C78BE400EBD26F /* DrinkCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 186095FA20C78BE400EBD26F /* DrinkCollectionViewCell.xib */; };
-		186095FF20C7A41C00EBD26F /* DrinkDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 186095FE20C7A41C00EBD26F /* DrinkDetailView.swift */; };
-		1860960120C7A42900EBD26F /* DrinkDetailView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1860960020C7A42900EBD26F /* DrinkDetailView.xib */; };
 		1860960520C7D81E00EBD26F /* DrinkDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1860960320C7D81E00EBD26F /* DrinkDetailViewController.swift */; };
 		1860960620C7D81E00EBD26F /* DrinkDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1860960420C7D81E00EBD26F /* DrinkDetailViewController.xib */; };
 		18704EFF20C8373B000F0CFD /* ContactView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18704EFE20C8373B000F0CFD /* ContactView.swift */; };
@@ -67,13 +63,13 @@
 		1894FCFB20C9216C0020F7C1 /* ComborDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1894FCF920C9216C0020F7C1 /* ComborDetailViewController.xib */; };
 		1894FCFE20C926CB0020F7C1 /* ComborDetailCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1894FCFC20C926CB0020F7C1 /* ComborDetailCellTableViewCell.swift */; };
 		1894FCFF20C926CB0020F7C1 /* ComborDetailCellTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1894FCFD20C926CB0020F7C1 /* ComborDetailCellTableViewCell.xib */; };
-		1894FD0220C92E6A0020F7C1 /* ComborDetailDynamicTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1894FD0020C92E6A0020F7C1 /* ComborDetailDynamicTableViewCell.swift */; };
-		1894FD0320C92E6A0020F7C1 /* ComborDetailDynamicTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1894FD0120C92E6A0020F7C1 /* ComborDetailDynamicTableViewCell.xib */; };
 		1894FD0620C92EC90020F7C1 /* ComborNameCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1894FD0420C92EC90020F7C1 /* ComborNameCollectionViewCell.swift */; };
 		1894FD0720C92EC90020F7C1 /* ComborNameCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1894FD0520C92EC90020F7C1 /* ComborNameCollectionViewCell.xib */; };
 		1894FD0C20C931E60020F7C1 /* ComborDynamicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1894FD0A20C931E60020F7C1 /* ComborDynamicViewController.swift */; };
 		1894FD0D20C931E60020F7C1 /* ComborDynamicViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1894FD0B20C931E60020F7C1 /* ComborDynamicViewController.xib */; };
 		18BD3AC720C5A3F2002DCE22 /* iCarousel.m in Sources */ = {isa = PBXBuildFile; fileRef = 18BD3AC620C5A3F2002DCE22 /* iCarousel.m */; };
+		18F7278120D61D0B00D9722D /* CustormerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F7277F20D61D0B00D9722D /* CustormerViewController.swift */; };
+		18F7278220D61D0B00D9722D /* CustormerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18F7278020D61D0B00D9722D /* CustormerViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -119,12 +115,8 @@
 		186095EB20C66FBE00EBD26F /* menuTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = menuTableViewCell.xib; sourceTree = "<group>"; };
 		186095EF20C77D8500EBD26F /* Global.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Global.swift; sourceTree = "<group>"; };
 		186095F120C787E000EBD26F /* MenuViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MenuViewController.xib; sourceTree = "<group>"; };
-		186095F420C78AE300EBD26F /* DrinkTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinkTableViewCell.swift; sourceTree = "<group>"; };
-		186095F520C78AE300EBD26F /* DrinkTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DrinkTableViewCell.xib; sourceTree = "<group>"; };
 		186095F920C78BE400EBD26F /* DrinkCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinkCollectionViewCell.swift; sourceTree = "<group>"; };
 		186095FA20C78BE400EBD26F /* DrinkCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DrinkCollectionViewCell.xib; sourceTree = "<group>"; };
-		186095FE20C7A41C00EBD26F /* DrinkDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinkDetailView.swift; sourceTree = "<group>"; };
-		1860960020C7A42900EBD26F /* DrinkDetailView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DrinkDetailView.xib; sourceTree = "<group>"; };
 		1860960320C7D81E00EBD26F /* DrinkDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinkDetailViewController.swift; sourceTree = "<group>"; };
 		1860960420C7D81E00EBD26F /* DrinkDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DrinkDetailViewController.xib; sourceTree = "<group>"; };
 		18704EFE20C8373B000F0CFD /* ContactView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactView.swift; sourceTree = "<group>"; };
@@ -139,8 +131,6 @@
 		1894FCF920C9216C0020F7C1 /* ComborDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ComborDetailViewController.xib; sourceTree = "<group>"; };
 		1894FCFC20C926CB0020F7C1 /* ComborDetailCellTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComborDetailCellTableViewCell.swift; sourceTree = "<group>"; };
 		1894FCFD20C926CB0020F7C1 /* ComborDetailCellTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ComborDetailCellTableViewCell.xib; sourceTree = "<group>"; };
-		1894FD0020C92E6A0020F7C1 /* ComborDetailDynamicTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComborDetailDynamicTableViewCell.swift; sourceTree = "<group>"; };
-		1894FD0120C92E6A0020F7C1 /* ComborDetailDynamicTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ComborDetailDynamicTableViewCell.xib; sourceTree = "<group>"; };
 		1894FD0420C92EC90020F7C1 /* ComborNameCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComborNameCollectionViewCell.swift; sourceTree = "<group>"; };
 		1894FD0520C92EC90020F7C1 /* ComborNameCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ComborNameCollectionViewCell.xib; sourceTree = "<group>"; };
 		1894FD0A20C931E60020F7C1 /* ComborDynamicViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComborDynamicViewController.swift; sourceTree = "<group>"; };
@@ -148,6 +138,8 @@
 		18BD3AC420C5A3F1002DCE22 /* Mobifood-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Mobifood-Bridging-Header.h"; sourceTree = "<group>"; };
 		18BD3AC520C5A3F2002DCE22 /* iCarousel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iCarousel.h; sourceTree = "<group>"; };
 		18BD3AC620C5A3F2002DCE22 /* iCarousel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iCarousel.m; sourceTree = "<group>"; };
+		18F7277F20D61D0B00D9722D /* CustormerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustormerViewController.swift; sourceTree = "<group>"; };
+		18F7278020D61D0B00D9722D /* CustormerViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustormerViewController.xib; sourceTree = "<group>"; };
 		3429BEC4352140C1F6CF9971 /* Pods-Mobifood.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mobifood.release.xcconfig"; path = "Pods/Target Support Files/Pods-Mobifood/Pods-Mobifood.release.xcconfig"; sourceTree = "<group>"; };
 		5D97B9177392060FABA77296 /* Pods-Mobifood.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mobifood.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Mobifood/Pods-Mobifood.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -239,6 +231,7 @@
 		1804A09120C4E56E00E2C9DF /* Mobifood */ = {
 			isa = PBXGroup;
 			children = (
+				18F7277E20D61CCD00D9722D /* Customer Information */,
 				1804A0C220C52BB500E2C9DF /* Utils */,
 				1802464820CA803F00B343A6 /* Service */,
 				1802464520CA7D9F00B343A6 /* Model */,
@@ -289,7 +282,6 @@
 			children = (
 				186095FD20C7A3A100EBD26F /* DrinkDetail */,
 				186095F820C78BBD00EBD26F /* DrinkCollectionCell */,
-				186095F320C78A5900EBD26F /* DrinkTableCell */,
 				1804A0AD20C5237900E2C9DF /* DrinkViewController.swift */,
 				1804A0AE20C5237900E2C9DF /* DrinkViewController.xib */,
 			);
@@ -375,15 +367,6 @@
 			path = Menu;
 			sourceTree = "<group>";
 		};
-		186095F320C78A5900EBD26F /* DrinkTableCell */ = {
-			isa = PBXGroup;
-			children = (
-				186095F420C78AE300EBD26F /* DrinkTableViewCell.swift */,
-				186095F520C78AE300EBD26F /* DrinkTableViewCell.xib */,
-			);
-			path = DrinkTableCell;
-			sourceTree = "<group>";
-		};
 		186095F820C78BBD00EBD26F /* DrinkCollectionCell */ = {
 			isa = PBXGroup;
 			children = (
@@ -396,8 +379,6 @@
 		186095FD20C7A3A100EBD26F /* DrinkDetail */ = {
 			isa = PBXGroup;
 			children = (
-				186095FE20C7A41C00EBD26F /* DrinkDetailView.swift */,
-				1860960020C7A42900EBD26F /* DrinkDetailView.xib */,
 				1860960320C7D81E00EBD26F /* DrinkDetailViewController.swift */,
 				1860960420C7D81E00EBD26F /* DrinkDetailViewController.xib */,
 			);
@@ -464,14 +445,21 @@
 		1894FD0920C931B00020F7C1 /* ComborDynamic */ = {
 			isa = PBXGroup;
 			children = (
-				1894FD0020C92E6A0020F7C1 /* ComborDetailDynamicTableViewCell.swift */,
-				1894FD0120C92E6A0020F7C1 /* ComborDetailDynamicTableViewCell.xib */,
 				1894FD0420C92EC90020F7C1 /* ComborNameCollectionViewCell.swift */,
 				1894FD0520C92EC90020F7C1 /* ComborNameCollectionViewCell.xib */,
 				1894FD0A20C931E60020F7C1 /* ComborDynamicViewController.swift */,
 				1894FD0B20C931E60020F7C1 /* ComborDynamicViewController.xib */,
 			);
 			path = ComborDynamic;
+			sourceTree = "<group>";
+		};
+		18F7277E20D61CCD00D9722D /* Customer Information */ = {
+			isa = PBXGroup;
+			children = (
+				18F7277F20D61D0B00D9722D /* CustormerViewController.swift */,
+				18F7278020D61D0B00D9722D /* CustormerViewController.xib */,
+			);
+			path = "Customer Information";
 			sourceTree = "<group>";
 		};
 		2D15924F64A62C9DEAB0E4BB /* Pods */ = {
@@ -555,7 +543,7 @@
 			files = (
 				186095ED20C66FBE00EBD26F /* menuTableViewCell.xib in Resources */,
 				1804A09D20C4E56F00E2C9DF /* LaunchScreen.storyboard in Resources */,
-				186095F720C78AE300EBD26F /* DrinkTableViewCell.xib in Resources */,
+				18F7278220D61D0B00D9722D /* CustormerViewController.xib in Resources */,
 				1804A0B020C5237900E2C9DF /* DrinkViewController.xib in Resources */,
 				18704F0120C83744000F0CFD /* ContactView.xib in Resources */,
 				1860960620C7D81E00EBD26F /* DrinkDetailViewController.xib in Resources */,
@@ -566,12 +554,10 @@
 				1804A09A20C4E56F00E2C9DF /* Assets.xcassets in Resources */,
 				18704F0720C8418D000F0CFD /* CartViewController.xib in Resources */,
 				1802465920CAD6AA00B343A6 /* MyComborTableViewCell.xib in Resources */,
-				1894FD0320C92E6A0020F7C1 /* ComborDetailDynamicTableViewCell.xib in Resources */,
 				1804A0B520C523BD00E2C9DF /* FruitViewController.xib in Resources */,
 				1894FD0D20C931E60020F7C1 /* ComborDynamicViewController.xib in Resources */,
 				1894FCFF20C926CB0020F7C1 /* ComborDetailCellTableViewCell.xib in Resources */,
 				186095F220C787E000EBD26F /* MenuViewController.xib in Resources */,
-				1860960120C7A42900EBD26F /* DrinkDetailView.xib in Resources */,
 				18321E9220C7FF9700BA10B2 /* AboutUsViewController.xib in Resources */,
 				1804A0BA20C523E600E2C9DF /* MapViewController.xib in Resources */,
 				1804A09820C4E56E00E2C9DF /* Main.storyboard in Resources */,
@@ -676,7 +662,6 @@
 				18704EFF20C8373B000F0CFD /* ContactView.swift in Sources */,
 				1802465820CAD6AA00B343A6 /* MyComborTableViewCell.swift in Sources */,
 				186095E420C63A0400EBD26F /* UPCarouselFlowLayout.swift in Sources */,
-				186095FF20C7A41C00EBD26F /* DrinkDetailView.swift in Sources */,
 				18BD3AC720C5A3F2002DCE22 /* iCarousel.m in Sources */,
 				1804A09520C4E56E00E2C9DF /* ViewController.swift in Sources */,
 				1804A0C420C52BEF00E2C9DF /* Utils.swift in Sources */,
@@ -693,9 +678,7 @@
 				1894FD0C20C931E60020F7C1 /* ComborDynamicViewController.swift in Sources */,
 				1804A0B420C523BD00E2C9DF /* FruitViewController.swift in Sources */,
 				1804A0C020C5245600E2C9DF /* ComborViewController.swift in Sources */,
-				1894FD0220C92E6A0020F7C1 /* ComborDetailDynamicTableViewCell.swift in Sources */,
 				18704F0620C8418D000F0CFD /* CartViewController.swift in Sources */,
-				186095F620C78AE300EBD26F /* DrinkTableViewCell.swift in Sources */,
 				1802464E20CA987900B343A6 /* SettingViewController.swift in Sources */,
 				1804A0B920C523E600E2C9DF /* MapViewController.swift in Sources */,
 				187509A220CBDB76004B0C56 /* AlertAddSuccessFull.swift in Sources */,
@@ -703,6 +686,7 @@
 				186095FB20C78BE400EBD26F /* DrinkCollectionViewCell.swift in Sources */,
 				1802465320CAD4FE00B343A6 /* MyComborViewController.swift in Sources */,
 				1894FD0620C92EC90020F7C1 /* ComborNameCollectionViewCell.swift in Sources */,
+				18F7278120D61D0B00D9722D /* CustormerViewController.swift in Sources */,
 				1848904A20CD1A1400E78A23 /* NetWorkManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -852,6 +836,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = KNPSWR43QN;
 				INFOPLIST_FILE = Mobifood/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -874,6 +859,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = KNPSWR43QN;
 				INFOPLIST_FILE = Mobifood/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

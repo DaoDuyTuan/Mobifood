@@ -15,7 +15,7 @@ class ComborDetailCellTableViewCell: UITableViewCell {
     @IBOutlet weak var lblComborName: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
-        self.lblComborName.layer.cornerRadius = 15.0
+        self.lblComborName.layer.cornerRadius = 5.0
         self.lblComborName.layer.masksToBounds = true
         
         self.btnDelete.layer.cornerRadius = self.btnDelete.frame.width/2

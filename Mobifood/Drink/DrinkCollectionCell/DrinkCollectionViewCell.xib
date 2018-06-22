@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina5_5" orientation="portrait">
+    <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -20,46 +20,53 @@
                 <rect key="frame" x="0.0" y="0.0" width="186" height="285"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="OWI-ow-btZ">
-                        <rect key="frame" x="15" y="16" width="157" height="142.66666666666666"/>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="OWI-ow-btZ">
+                        <rect key="frame" x="24" y="12" width="139.5" height="127.5"/>
                         <constraints>
                             <constraint firstAttribute="width" secondItem="OWI-ow-btZ" secondAttribute="height" multiplier="1.1:1" id="PzD-5X-S7b"/>
                         </constraints>
                     </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nước ép táo" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZFQ-FF-q0D">
-                        <rect key="frame" x="0.6666666666666714" y="170.66666666666666" width="186" height="18"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nước ép táo" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZFQ-FF-q0D">
+                        <rect key="frame" x="8" y="152" width="170" height="21.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                         <variation key="heightClass=regular-widthClass=regular">
-                            <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="30"/>
                         </variation>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="20.000đ" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wO0-Gc-mGw">
-                        <rect key="frame" x="64.666666666666671" y="200.66666666666666" width="58" height="18"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <rect key="frame" x="61" y="183" width="65" height="20.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <color key="textColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <nil key="highlightedColor"/>
                         <variation key="heightClass=regular-widthClass=regular">
-                            <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="30"/>
                         </variation>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Size: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RaL-Lc-eAs">
-                        <rect key="frame" x="48" y="230.66666666666666" width="37" height="18"/>
+                        <rect key="frame" x="45" y="213.5" width="37" height="20"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="20" id="Lp6-0f-hWX">
+                                <variation key="heightClass=regular-widthClass=regular" constant="30"/>
+                            </constraint>
+                        </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                         <variation key="heightClass=regular-widthClass=regular">
-                            <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="30"/>
                         </variation>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="M" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7sC-Dr-eIf">
-                        <rect key="frame" x="92" y="232.33333333333334" width="62" height="15.666666666666657"/>
+                        <rect key="frame" x="92" y="215" width="62" height="18"/>
                         <color key="backgroundColor" red="0.75406885150000003" green="0.75408679249999999" blue="0.75407713649999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstAttribute="width" constant="62" id="gMN-3b-hXW"/>
+                            <constraint firstAttribute="width" constant="62" id="gMN-3b-hXW">
+                                <variation key="heightClass=regular-widthClass=regular" constant="120"/>
+                            </constraint>
                         </constraints>
-                        <fontDescription key="fontDescription" type="boldSystem" pointSize="13"/>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                         <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <nil key="highlightedColor"/>
                         <variation key="heightClass=regular-widthClass=regular">
@@ -69,20 +76,37 @@
                 </subviews>
             </view>
             <constraints>
-                <constraint firstItem="RaL-Lc-eAs" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" constant="-27" id="0pr-l2-8WP"/>
-                <constraint firstItem="ZFQ-FF-q0D" firstAttribute="width" secondItem="gTV-IL-0wX" secondAttribute="width" id="1I3-K0-lbs"/>
+                <constraint firstItem="ZFQ-FF-q0D" firstAttribute="width" secondItem="gTV-IL-0wX" secondAttribute="width" multiplier="0.92" id="1I3-K0-lbs"/>
                 <constraint firstItem="OWI-ow-btZ" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="1ki-wN-Lp0"/>
                 <constraint firstItem="ZFQ-FF-q0D" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="2nN-fx-MWY"/>
-                <constraint firstItem="OWI-ow-btZ" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="16" id="CbT-Xt-85o"/>
-                <constraint firstItem="RaL-Lc-eAs" firstAttribute="top" secondItem="wO0-Gc-mGw" secondAttribute="bottom" constant="12" id="Deb-Tm-3cK"/>
-                <constraint firstItem="ZFQ-FF-q0D" firstAttribute="top" secondItem="OWI-ow-btZ" secondAttribute="bottom" constant="12" id="JJp-Mp-Rxd"/>
+                <constraint firstItem="OWI-ow-btZ" firstAttribute="width" secondItem="gTV-IL-0wX" secondAttribute="width" multiplier="0.75" id="34I-Os-xC9">
+                    <variation key="heightClass=regular-widthClass=regular" constant="-40"/>
+                </constraint>
+                <constraint firstItem="OWI-ow-btZ" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="12" id="CbT-Xt-85o"/>
+                <constraint firstItem="RaL-Lc-eAs" firstAttribute="top" secondItem="wO0-Gc-mGw" secondAttribute="bottom" constant="10" id="Deb-Tm-3cK">
+                    <variation key="heightClass=regular-widthClass=regular" constant="14"/>
+                </constraint>
+                <constraint firstItem="ZFQ-FF-q0D" firstAttribute="top" secondItem="OWI-ow-btZ" secondAttribute="bottom" constant="12" id="JJp-Mp-Rxd">
+                    <variation key="heightClass=regular-widthClass=regular" constant="16"/>
+                </constraint>
                 <constraint firstItem="7sC-Dr-eIf" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" constant="30" id="Jts-iv-QuO"/>
-                <constraint firstItem="wO0-Gc-mGw" firstAttribute="top" secondItem="ZFQ-FF-q0D" secondAttribute="bottom" constant="12" id="P6x-Ym-s4A"/>
+                <constraint firstItem="wO0-Gc-mGw" firstAttribute="top" secondItem="ZFQ-FF-q0D" secondAttribute="bottom" constant="10" id="P6x-Ym-s4A">
+                    <variation key="heightClass=regular-widthClass=regular" constant="14"/>
+                </constraint>
+                <constraint firstAttribute="trailing" secondItem="ZFQ-FF-q0D" secondAttribute="trailing" constant="8" id="Sds-2r-d9Q"/>
                 <constraint firstItem="7sC-Dr-eIf" firstAttribute="centerY" secondItem="RaL-Lc-eAs" secondAttribute="centerY" id="Z5v-Sk-1Tf"/>
                 <constraint firstItem="wO0-Gc-mGw" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="crm-sr-Ytd"/>
-                <constraint firstItem="OWI-ow-btZ" firstAttribute="height" secondItem="gTV-IL-0wX" secondAttribute="height" multiplier="0.5" id="fcy-B9-d4s"/>
+                <constraint firstItem="ZFQ-FF-q0D" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="8" id="h6D-6D-sL7"/>
+                <constraint firstItem="7sC-Dr-eIf" firstAttribute="leading" secondItem="RaL-Lc-eAs" secondAttribute="trailing" constant="10" id="yml-iK-8ca">
+                    <variation key="heightClass=regular-widthClass=regular" constant="16"/>
+                </constraint>
             </constraints>
             <size key="customSize" width="186" height="285"/>
+            <variation key="default">
+                <mask key="constraints">
+                    <exclude reference="1I3-K0-lbs"/>
+                </mask>
+            </variation>
             <connections>
                 <outlet property="imageFruitImageView" destination="OWI-ow-btZ" id="RRR-cM-NuA"/>
                 <outlet property="lblNameFruit" destination="ZFQ-FF-q0D" id="XHS-1t-ruX"/>

@@ -59,12 +59,12 @@ extension DrinkViewController: UICollectionViewDelegate, UICollectionViewDataSou
         
         cell.lblPriceFruit.text = "\(Utils.formmatCurrentcy(fommater: "", price: drink.productVariants.price as NSNumber) )"
         cell.imageFruitImageView.sd_setImage(with: URL(string:
-            drink.productImage.count > 0 ? drink.productImage[0].src : ""), placeholderImage: UIImage(named: "tim3"))
+            drink.productImage.count > 0 ? drink.productImage[0].src : ""), placeholderImage: UIImage(named: "loading"))
         return cell
     }
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let width = (self.view.frame.width / 2) - 15
-        return CGSize(width: width, height: self.view.frame.height * 0.48 * 0.93)
+        return CGSize(width: width, height: self.view.frame.height * 0.48)
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
@@ -85,15 +85,16 @@ extension DrinkViewController: UICollectionViewDelegate, UICollectionViewDataSou
 }
 extension DrinkViewController {
     func loadDrink()  {
-        SKActivityIndicator.show("Loding...", userInteractionStatus: false)
+        self.drinks = [Product]()
+        let paramsDrink = ["collection_id" : "1001165720"]
+        SKActivityIndicator.show("Loading...", userInteractionStatus: false)
         firstly {
-            Alamofire.request(url, method: .get, headers: headers).responseDecodable(ProductList.self)
+            Alamofire.request(url, method: .get,parameters: paramsDrink, headers: headers).responseDecodable(ProductList.self)
         }.done { products in
             self.drinks = products.products
         }.ensure {
             self.drinkCollectionView.reloadData()
             SKActivityIndicator.dismiss()
-            
         }.catch { error in
             Utils.warning(title: "Thông báo", message: "Lỗi dữ liệu", addActionOk: true, addActionCancel: false)
         }

@@ -55,15 +55,14 @@ extension FruitViewController: UICollectionViewDelegate, UICollectionViewDataSou
         cell.lblNameFruit.text = fruit.productTitle
         cell.lblPriceFruit.text = "\(Utils.formmatCurrentcy(fommater: "", price: fruit.productVariants.price as NSNumber) )"
         cell.imageFruitImageView.sd_setImage(with: URL(string:
-                fruit.productImage.count > 0 ? fruit.productImage[0].src : ""), placeholderImage: UIImage(named: "notimage"))
-//        cell.imageFruitImageView.image = self.images[collectionView.tag][indexPath.row].image
+                fruit.productImage.count > 0 ? fruit.productImage[0].src : ""), placeholderImage: Utils.loadingImage)
         cell.lblSize.isHidden = true
         cell.lblSizeType.isHidden = true
         return cell
     }
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let width = (self.view.frame.width / 2) - 15
-        return CGSize(width: width, height: self.view.frame.height * 0.48 * 0.93)
+        return CGSize(width: width, height: self.view.frame.height * 0.45)
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
@@ -73,7 +72,7 @@ extension FruitViewController: UICollectionViewDelegate, UICollectionViewDataSou
         vc.view.backgroundColor = UIColor.clear
         let fruit = self.fruits[indexPath.row]
         vc.drinkDetail = fruit
-        vc.fruitImage = fruit.productImage.count > 0 ? fruit.productImage[0].src : "red2"
+        vc.fruitImage = fruit.productImage.count > 0 ? fruit.productImage[0].src : "notimage"
         vc.fruitName = fruit.productTitle
         vc.price = "\(Utils.formmatCurrentcy(fommater: "", price: fruit.productVariants.price as NSNumber) )"
         UIView.animate(withDuration: 1.5, animations: {
@@ -84,9 +83,10 @@ extension FruitViewController: UICollectionViewDelegate, UICollectionViewDataSou
 extension FruitViewController {
     func loadFruit()  {
         self.fruits = [Product]()
-        SKActivityIndicator.show("Loding...", userInteractionStatus: false)
+        let paramsFruit = ["collection_id": "1001103057"]
+        SKActivityIndicator.show("Loading...", userInteractionStatus: false)
         firstly {
-            Alamofire.request(url, method: .get, headers: headers).responseDecodable(ProductList.self)
+            Alamofire.request(url, method: .get, parameters: paramsFruit, headers: headers).responseDecodable(ProductList.self)
             }.done { products in
                 self.fruits = products.products
             }.ensure {
@@ -97,6 +97,7 @@ extension FruitViewController {
                 Utils.warning(title: "Thông báo", message: "Lỗi dữ liệu", addActionOk: true, addActionCancel: false)
         }
     }
+    
     func loadImages(data: [[Product]], container: inout [[UIImageView]]) {
         for product in data {
             var images = [UIImageView]()

@@ -23,10 +23,10 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="l8O-sL-KNa">
-                    <rect key="frame" x="0.0" y="0.0" width="375" height="73"/>
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="91.5"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Về chúng tôi" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B9G-YU-u1c">
-                            <rect key="frame" x="134" y="35" width="107.5" height="24"/>
+                            <rect key="frame" x="134" y="54" width="107.5" height="24"/>
                             <fontDescription key="fontDescription" type="system" pointSize="20"/>
                             <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <nil key="highlightedColor"/>
@@ -35,7 +35,7 @@
                             </variation>
                         </label>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ki3-k9-dPJ">
-                            <rect key="frame" x="16" y="27.5" width="30" height="39"/>
+                            <rect key="frame" x="16" y="36.5" width="30" height="39"/>
                             <fontDescription key="fontDescription" type="system" pointSize="22"/>
                             <state key="normal" title="←">
                                 <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -50,14 +50,14 @@
                     </subviews>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
-                        <constraint firstItem="B9G-YU-u1c" firstAttribute="centerY" secondItem="l8O-sL-KNa" secondAttribute="centerY" constant="10" id="Yfh-yH-vUP"/>
+                        <constraint firstItem="B9G-YU-u1c" firstAttribute="centerY" secondItem="l8O-sL-KNa" secondAttribute="centerY" constant="20" id="Yfh-yH-vUP"/>
                         <constraint firstItem="B9G-YU-u1c" firstAttribute="centerX" secondItem="l8O-sL-KNa" secondAttribute="centerX" id="blS-BE-G08"/>
                         <constraint firstItem="ki3-k9-dPJ" firstAttribute="leading" secondItem="l8O-sL-KNa" secondAttribute="leading" constant="16" id="hKR-54-TDE"/>
                         <constraint firstItem="ki3-k9-dPJ" firstAttribute="centerY" secondItem="l8O-sL-KNa" secondAttribute="centerY" constant="10" id="ibA-Il-DVT"/>
                     </constraints>
                 </view>
                 <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Z5r-H6-bxD">
-                    <rect key="frame" x="0.0" y="73.5" width="375" height="840.5"/>
+                    <rect key="frame" x="0.0" y="92" width="375" height="822"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tkH-fr-oav">
                             <rect key="frame" x="0.0" y="0.0" width="375" height="849"/>
@@ -114,7 +114,7 @@ văn minh, chuyên nghiệp, đáp ứng mọi nhu cầu của bạn là mục t
                 <constraint firstItem="tkH-fr-oav" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" id="Bet-8U-Hku"/>
                 <constraint firstItem="l8O-sL-KNa" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="DTo-En-4wt"/>
                 <constraint firstItem="l8O-sL-KNa" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="IWD-aX-6LT"/>
-                <constraint firstItem="l8O-sL-KNa" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="0.08" id="dfb-XE-03s"/>
+                <constraint firstItem="l8O-sL-KNa" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="0.1" id="dfb-XE-03s"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Z5r-H6-bxD" secondAttribute="trailing" id="lFz-wX-YRk"/>
                 <constraint firstItem="Z5r-H6-bxD" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="n9j-BA-1af"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="Z5r-H6-bxD" secondAttribute="bottom" constant="-1" id="rku-KT-juO"/>

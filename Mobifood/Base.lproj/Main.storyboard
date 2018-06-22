@@ -30,7 +30,7 @@
                                     <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <variation key="heightClass=regular-widthClass=regular">
-                                    <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 </variation>
                                 <connections>
                                     <action selector="directHome:" destination="BYZ-38-t0r" eventType="touchUpInside" id="U0T-k2-BhH"/>
@@ -43,7 +43,7 @@
                                     <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <variation key="heightClass=regular-widthClass=regular">
-                                    <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 </variation>
                                 <connections>
                                     <action selector="directHome:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6XM-eC-wGP"/>

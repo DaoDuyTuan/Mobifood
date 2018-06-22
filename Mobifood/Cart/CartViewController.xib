@@ -91,7 +91,7 @@
                             <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <nil key="highlightedColor"/>
                             <variation key="heightClass=regular-widthClass=regular">
-                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
                             </variation>
                         </label>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qfr-dq-yUj">
@@ -110,7 +110,7 @@
                             <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <nil key="highlightedColor"/>
                             <variation key="heightClass=regular-widthClass=regular">
-                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
                             </variation>
                         </label>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="50.000đ" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GqJ-Yv-TIm">
@@ -119,7 +119,7 @@
                             <color key="textColor" red="0.31372549019607843" green="0.95686274509803915" blue="0.2196078431372549" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <nil key="highlightedColor"/>
                             <variation key="heightClass=regular-widthClass=regular">
-                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
                             </variation>
                         </label>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wrF-ok-CT3">
@@ -139,11 +139,15 @@
                     </subviews>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
-                        <constraint firstItem="GqJ-Yv-TIm" firstAttribute="leading" secondItem="sPT-AJ-qYg" secondAttribute="trailing" constant="6" id="90V-um-pKa"/>
+                        <constraint firstItem="GqJ-Yv-TIm" firstAttribute="leading" secondItem="sPT-AJ-qYg" secondAttribute="trailing" constant="6" id="90V-um-pKa">
+                            <variation key="heightClass=regular-widthClass=regular" constant="12"/>
+                        </constraint>
                         <constraint firstItem="d8O-pX-l4N" firstAttribute="leading" secondItem="0Xx-mG-XxY" secondAttribute="trailing" constant="8" id="GOU-ev-DMI"/>
                         <constraint firstItem="0Xx-mG-XxY" firstAttribute="centerY" secondItem="6Ch-OS-elF" secondAttribute="centerY" id="JRw-9Y-6pn"/>
                         <constraint firstAttribute="trailing" secondItem="wrF-ok-CT3" secondAttribute="trailing" constant="8" id="Kop-XQ-kFP"/>
-                        <constraint firstItem="wrF-ok-CT3" firstAttribute="leading" secondItem="GqJ-Yv-TIm" secondAttribute="trailing" constant="6" id="OKu-ng-8BQ"/>
+                        <constraint firstItem="wrF-ok-CT3" firstAttribute="leading" secondItem="GqJ-Yv-TIm" secondAttribute="trailing" constant="6" id="OKu-ng-8BQ">
+                            <variation key="heightClass=regular-widthClass=regular" constant="12"/>
+                        </constraint>
                         <constraint firstItem="sPT-AJ-qYg" firstAttribute="centerY" secondItem="6Ch-OS-elF" secondAttribute="centerY" id="Ojr-sC-gRp"/>
                         <constraint firstItem="0Xx-mG-XxY" firstAttribute="leading" secondItem="6Ch-OS-elF" secondAttribute="leading" constant="16" id="P4h-35-OfB"/>
                         <constraint firstItem="wrF-ok-CT3" firstAttribute="centerY" secondItem="6Ch-OS-elF" secondAttribute="centerY" id="QrU-Zw-mge"/>

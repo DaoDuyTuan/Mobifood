@@ -8,6 +8,10 @@
 
 import UIKit
 import XLPagerTabStrip
+import PromiseKit
+import Alamofire
+import SKActivityIndicatorView
+import SDWebImage
 
 class ComborViewController: UIViewController, IndicatorInfoProvider {
     func indicatorInfo(for pagerTabStripController: PagerTabStripViewController) -> IndicatorInfo {
@@ -15,6 +19,7 @@ class ComborViewController: UIViewController, IndicatorInfoProvider {
     }
     
     @IBOutlet weak var slideCollectionView: UICollectionView!
+    var combors = [Product]()
     
     fileprivate var pageSize: CGSize {
         let layout = self.slideCollectionView.collectionViewLayout as! UPCarouselFlowLayout
@@ -33,7 +38,6 @@ class ComborViewController: UIViewController, IndicatorInfoProvider {
         }
     }
     
-    let images = ["red2", "red2", "red2", "red2", "red2"]
     override func viewDidLoad() {
         NetworkManager.whenNoConnection()
         NetworkManager.sharedInstance.reachability.whenReachable = {_ in
@@ -43,11 +47,18 @@ class ComborViewController: UIViewController, IndicatorInfoProvider {
         let nib = UINib(nibName: "ComborCollectionViewCell", bundle: nil)
         self.slideCollectionView.register(nib, forCellWithReuseIdentifier: "slideCell")
         
+        print(self.view.frame, UIScreen.main.bounds)
+        
+        self.settingWidthAndHeightForView()
+        self.loadCombor()
+    }
+    
+    func settingWidthAndHeightForView() {
         let layout = UPCarouselFlowLayout()
         if UIScreen.main.bounds.height >= 667 {
-            layout.itemSize = CGSize(width: self.view.frame.width * 0.68, height: self.slideCollectionView.frame.size.height)
+            layout.itemSize = CGSize(width: UIScreen.main.bounds.width * 0.68, height: self.slideCollectionView.frame.height)
         } else {
-            layout.itemSize = CGSize(width: self.view.frame.width - 0.42 * self.view.frame.width, height: 0.8 * self.slideCollectionView.frame.size.height)
+            layout.itemSize = CGSize(width: UIScreen.main.bounds.width * 0.48, height: 0.8 * self.slideCollectionView.frame.height)
         }
         
         layout.scrollDirection = .horizontal
@@ -58,19 +69,21 @@ class ComborViewController: UIViewController, IndicatorInfoProvider {
         
         self.slideCollectionView.delegate = self
         self.slideCollectionView.dataSource = self
-        
-        self.slideCollectionView.scrollToItem(at: IndexPath(row: 2, section: 0), at: .centeredHorizontally, animated: true)
     }
 }
 
 extension ComborViewController: UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return images.count
+        return combors.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "slideCell", for: indexPath) as! ComborCollectionViewCell
-        cell.comborImageView.image = UIImage(named: images[indexPath.row])
+        let combor = self.combors[indexPath.row]
+        cell.comborImageView.sd_setImage(with: URL(string:
+            combor.productImage.count > 0 ? combor.productImage[0].src : ""), placeholderImage: Utils.loadingImage)
+        
+        cell.btnBuyItem.setTitle(combor.productTitle, for: .normal)
         return cell
     }
     
@@ -87,3 +100,21 @@ extension ComborViewController: UICollectionViewDelegate, UICollectionViewDataSo
     }
 }
 
+extension ComborViewController {
+    func loadCombor()  {
+        self.combors = [Product]()
+        let paramsCombor = ["collection_id" : "1001307930"]
+        SKActivityIndicator.show("Loading...", userInteractionStatus: false)
+        
+        firstly {
+            Alamofire.request(url, method: .get,parameters: paramsCombor, headers: headers).responseDecodable(ProductList.self)
+            }.done { products in
+                self.combors = products.products
+            }.ensure {
+                self.slideCollectionView.reloadData()
+                SKActivityIndicator.dismiss()
+            }.catch { error in
+                Utils.warning(title: "Thông báo", message: "Lỗi dữ liệu", addActionOk: true, addActionCancel: false)
+        }
+    }
+}

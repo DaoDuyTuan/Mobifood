@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -21,7 +22,7 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="jhgjhjhgjhjjljljlkjljljljljlkjlkjljlkjlkjl" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nOc-0y-ozg">
-                        <rect key="frame" x="132" y="5" width="128" height="35"/>
+                        <rect key="frame" x="141.5" y="5" width="128" height="35"/>
                         <color key="backgroundColor" red="0.83741801979999997" green="0.83743780850000005" blue="0.83742713930000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <color key="textColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -31,14 +32,13 @@
                         </variation>
                     </label>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rp7-Iw-TbR">
-                        <rect key="frame" x="285" y="9.5" width="25" height="25"/>
-                        <color key="backgroundColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <rect key="frame" x="285.5" y="7.5" width="28.5" height="29"/>
+                        <color key="backgroundColor" red="1" green="0.49327188729999999" blue="0.47399842739999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="25" id="5PU-Ap-JKy"/>
-                            <constraint firstAttribute="width" constant="25" id="GJU-cm-vLt"/>
+                            <constraint firstAttribute="width" secondItem="Rp7-Iw-TbR" secondAttribute="height" multiplier="1:1" id="cQd-8u-eet"/>
                         </constraints>
                         <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
-                        <state key="normal" title="-">
+                        <state key="normal" title="x">
                             <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         </state>
                         <variation key="heightClass=regular-widthClass=regular">
@@ -60,12 +60,15 @@
                     <constraint firstItem="Rp7-Iw-TbR" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="Iop-sg-Sv3"/>
                     <constraint firstItem="nOc-0y-ozg" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="g16-AE-4g0"/>
                     <constraint firstItem="nMr-Bu-RXt" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="ma8-08-c5o"/>
-                    <constraint firstItem="Rp7-Iw-TbR" firstAttribute="leading" secondItem="nOc-0y-ozg" secondAttribute="trailing" constant="25" id="oWM-yp-U2g"/>
-                    <constraint firstAttribute="trailing" secondItem="Rp7-Iw-TbR" secondAttribute="trailing" constant="10" id="qbu-bN-5cc"/>
+                    <constraint firstItem="Rp7-Iw-TbR" firstAttribute="leading" secondItem="nOc-0y-ozg" secondAttribute="trailing" constant="16" id="oWM-yp-U2g"/>
+                    <constraint firstAttribute="trailing" secondItem="Rp7-Iw-TbR" secondAttribute="trailing" constant="6" id="qbu-bN-5cc"/>
                 </constraints>
             </tableViewCellContentView>
             <constraints>
-                <constraint firstItem="nOc-0y-ozg" firstAttribute="width" secondItem="KGk-i7-Jjw" secondAttribute="width" multiplier="0.4" id="5a8-Hx-eJv"/>
+                <constraint firstItem="Rp7-Iw-TbR" firstAttribute="height" secondItem="KGk-i7-Jjw" secondAttribute="height" multiplier="0.65" id="3oK-L0-3Ma"/>
+                <constraint firstItem="nOc-0y-ozg" firstAttribute="width" secondItem="KGk-i7-Jjw" secondAttribute="width" multiplier="0.4" id="5a8-Hx-eJv">
+                    <variation key="heightClass=regular-widthClass=regular" constant="150"/>
+                </constraint>
                 <constraint firstItem="nOc-0y-ozg" firstAttribute="height" secondItem="KGk-i7-Jjw" secondAttribute="height" multiplier="0.8" id="7mg-u2-tML"/>
                 <constraint firstItem="nMr-Bu-RXt" firstAttribute="width" secondItem="KGk-i7-Jjw" secondAttribute="width" multiplier="0.25" id="byH-1g-fjw"/>
             </constraints>
