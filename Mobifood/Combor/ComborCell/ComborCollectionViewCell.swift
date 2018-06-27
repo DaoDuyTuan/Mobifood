@@ -19,7 +19,7 @@ class ComborCollectionViewCell: UICollectionViewCell {
         self.btnBuyItem.layer.cornerRadius = 15.0
     }
 
-    @IBAction func buyiTEM(_ sender: Any) {
+    @IBAction func buyiTEM(_ sender: UIButton) {
         
     }
 }

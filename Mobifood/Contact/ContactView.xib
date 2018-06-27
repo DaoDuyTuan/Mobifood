@@ -63,9 +63,9 @@
                                     </variation>
                                 </label>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B8r-Dj-mMp">
-                                    <rect key="frame" x="154" y="124.5" width="33" height="34"/>
+                                    <rect key="frame" x="155.5" y="124.5" width="30" height="34"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                    <state key="normal" title="YES"/>
+                                    <state key="normal" title="Gọi"/>
                                     <variation key="heightClass=regular-widthClass=regular">
                                         <fontDescription key="fontDescription" type="system" pointSize="35"/>
                                     </variation>
@@ -74,9 +74,9 @@
                                     </connections>
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OTK-wg-vFJ">
-                                    <rect key="frame" x="55.5" y="125" width="30" height="33"/>
+                                    <rect key="frame" x="55" y="125" width="31" height="33"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                    <state key="normal" title="NO"/>
+                                    <state key="normal" title="Huỷ"/>
                                     <variation key="heightClass=regular-widthClass=regular">
                                         <fontDescription key="fontDescription" type="system" pointSize="35"/>
                                     </variation>

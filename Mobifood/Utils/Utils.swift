@@ -30,7 +30,7 @@ class Utils: NSObject {
         CATransaction.commit()
     }
 
-    static func setBorder(table: UITableView ,width: CGFloat, radius: CGFloat, color: UIColor) {
+    static func setBorder(table: UIView, width: CGFloat, radius: CGFloat, color: UIColor) {
         table.layer.cornerRadius = radius
         table.layer.borderWidth = width
         table.layer.borderColor = color.cgColor
@@ -140,5 +140,11 @@ extension UIColor {
     }
     static var myGreen: UIColor {
         return UIColor(displayP3Red: 129/255, green: 242/255, blue: 134/255, alpha: 1)
+    }
+}
+
+extension Array where Element: Equatable {
+    func indexes(of item: Element) -> [Int]  {
+        return enumerated().compactMap { $0.element == item ? $0.offset : nil }
     }
 }

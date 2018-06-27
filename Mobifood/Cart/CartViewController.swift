@@ -76,6 +76,7 @@ extension CartViewController: UITableViewDelegate, UITableViewDataSource {
         cell.isItemSelected.tag = indexPath.row
         cell.delegate = self
         cell.itemImageView.sd_setImage(with: URL(string: product.productImage[0].src), placeholderImage: UIImage(named: "notimage"))
+        cell.lblAmount.text = "\(product.amount!)"
         
         if  product.isCheckedProduct {
             cell.isItemSelected.backgroundColor = UIColor.myGreen

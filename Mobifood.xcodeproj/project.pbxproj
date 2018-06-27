@@ -67,6 +67,7 @@
 		1894FD0720C92EC90020F7C1 /* ComborNameCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1894FD0520C92EC90020F7C1 /* ComborNameCollectionViewCell.xib */; };
 		1894FD0C20C931E60020F7C1 /* ComborDynamicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1894FD0A20C931E60020F7C1 /* ComborDynamicViewController.swift */; };
 		1894FD0D20C931E60020F7C1 /* ComborDynamicViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1894FD0B20C931E60020F7C1 /* ComborDynamicViewController.xib */; };
+		18A8628620E164BF00A4AD1B /* MyCombor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A8628520E164BF00A4AD1B /* MyCombor.swift */; };
 		18BD3AC720C5A3F2002DCE22 /* iCarousel.m in Sources */ = {isa = PBXBuildFile; fileRef = 18BD3AC620C5A3F2002DCE22 /* iCarousel.m */; };
 		18F7278120D61D0B00D9722D /* CustormerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F7277F20D61D0B00D9722D /* CustormerViewController.swift */; };
 		18F7278220D61D0B00D9722D /* CustormerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18F7278020D61D0B00D9722D /* CustormerViewController.xib */; };
@@ -135,6 +136,7 @@
 		1894FD0520C92EC90020F7C1 /* ComborNameCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ComborNameCollectionViewCell.xib; sourceTree = "<group>"; };
 		1894FD0A20C931E60020F7C1 /* ComborDynamicViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComborDynamicViewController.swift; sourceTree = "<group>"; };
 		1894FD0B20C931E60020F7C1 /* ComborDynamicViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ComborDynamicViewController.xib; sourceTree = "<group>"; };
+		18A8628520E164BF00A4AD1B /* MyCombor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCombor.swift; sourceTree = "<group>"; };
 		18BD3AC420C5A3F1002DCE22 /* Mobifood-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Mobifood-Bridging-Header.h"; sourceTree = "<group>"; };
 		18BD3AC520C5A3F2002DCE22 /* iCarousel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iCarousel.h; sourceTree = "<group>"; };
 		18BD3AC620C5A3F2002DCE22 /* iCarousel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iCarousel.m; sourceTree = "<group>"; };
@@ -160,6 +162,7 @@
 			isa = PBXGroup;
 			children = (
 				1802464620CA7DB600B343A6 /* Product.swift */,
+				18A8628520E164BF00A4AD1B /* MyCombor.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -678,6 +681,7 @@
 				1894FD0C20C931E60020F7C1 /* ComborDynamicViewController.swift in Sources */,
 				1804A0B420C523BD00E2C9DF /* FruitViewController.swift in Sources */,
 				1804A0C020C5245600E2C9DF /* ComborViewController.swift in Sources */,
+				18A8628620E164BF00A4AD1B /* MyCombor.swift in Sources */,
 				18704F0620C8418D000F0CFD /* CartViewController.swift in Sources */,
 				1802464E20CA987900B343A6 /* SettingViewController.swift in Sources */,
 				1804A0B920C523E600E2C9DF /* MapViewController.swift in Sources */,

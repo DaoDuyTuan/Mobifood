@@ -25,10 +25,11 @@ struct Variant: Codable {
     }
 }
 struct Product: Codable {
-    private var id: Float?
+    private var id: Double?
     private var title: String?
     private var variants: [Variant]?
     private var images: [Image]?
+    var amount: Int?
     var isChecked: Bool?
     
     var isCheckedProduct: Bool {
@@ -40,7 +41,7 @@ struct Product: Codable {
         }
     }
     
-    var productID: Float {
+    var productID: Double {
         get {
             return id!
         }

@@ -12,8 +12,11 @@ class MyComborViewController: UIViewController {
 
     @IBOutlet weak var headerMyCombor: UIView!
     @IBOutlet weak var myComborTableView: UITableView!
+    static var myCombor: [MyCombor] = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         let cartCell = UINib(nibName: "MyComborTableViewCell", bundle: nil)
         self.myComborTableView.register(cartCell, forCellReuseIdentifier: "myCombor")
     }
@@ -25,13 +28,20 @@ class MyComborViewController: UIViewController {
         self.navigationController?.popViewController(animated: true)
     }
 }
+
 extension MyComborViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 6
+        return MyComborViewController.myCombor.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "myCombor", for: indexPath) as! MyComborTableViewCell
+        let combor = MyComborViewController.myCombor[indexPath.row]
+        cell.delegate = self
+        cell.lblComborName.text = combor.name
+        cell.lblComborPrice.text = combor.price
+        cell.btnBook.tag = indexPath.row
+        cell.myComborImage.sd_setImage(with: URL(string: combor.image!))
         return cell
     }
     
@@ -41,6 +51,17 @@ extension MyComborViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        if UIScreen.main.bounds.height < 667 {
+            return 0.32 * UIScreen.main.bounds.height
+        }
         return 0.25 * UIScreen.main.bounds.height
+    }
+}
+
+extension MyComborViewController: BuyCombor {
+    func buy(index: Int) {
+        let myCombor = ComborDetailViewController(nibName: "ComborDetailViewController", bundle: nil)
+        myCombor.comborDetail = MyComborViewController.myCombor[index]
+        self.present(myCombor, animated: true, completion: nil)
     }
 }

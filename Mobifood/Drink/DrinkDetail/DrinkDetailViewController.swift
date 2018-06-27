@@ -9,6 +9,7 @@
 import UIKit
 
 class DrinkDetailViewController: UIViewController {
+    @IBOutlet weak var lblIsAddedState: UILabel!
     @IBOutlet weak var btnClose: UIButton!
     @IBOutlet weak var fruitImageView: UIImageView!
     @IBOutlet weak var numberPickerView: UIPickerView!
@@ -16,6 +17,8 @@ class DrinkDetailViewController: UIViewController {
     @IBOutlet weak var lblFruitName: UILabel!
     @IBOutlet weak var viewBg: UIView!
     @IBOutlet weak var btnAddToCart: UIButton!
+    @IBOutlet weak var heightAlertView: NSLayoutConstraint!
+    
     var images: [String] = []
     private var newAmount: Int = 0
     private var newPrice: Int = 0
@@ -24,6 +27,7 @@ class DrinkDetailViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         for index in  stride(from: 50, through: 1, by: -1) {
             self.images.append("\(index)")
         }
@@ -31,6 +35,7 @@ class DrinkDetailViewController: UIViewController {
             self.images.append("\(index)")
         }
         numberPickerView.selectRow(images.count / 2 - 1, inComponent: 0, animated: true)
+        self.newAmount = 1
         
         self.btnClose.layer.cornerRadius = self.btnClose.frame.width/2
         self.btnClose.layer.masksToBounds = true
@@ -40,14 +45,34 @@ class DrinkDetailViewController: UIViewController {
         self.btnAddToCart.layer.cornerRadius = 10.0
         self.bgAlertView.layer.masksToBounds = true
         self.bgAlertView.layer.cornerRadius = 10.0
-        
+    }
+    
+    override func viewDidLayoutSubviews() {
+        let height = UIScreen.main.bounds.height
+        if height < 667 || (height > 1000 && height < 1300){
+            heightAlertView.constant = 20
+        }
     }
 
     @IBAction func addToCard(_ sender: Any) {
         newPrice = newPrice == 0 ? drinkDetail.productVariants.price : newPrice
         drinkDetail.productVariants = Variant(price: newPrice)
-        CartViewController.cart.append(drinkDetail)
-        Utils.alert(title: "Congratulation", message: "Added to your cart", addActionOk: true, addActionCancel: false, vc: self)
+        drinkDetail.amount = self.newAmount
+        
+        if CartViewController.cart.filter({ $0.productID == self.drinkDetail.productID }).count == 0 {
+            CartViewController.cart.append(drinkDetail)
+        } else {
+            for (index, product) in CartViewController.cart.enumerated() {
+                if product.productID == self.drinkDetail.productID {
+                    CartViewController.cart[index] = self.drinkDetail
+                }
+            }
+        }
+        
+        UIView.animate(withDuration: 1.0, animations: {
+            self.lblIsAddedState.isHidden = false
+            self.lblIsAddedState.text = "Đã thêm!"
+        })
     }
     
     var price: String = "" {

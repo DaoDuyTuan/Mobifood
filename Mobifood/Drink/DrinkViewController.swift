@@ -34,15 +34,7 @@ class DrinkViewController: UIViewController, IndicatorInfoProvider {
         layout.sectionInset = UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
         self.drinkCollectionView.collectionViewLayout = layout
         
-        NetworkManager.whenNoConnection()
-        NetworkManager.sharedInstance.reachability.whenReachable = {_ in
-            Utils.warning(title: "Success", message: "Connected Internet", addActionOk: true, addActionCancel: false)
-            self.drinks = [Product]()
-            self.loadDrink()
-        }
-        NetworkManager.isReachable(completed: {_ in
-            self.loadDrink()
-        })
+        self.checkNetworkState()
     }
 }
 
@@ -71,6 +63,7 @@ extension DrinkViewController: UICollectionViewDelegate, UICollectionViewDataSou
         let drink = self.drinks[indexPath.row]
         let vc = DrinkDetailViewController(nibName: "DrinkDetailViewController", bundle: nil)
         vc.drinkDetail = drink
+        
         Utils.setAnimation(view: self.view)
         vc.modalPresentationStyle = .overCurrentContext
         vc.view.backgroundColor = UIColor.clear
@@ -84,7 +77,7 @@ extension DrinkViewController: UICollectionViewDelegate, UICollectionViewDataSou
     
 }
 extension DrinkViewController {
-    func loadDrink()  {
+    private func loadDrink()  {
         self.drinks = [Product]()
         let paramsDrink = ["collection_id" : "1001165720"]
         SKActivityIndicator.show("Loading...", userInteractionStatus: false)
@@ -98,6 +91,18 @@ extension DrinkViewController {
         }.catch { error in
             Utils.warning(title: "Thông báo", message: "Lỗi dữ liệu", addActionOk: true, addActionCancel: false)
         }
+    }
+    
+    private func checkNetworkState() {
+        NetworkManager.whenNoConnection()
+        NetworkManager.sharedInstance.reachability.whenReachable = {_ in
+            Utils.warning(title: "Success", message: "Connected Internet", addActionOk: true, addActionCancel: false)
+            self.drinks = [Product]()
+            self.loadDrink()
+        }
+        NetworkManager.isReachable(completed: {_ in
+            self.loadDrink()
+        })
     }
 }
 

@@ -46,21 +46,14 @@ class ComborViewController: UIViewController, IndicatorInfoProvider {
         
         let nib = UINib(nibName: "ComborCollectionViewCell", bundle: nil)
         self.slideCollectionView.register(nib, forCellWithReuseIdentifier: "slideCell")
-        
-        print(self.view.frame, UIScreen.main.bounds)
-        
         self.settingWidthAndHeightForView()
         self.loadCombor()
     }
     
-    func settingWidthAndHeightForView() {
+    private func settingWidthAndHeightForView() {
         let layout = UPCarouselFlowLayout()
-        if UIScreen.main.bounds.height >= 667 {
-            layout.itemSize = CGSize(width: UIScreen.main.bounds.width * 0.68, height: self.slideCollectionView.frame.height)
-        } else {
-            layout.itemSize = CGSize(width: UIScreen.main.bounds.width * 0.48, height: 0.8 * self.slideCollectionView.frame.height)
-        }
         
+        self.setSizeForLayout(layout: layout)
         layout.scrollDirection = .horizontal
         layout.sideItemScale = 0.8
         layout.sideItemAlpha = 1.0
@@ -69,6 +62,19 @@ class ComborViewController: UIViewController, IndicatorInfoProvider {
         
         self.slideCollectionView.delegate = self
         self.slideCollectionView.dataSource = self
+    }
+    
+    private func setSizeForLayout(layout: UPCarouselFlowLayout) {
+        let screen = (width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height)
+        if screen.height >= 667 {
+            if screen.height > 1000 {
+                self.slideCollectionView.frame.size = CGSize(width: screen.width * 0.68, height: screen.height * 0.72)
+            }
+            
+            layout.itemSize = CGSize(width: screen.width * 0.6, height: self.slideCollectionView.frame.height * 0.9)
+        } else {
+            layout.itemSize = CGSize(width: screen.width * 0.68, height: 0.75 * self.slideCollectionView.frame.height)
+        }
     }
 }
 
@@ -82,13 +88,17 @@ extension ComborViewController: UICollectionViewDelegate, UICollectionViewDataSo
         let combor = self.combors[indexPath.row]
         cell.comborImageView.sd_setImage(with: URL(string:
             combor.productImage.count > 0 ? combor.productImage[0].src : ""), placeholderImage: Utils.loadingImage)
-        
         cell.btnBuyItem.setTitle(combor.productTitle, for: .normal)
         return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let comborDetailVC = ComborDynamicViewController(nibName: "ComborDynamicViewController", bundle: nil)
+        let drink = self.combors[indexPath.row]
+        comborDetailVC.combor.name = drink.productTitle
+        comborDetailVC.combor.price = drink.productPrice.isString
+        comborDetailVC.combor.image = drink.productImage.count > 0 ? drink.productImage[0].src : nil
+        comborDetailVC.combor.idCombor = "\(drink.productID)"
         self.navigationController?.pushViewController(comborDetailVC, animated: true)
     }
     
@@ -101,7 +111,7 @@ extension ComborViewController: UICollectionViewDelegate, UICollectionViewDataSo
 }
 
 extension ComborViewController {
-    func loadCombor()  {
+    private func loadCombor()  {
         self.combors = [Product]()
         let paramsCombor = ["collection_id" : "1001307930"]
         SKActivityIndicator.show("Loading...", userInteractionStatus: false)

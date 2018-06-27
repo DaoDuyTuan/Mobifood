@@ -25,22 +25,8 @@ class FruitViewController: UIViewController, IndicatorInfoProvider {
         let nib = UINib(nibName: "DrinkCollectionViewCell", bundle: nil)
         self.fruitCollectionView.register(nib, forCellWithReuseIdentifier: "drinkCollectionCell")
         
-        let layout = UICollectionViewFlowLayout()
-        layout.minimumLineSpacing = 10
-        layout.minimumInteritemSpacing = 5
-        layout.sectionInset = UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
-        self.fruitCollectionView.collectionViewLayout = layout
-        
-        NetworkManager.whenNoConnection()
-        NetworkManager.sharedInstance.reachability.whenReachable = {_ in
-            Utils.warning(title: "Success", message: "Connected Internet", addActionOk: true, addActionCancel: false)
-            self.fruits = [Product]()
-            self.fruitCollectionView.reloadData()
-            self.loadFruit()
-        }
-        NetworkManager.isReachable(completed: {_ in
-            self.loadFruit()
-        })
+        self.createLayoutForCollectionView()
+        self.checkNetworkState()
     }
 }
 
@@ -81,7 +67,7 @@ extension FruitViewController: UICollectionViewDelegate, UICollectionViewDataSou
     }
 }
 extension FruitViewController {
-    func loadFruit()  {
+    private func loadFruit() {
         self.fruits = [Product]()
         let paramsFruit = ["collection_id": "1001103057"]
         SKActivityIndicator.show("Loading...", userInteractionStatus: false)
@@ -98,17 +84,23 @@ extension FruitViewController {
         }
     }
     
-    func loadImages(data: [[Product]], container: inout [[UIImageView]]) {
-        for product in data {
-            var images = [UIImageView]()
-            for pr in product {
-                let img = UIImageView()
-                
-                img.sd_setImage(with: URL(string: pr.productImage.count > 0 ? pr.productImage[0].src : "notimage" ), placeholderImage: UIImage(named: "notimage"))
-                images.append(img)
-            }
-            container.append(images)
+    private func createLayoutForCollectionView() {
+        let layout = UICollectionViewFlowLayout()
+        layout.minimumLineSpacing = 10
+        layout.minimumInteritemSpacing = 5
+        layout.sectionInset = UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
+        self.fruitCollectionView.collectionViewLayout = layout
+    }
+    private func checkNetworkState() {
+        NetworkManager.whenNoConnection()
+        NetworkManager.sharedInstance.reachability.whenReachable = {_ in
+            Utils.warning(title: "Success", message: "Connected Internet", addActionOk: true, addActionCancel: false)
+            self.fruits = [Product]()
+            self.fruitCollectionView.reloadData()
+            self.loadFruit()
         }
-
+        NetworkManager.isReachable(completed: {_ in
+            self.loadFruit()
+        })
     }
 }

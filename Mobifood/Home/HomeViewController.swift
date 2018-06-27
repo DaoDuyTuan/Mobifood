@@ -26,21 +26,9 @@ class HomeViewController: ButtonBarPagerTabStripViewController {
         changeCurrentIndexProgressive = { (oldCell: ButtonBarViewCell?, newCell: ButtonBarViewCell?, progressPercentage: CGFloat, changeCurrentIndex: Bool, animated: Bool) -> Void in
             guard changeCurrentIndex == true else { return }
             
-            switch self.settings.style.myIndex {
-            case 0:
-                self.titleScreen.text = "COMBOR"
-            case 1:
-                self.titleScreen.text = "ĐỒ UỐNG"
-            case 2:
-                self.titleScreen.text = "TRÁI CÂY"
-            case 3:
-                self.titleScreen.text = "BẢN ĐỒ"
-            default:
-                print("afdasdf")
-            }
+            self.settingTabWillSelect()
             oldCell?.label.textColor = UIColor(white: 1, alpha: 0.6)
             newCell?.label.textColor = .white
-            
             if animated {
                 UIView.animate(withDuration: 0.1, animations: { () -> Void in
                     newCell?.transform = CGAffineTransform(scaleX: 1.1, y: 1.1)
@@ -51,6 +39,7 @@ class HomeViewController: ButtonBarPagerTabStripViewController {
                 newCell?.transform = CGAffineTransform(scaleX: 1.1, y: 1.1)
                 oldCell?.transform = CGAffineTransform(scaleX: 0.8, y: 0.8)
             }
+
         }
     }
     
@@ -63,10 +52,7 @@ class HomeViewController: ButtonBarPagerTabStripViewController {
         let cartVC = CartViewController(nibName: "CartViewController", bundle: nil)
         self.navigationController?.pushViewController(cartVC, animated: true)
     }
-    
-    override func updateIndicator(for viewController: PagerTabStripViewController, fromIndex: Int, toIndex: Int) {
-        print(toIndex)
-    }
+
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
         self.navigationController?.setNavigationBarHidden(true, animated: true)
@@ -96,7 +82,7 @@ class HomeViewController: ButtonBarPagerTabStripViewController {
 }
 
 extension HomeViewController {
-    func setHeader(view: UIView) {
+    private func setHeader(view: UIView) {
         // custom header color background
         let gradient = CAGradientLayer()
         gradient.frame = view.bounds
@@ -104,6 +90,21 @@ extension HomeViewController {
         view.layer.insertSublayer(gradient, at: 0)
         gradient.startPoint = CGPoint(x: 0, y: 0.5)
         gradient.endPoint = CGPoint(x: 1, y: 0.5)
+    }
+    
+    private func settingTabWillSelect() {
+        switch self.settings.style.myIndex {
+        case 0:
+            self.titleScreen.text = "COMBOR"
+        case 1:
+            self.titleScreen.text = "ĐỒ UỐNG"
+        case 2:
+            self.titleScreen.text = "TRÁI CÂY"
+        case 3:
+            self.titleScreen.text = "BẢN ĐỒ"
+        default:
+            print("afdasdf")
+        }
     }
 }
 

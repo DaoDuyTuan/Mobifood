@@ -61,19 +61,19 @@
                             </connections>
                         </button>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="COMBOR" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ca6-9e-Jc0">
-                            <rect key="frame" x="133" y="43.666666666666664" width="89.666666666666686" height="23.999999999999993"/>
+                            <rect key="frame" x="133" y="36.666666666666664" width="89.666666666666686" height="24"/>
                             <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                             <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <nil key="highlightedColor"/>
                             <variation key="heightClass=regular-widthClass=regular">
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="40"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="35"/>
                             </variation>
                         </label>
                     </subviews>
                     <constraints>
                         <constraint firstItem="Udd-Aj-B3y" firstAttribute="leading" secondItem="7WE-Sa-ctu" secondAttribute="trailing" constant="16" id="4Ct-G1-PE7"/>
                         <constraint firstItem="7WE-Sa-ctu" firstAttribute="height" secondItem="GLt-Yh-Mz0" secondAttribute="height" multiplier="0.37" id="6FH-O8-EsC"/>
-                        <constraint firstItem="ca6-9e-Jc0" firstAttribute="centerY" secondItem="GLt-Yh-Mz0" secondAttribute="centerY" constant="15" id="EKt-LH-nSB"/>
+                        <constraint firstItem="ca6-9e-Jc0" firstAttribute="centerY" secondItem="GLt-Yh-Mz0" secondAttribute="centerY" constant="8" id="EKt-LH-nSB"/>
                         <constraint firstItem="Udd-Aj-B3y" firstAttribute="centerY" secondItem="GLt-Yh-Mz0" secondAttribute="centerY" constant="15" id="IzL-vh-rf5"/>
                         <constraint firstItem="0ny-3I-90L" firstAttribute="height" secondItem="GLt-Yh-Mz0" secondAttribute="height" multiplier="0.37" id="K0g-ZV-9Tj"/>
                         <constraint firstItem="Udd-Aj-B3y" firstAttribute="height" secondItem="GLt-Yh-Mz0" secondAttribute="height" multiplier="0.37" id="MJc-L7-3NV"/>
@@ -99,14 +99,18 @@
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
-                <constraint firstItem="Rcu-4C-sb7" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="0.1" constant="-6.6000000000000085" id="2C9-T8-q72"/>
+                <constraint firstItem="Rcu-4C-sb7" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="0.1" constant="-6.5999999999999996" id="2C9-T8-q72">
+                    <variation key="heightClass=regular-widthClass=regular" constant="-20"/>
+                </constraint>
                 <constraint firstItem="LhB-a5-nbX" firstAttribute="top" secondItem="GLt-Yh-Mz0" secondAttribute="bottom" id="3dw-7R-iNe"/>
                 <constraint firstAttribute="bottomMargin" secondItem="Rcu-4C-sb7" secondAttribute="bottom" id="6MO-xM-zZZ"/>
                 <constraint firstItem="LhB-a5-nbX" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="F5j-Ok-b1a"/>
                 <constraint firstItem="GLt-Yh-Mz0" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="GkA-SH-and"/>
                 <constraint firstAttribute="trailing" secondItem="LhB-a5-nbX" secondAttribute="trailing" id="N3W-Js-ARK"/>
                 <constraint firstItem="Rcu-4C-sb7" firstAttribute="trailing" secondItem="i5M-Pr-FkT" secondAttribute="trailing" id="TAQ-B3-SuX"/>
-                <constraint firstItem="GLt-Yh-Mz0" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="0.11" id="gDz-SP-27S"/>
+                <constraint firstItem="GLt-Yh-Mz0" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="0.11" id="gDz-SP-27S">
+                    <variation key="heightClass=regular-widthClass=regular" constant="-20"/>
+                </constraint>
                 <constraint firstItem="GLt-Yh-Mz0" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="iF7-91-LJt"/>
                 <constraint firstItem="Rcu-4C-sb7" firstAttribute="top" secondItem="LhB-a5-nbX" secondAttribute="bottom" id="j0T-ni-U1C"/>
                 <constraint firstItem="Rcu-4C-sb7" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="vu1-HV-M7I"/>

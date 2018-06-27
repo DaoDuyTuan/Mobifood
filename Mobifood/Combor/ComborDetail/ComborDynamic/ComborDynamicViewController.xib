@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -15,6 +16,7 @@
             <connections>
                 <outlet property="btnExtends" destination="K6b-KY-CVV" id="cjK-d8-60a"/>
                 <outlet property="lblComborName" destination="ycR-au-XBC" id="K4I-JD-ePV"/>
+                <outlet property="lblIsSetelected" destination="Ohq-w8-uQH" id="B1V-df-ht8"/>
                 <outlet property="listComborCollectionView" destination="WLc-Zx-rfy" id="XR1-EZ-6CS"/>
                 <outlet property="listSelectedCombor" destination="XKf-pS-MaF" id="C04-GJ-wuB"/>
                 <outlet property="myView" destination="6aQ-6y-GsV" id="iBh-8s-UZU"/>
@@ -50,10 +52,13 @@
                                     </connections>
                                 </button>
                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="red2" translatesAutoresizingMaskIntoConstraints="NO" id="cCU-38-zB0">
-                                    <rect key="frame" x="56.5" y="50" width="262.5" height="260.5"/>
+                                    <rect key="frame" x="56.5" y="50" width="262.5" height="236.5"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" secondItem="cCU-38-zB0" secondAttribute="height" multiplier="1:0.9" id="bjm-eO-gsK"/>
+                                    </constraints>
                                 </imageView>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Combor 1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ycR-au-XBC">
-                                    <rect key="frame" x="150" y="326.5" width="74" height="21"/>
+                                    <rect key="frame" x="150" y="302.5" width="74" height="21"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                     <color key="textColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <nil key="highlightedColor"/>
@@ -62,7 +67,7 @@
                                     </variation>
                                 </label>
                                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="XKf-pS-MaF">
-                                    <rect key="frame" x="54.5" y="363.5" width="266" height="350.5"/>
+                                    <rect key="frame" x="54.5" y="339.5" width="266" height="350.5"/>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <connections>
                                         <outlet property="dataSource" destination="-1" id="tWu-Wm-Sca"/>
@@ -70,7 +75,7 @@
                                     </connections>
                                 </tableView>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K6b-KY-CVV">
-                                    <rect key="frame" x="16" y="1141.5" width="343" height="65"/>
+                                    <rect key="frame" x="16" y="1117.5" width="343" height="65"/>
                                     <color key="backgroundColor" red="1" green="0.57810515169999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="65" id="hsO-1y-BlA"/>
@@ -87,7 +92,7 @@
                                     </connections>
                                 </button>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Giảm 10% khi mua từ 2 combor" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O0M-zO-R8L">
-                                    <rect key="frame" x="68" y="1104.5" width="238.5" height="21"/>
+                                    <rect key="frame" x="68" y="1080.5" width="238.5" height="21"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                     <color key="textColor" red="0.0" green="0.58980089430000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <nil key="highlightedColor"/>
@@ -96,7 +101,7 @@
                                     </variation>
                                 </label>
                                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="WLc-Zx-rfy">
-                                    <rect key="frame" x="16" y="734" width="343" height="350.5"/>
+                                    <rect key="frame" x="16" y="710" width="343" height="350.5"/>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="EPi-7A-GzN">
                                         <size key="itemSize" width="50" height="50"/>
@@ -109,6 +114,15 @@
                                         <outlet property="delegate" destination="-1" id="WY1-kw-JuZ"/>
                                     </connections>
                                 </collectionView>
+                                <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bạn chưa chọn nước ép!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ohq-w8-uQH">
+                                    <rect key="frame" x="94.5" y="504.5" width="186" height="21"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <color key="textColor" red="0.57414853570000002" green="0.57416242360000003" blue="0.57415497299999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <nil key="highlightedColor"/>
+                                    <variation key="heightClass=regular-widthClass=regular">
+                                        <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                    </variation>
+                                </label>
                             </subviews>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
@@ -124,7 +138,9 @@
                                 <constraint firstAttribute="height" constant="1001" id="V87-QV-oBt"/>
                                 <constraint firstItem="2jA-uw-yNE" firstAttribute="top" secondItem="6aQ-6y-GsV" secondAttribute="top" constant="16" id="aj2-50-A8F"/>
                                 <constraint firstItem="ycR-au-XBC" firstAttribute="top" secondItem="cCU-38-zB0" secondAttribute="bottom" constant="16" id="bbQ-cg-fGv"/>
+                                <constraint firstItem="Ohq-w8-uQH" firstAttribute="centerX" secondItem="XKf-pS-MaF" secondAttribute="centerX" id="bml-Ou-SVz"/>
                                 <constraint firstItem="O0M-zO-R8L" firstAttribute="top" secondItem="WLc-Zx-rfy" secondAttribute="bottom" constant="20" id="hK9-VD-HgA"/>
+                                <constraint firstItem="Ohq-w8-uQH" firstAttribute="centerY" secondItem="XKf-pS-MaF" secondAttribute="centerY" id="hgg-GB-pEa"/>
                                 <constraint firstItem="ycR-au-XBC" firstAttribute="centerX" secondItem="6aQ-6y-GsV" secondAttribute="centerX" id="o8u-VY-bod"/>
                                 <constraint firstItem="WLc-Zx-rfy" firstAttribute="leading" secondItem="6aQ-6y-GsV" secondAttribute="leading" constant="16" id="ptS-u1-Gu0"/>
                                 <constraint firstItem="K6b-KY-CVV" firstAttribute="leading" secondItem="6aQ-6y-GsV" secondAttribute="leading" constant="16" id="rKf-DD-2vi"/>
@@ -143,13 +159,14 @@
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="x89-HU-ID4" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="0Dz-XT-5Is"/>
-                <constraint firstItem="cCU-38-zB0" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="0.26" id="82j-d8-NAZ"/>
                 <constraint firstItem="x89-HU-ID4" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="GUr-Zl-HdA"/>
                 <constraint firstItem="6aQ-6y-GsV" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" id="JVL-Ix-Bbf"/>
                 <constraint firstItem="x89-HU-ID4" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" id="Mx8-Ub-MBs"/>
                 <constraint firstItem="WLc-Zx-rfy" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="0.35" id="Nic-YI-b5Q"/>
                 <constraint firstItem="XKf-pS-MaF" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" multiplier="0.71" id="gzB-3E-5B4"/>
-                <constraint firstItem="cCU-38-zB0" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" multiplier="0.7" id="huR-Eg-18r"/>
+                <constraint firstItem="cCU-38-zB0" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" multiplier="0.7" id="huR-Eg-18r">
+                    <variation key="heightClass=regular-widthClass=regular" constant="-200"/>
+                </constraint>
                 <constraint firstItem="XKf-pS-MaF" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="0.35" id="i1O-76-31o"/>
                 <constraint firstItem="x89-HU-ID4" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="t0J-cO-aVl"/>
             </constraints>
