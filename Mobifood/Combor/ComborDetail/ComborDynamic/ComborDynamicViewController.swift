@@ -34,7 +34,7 @@ class ComborDynamicViewController: UIViewController {
         
         if self.checkComborDidSelected() {
             self.lblIsSetelected.isHidden = true
-           Utils.warning(title: "Thông báo", message: "Bạn đã thêm combor nay rồi", addActionOk: true, addActionCancel: false)
+           Utils.alert(title: "Thông báo", message: "Bạn đã thêm combor nay rồi", addActionOk: true, addActionCancel: false, vc: self)
             let index = self.getIndexOfComborAdded(combor: self.combor)
             if let indexOf = index {
                 self.itemsSeleted = MyComborViewController.myCombor[indexOf].items
@@ -58,11 +58,13 @@ class ComborDynamicViewController: UIViewController {
                     MyComborViewController.myCombor[index].items = self.itemsSeleted
                 }
             }
-            Utils.warning(title: "Thành công", message: "Thêm thành công!", addActionOk: true, addActionCancel: false)
+            Utils.alert(title: "Thành công", message: "Thêm thành công!", addActionOk: true, addActionCancel: false, vc: self)
+        } else {
+            Utils.alert(title: "Thông báo", message: "Bạn chưa chọn nước ép!", addActionOk: true, addActionCancel: false, vc: self)
         }
     }
     @IBAction func back(_ sender: Any) {
-        self.navigationController?.popViewController(animated: true)
+        self.dismiss(animated: true, completion: nil)
     }
 }
 
@@ -102,7 +104,7 @@ extension ComborDynamicViewController: UICollectionViewDelegate, UICollectionVie
         let drink = self.drinks[indexPath.row]
         self.lblIsSetelected.isHidden = true
         if self.itemsSeleted.filter({$0.productID == drink.productID}).count > 0 {
-            Utils.warning(title: "Thông báo", message: "Bạn đã chọn nước ép này rồi", addActionOk: true, addActionCancel: false)
+            Utils.alert(title: "Thông báo", message: "Bạn đã chọn nước ép này rồi", addActionOk: true, addActionCancel: false, vc: self)
         } else {
             self.itemsSeleted.append(drink)
         }
@@ -155,7 +157,7 @@ extension ComborDynamicViewController {
                 self.listComborCollectionView.reloadData()
                 SKActivityIndicator.dismiss()
             }.catch { error in
-                Utils.warning(title: "Thông báo", message: "Lỗi dữ liệu", addActionOk: true, addActionCancel: false)
+                Utils.alert(title: "Thông báo", message: "Lỗi dữ liệu", addActionOk: true, addActionCancel: false, vc: self)
         }
     }
     

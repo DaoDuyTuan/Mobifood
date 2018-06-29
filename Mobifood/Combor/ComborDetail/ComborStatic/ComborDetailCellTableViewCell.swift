@@ -14,6 +14,8 @@ protocol DeleteDrinkInCombor: class {
 
 class ComborDetailCellTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var spaceOfBtnDeleteAndName: NSLayoutConstraint!
+    @IBOutlet weak var btnHeightDeleteConstraint: NSLayoutConstraint!
     weak var delegate: DeleteDrinkInCombor!
     @IBOutlet weak var btnDelete: UIButton!
     @IBOutlet weak var lblComborType: UILabel!

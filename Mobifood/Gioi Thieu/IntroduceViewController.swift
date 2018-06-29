@@ -36,10 +36,8 @@ class IntroduceViewController: UIViewController {
     }
     
     @IBAction func directHome(_ sender: Any) {
-        
         let vc = UIStoryboard.init(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "root")
         Utils.setAnimation(view: self.view)
         self.navigationController?.pushViewController(vc, animated: true)
-        
     }
 }

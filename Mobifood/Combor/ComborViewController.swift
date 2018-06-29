@@ -40,13 +40,18 @@ class ComborViewController: UIViewController, IndicatorInfoProvider {
     
     override func viewDidLoad() {
         NetworkManager.whenNoConnection()
-        NetworkManager.sharedInstance.reachability.whenReachable = {_ in
-            Utils.warning(title: "Success", message: "Connected Internet", addActionOk: true, addActionCancel: false)
-        }
+        NetworkManager.whenConnected()
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(reloadPageWhenNetworkChange), name: .combor, object: nil)
         
         let nib = UINib(nibName: "ComborCollectionViewCell", bundle: nil)
         self.slideCollectionView.register(nib, forCellWithReuseIdentifier: "slideCell")
         self.settingWidthAndHeightForView()
+        self.loadCombor()
+    }
+    
+    @objc func reloadPageWhenNetworkChange(notification: NSNotification) {
+        Utils.warning(title: "Success", message: "Connected Internet", addActionOk: true, addActionCancel: false)
         self.loadCombor()
     }
     
@@ -99,7 +104,7 @@ extension ComborViewController: UICollectionViewDelegate, UICollectionViewDataSo
         comborDetailVC.combor.price = drink.productPrice.isString
         comborDetailVC.combor.image = drink.productImage.count > 0 ? drink.productImage[0].src : nil
         comborDetailVC.combor.idCombor = "\(drink.productID)"
-        self.navigationController?.pushViewController(comborDetailVC, animated: true)
+        self.present(comborDetailVC, animated: true, completion: nil)
     }
     
     func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
@@ -127,4 +132,10 @@ extension ComborViewController {
                 Utils.warning(title: "Thông báo", message: "Lỗi dữ liệu", addActionOk: true, addActionCancel: false)
         }
     }
+}
+
+extension Notification.Name {
+    static let combor = Notification.Name("combor")
+    static let fruit = Notification.Name("fruit")
+    static let drink = Notification.Name("drink")
 }

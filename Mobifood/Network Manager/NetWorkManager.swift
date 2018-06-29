@@ -83,7 +83,14 @@ class NetworkManager: NSObject {
     static func whenNoConnection() {
         NetworkManager.sharedInstance.reachability.whenUnreachable = {_ in
             Utils.warning(title: "Warning", message: "No connection", addActionOk: true, addActionCancel: false)
-            return
+        }
+    }
+    
+    static func whenConnected() {
+        NetworkManager.sharedInstance.reachability.whenReachable = {_ in
+            NotificationCenter.default.post(name: .combor, object: nil)
+            NotificationCenter.default.post(name: .fruit, object: nil)
+            NotificationCenter.default.post(name: .drink, object: nil)
         }
     }
 }

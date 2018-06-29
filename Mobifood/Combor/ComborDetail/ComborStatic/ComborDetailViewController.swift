@@ -34,6 +34,10 @@ class ComborDetailViewController: UIViewController {
     override func viewDidLayoutSubviews() {
         self.autoLayoutUI()
     }
+    @IBAction func buyCombor(_ sender: Any) {
+        let vc = CustormerViewController(nibName: "CustormerViewController", bundle: nil)
+        self.present(vc, animated: true, completion: nil)
+    }
     
     private func autoLayoutUI() {
         let heightScreen = UIScreen.main.bounds.height
@@ -63,12 +67,14 @@ extension ComborDetailViewController: UITableViewDelegate, UITableViewDataSource
         let cell = tableView.dequeueReusableCell(withIdentifier: "ComborDetailCell", for: indexPath) as! ComborDetailCellTableViewCell
         let item = self.comborDetail.items[indexPath.row]
         cell.btnDelete.isHidden = true
+        cell.btnHeightDeleteConstraint.constant = -(cell.btnDelete.frame.width)
+        cell.spaceOfBtnDeleteAndName.constant = 0
         cell.lblComborType.text = "Drink \(indexPath.row + 1)"
         cell.lblComborName.text = item.productTitle
         return cell
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 0.16 * tableView.frame.height
+        return 0.18 * tableView.frame.height
     }
 }

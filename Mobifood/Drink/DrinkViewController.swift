@@ -27,7 +27,7 @@ class DrinkViewController: UIViewController, IndicatorInfoProvider {
         super.viewDidLoad()
         let nib = UINib(nibName: "DrinkCollectionViewCell", bundle: nil)
         self.drinkCollectionView.register(nib, forCellWithReuseIdentifier: "drinkCollectionCell")
-        
+        NotificationCenter.default.addObserver(self, selector: #selector(reloadPageWhenNetworkChange), name: .drink, object: nil)
         let layout = UICollectionViewFlowLayout()
         layout.minimumLineSpacing = 10
         layout.minimumInteritemSpacing = 5
@@ -35,6 +35,11 @@ class DrinkViewController: UIViewController, IndicatorInfoProvider {
         self.drinkCollectionView.collectionViewLayout = layout
         
         self.checkNetworkState()
+    }
+    
+    @objc func reloadPageWhenNetworkChange(notification: NSNotification) {
+        Utils.warning(title: "Success", message: "Connected Internet", addActionOk: true, addActionCancel: false)
+        self.loadDrink()
     }
 }
 
@@ -95,11 +100,7 @@ extension DrinkViewController {
     
     private func checkNetworkState() {
         NetworkManager.whenNoConnection()
-        NetworkManager.sharedInstance.reachability.whenReachable = {_ in
-            Utils.warning(title: "Success", message: "Connected Internet", addActionOk: true, addActionCancel: false)
-            self.drinks = [Product]()
-            self.loadDrink()
-        }
+        NetworkManager.whenConnected()
         NetworkManager.isReachable(completed: {_ in
             self.loadDrink()
         })

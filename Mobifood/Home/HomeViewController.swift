@@ -39,7 +39,6 @@ class HomeViewController: ButtonBarPagerTabStripViewController {
                 newCell?.transform = CGAffineTransform(scaleX: 1.1, y: 1.1)
                 oldCell?.transform = CGAffineTransform(scaleX: 0.8, y: 0.8)
             }
-
         }
     }
     

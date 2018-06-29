@@ -22,7 +22,7 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Apple" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nOc-0y-ozg">
-                        <rect key="frame" x="141.5" y="5" width="128" height="35"/>
+                        <rect key="frame" x="141" y="5" width="128" height="35"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <color key="textColor" red="0.0" green="0.58980089430000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <nil key="highlightedColor"/>
@@ -31,7 +31,7 @@
                         </variation>
                     </label>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rp7-Iw-TbR">
-                        <rect key="frame" x="285.5" y="7.5" width="28.5" height="29"/>
+                        <rect key="frame" x="285" y="7.5" width="29" height="29"/>
                         <color key="backgroundColor" red="1" green="0.49327188729999999" blue="0.47399842739999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstAttribute="width" secondItem="Rp7-Iw-TbR" secondAttribute="height" multiplier="1:1" id="cQd-8u-eet"/>
@@ -77,8 +77,10 @@
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
                 <outlet property="btnDelete" destination="Rp7-Iw-TbR" id="JeT-hG-udR"/>
+                <outlet property="btnHeightDeleteConstraint" destination="3oK-L0-3Ma" id="alh-Xr-esm"/>
                 <outlet property="lblComborName" destination="nOc-0y-ozg" id="Sap-WA-Tmb"/>
                 <outlet property="lblComborType" destination="nMr-Bu-RXt" id="mPp-FB-4rx"/>
+                <outlet property="spaceOfBtnDeleteAndName" destination="oWM-yp-U2g" id="HVG-IW-ZCW"/>
             </connections>
         </tableViewCell>
     </objects>

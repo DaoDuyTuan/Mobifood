@@ -16,9 +16,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-//        AIzaSyCxeD0qlWHnOIKbEDcsYoq_st1JBSwSJSg
         GMSServices.provideAPIKey("AIzaSyCxeD0qlWHnOIKbEDcsYoq_st1JBSwSJSg")
-        // Override point for customization after application launch.
+        self.window = UIWindow(frame: UIScreen.main.bounds)
+        let userDefault = UserDefaults.standard
+        // Set that ViewController as the rootViewController
+        
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        if let _ = userDefault.object(forKey: "isLauched") as? String {
+            let vc = storyboard.instantiateViewController(withIdentifier: "root")
+            self.window?.rootViewController = UINavigationController(rootViewController: vc)
+        } else {
+            userDefault.set("OK", forKey: "isLauched")
+            let initialViewController = storyboard.instantiateViewController(withIdentifier: "introduceVC")
+            self.window?.rootViewController = initialViewController
+        }
+        self.window?.makeKeyAndVisible()
         return true
     }
 

@@ -24,9 +24,14 @@ class FruitViewController: UIViewController, IndicatorInfoProvider {
         super.viewDidLoad()
         let nib = UINib(nibName: "DrinkCollectionViewCell", bundle: nil)
         self.fruitCollectionView.register(nib, forCellWithReuseIdentifier: "drinkCollectionCell")
-        
+        NotificationCenter.default.addObserver(self, selector: #selector(reloadPageWhenNetworkChange), name: .fruit, object: nil)
         self.createLayoutForCollectionView()
         self.checkNetworkState()
+    }
+    
+    @objc func reloadPageWhenNetworkChange(notification: NSNotification) {
+        Utils.warning(title: "Success", message: "Connected Internet", addActionOk: true, addActionCancel: false)
+        self.loadFruit()
     }
 }
 
@@ -93,12 +98,7 @@ extension FruitViewController {
     }
     private func checkNetworkState() {
         NetworkManager.whenNoConnection()
-        NetworkManager.sharedInstance.reachability.whenReachable = {_ in
-            Utils.warning(title: "Success", message: "Connected Internet", addActionOk: true, addActionCancel: false)
-            self.fruits = [Product]()
-            self.fruitCollectionView.reloadData()
-            self.loadFruit()
-        }
+        NetworkManager.whenConnected()
         NetworkManager.isReachable(completed: {_ in
             self.loadFruit()
         })

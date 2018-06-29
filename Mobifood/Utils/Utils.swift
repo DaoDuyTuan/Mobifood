@@ -74,10 +74,7 @@ class Utils: NSObject {
     static func alert(title: String, message: String, addActionOk: Bool, addActionCancel: Bool, vc: UIViewController) {
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
         if addActionOk {
-            alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: {alert in
-                Utils.setAnimation(view: vc.view)
-                vc.dismiss(animated: true, completion: nil)
-            }))
+            alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
         }
         if addActionCancel {
             alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
