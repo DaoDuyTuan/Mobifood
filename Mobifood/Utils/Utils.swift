@@ -10,6 +10,9 @@ import Foundation
 import UIKit
 
 class Utils: NSObject {
+    static var heightScreen = UIScreen.main.bounds.height
+    static var widthScreen = UIScreen.main.bounds.width
+    
     static func showIndicator(indicator: UIActivityIndicatorView) {
         indicator.startAnimating()
         UIApplication.shared.beginIgnoringInteractionEvents()
@@ -98,37 +101,19 @@ class Utils: NSObject {
         return formatter.string(from: price) ?? "Invalid"
     }
     
-    static func settingShowDataForDrinkAndFruit(dataService: [Product], drinkOrFruit: inout [[Product]], table: UITableView) {
-        if dataService.count % 2 == 0 {
-            var count = 0
-            while drinkOrFruit.count != dataService.count / 2 {
-                var productList = [Product]()
-                for _ in 0...1 {
-                    productList.append(dataService[count])
-                    count += 1
-                }
-                drinkOrFruit.append(productList)
-            }
-        } else {
-            var count = 0
-            while drinkOrFruit.count != dataService.count - 1 {
-                var productList = [Product]()
-                for _ in 0...1 {
-                    productList.append(dataService[count])
-                    count += 1
-                }
-                drinkOrFruit.append(productList)
-            }
-            drinkOrFruit.append([dataService[count + 1]])
-        }
-
-    }
-    
     static var loadingImage: UIImage {
         let img = UIImageView(image: UIImage(named: "loading"))
         img.contentMode = .scaleAspectFit
         return img.image!
     }
+    
+    static var MyRefreshControl: UIRefreshControl {
+        let refresh = UIRefreshControl()
+        refresh.attributedTitle = NSAttributedString(string: "Loading...")
+        refresh.tintColor = UIColor(displayP3Red: 1, green: 0.21, blue: 0.55, alpha: 1.0)
+        return refresh
+    }
+    
 }
 
 extension UIColor {

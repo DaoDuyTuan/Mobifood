@@ -107,7 +107,7 @@ extension HomeViewController {
     }
 }
 
-extension HomeViewController: SlideMenuControllerDelegate {
+extension HomeViewController: MenuControllerDelegate {
     func leftDidClose() {
 //        self.moveToViewController(at: HomeViewController.index, animated: true)
     }

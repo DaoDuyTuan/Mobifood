@@ -75,6 +75,9 @@ extension ComborDetailViewController: UITableViewDelegate, UITableViewDataSource
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        if Utils.heightScreen < 667 {
+            return 0.20 * tableView.frame.height
+        }
         return 0.18 * tableView.frame.height
     }
 }

@@ -14,8 +14,7 @@ public enum UPCarouselFlowLayoutSpacingMode {
     case overlap(visibleOffset: CGFloat)
 }
 
-
-open class UPCarouselFlowLayout: UICollectionViewFlowLayout {
+open class CarouselFlowLayout: UICollectionViewFlowLayout {
     
     fileprivate struct LayoutState {
         var size: CGSize

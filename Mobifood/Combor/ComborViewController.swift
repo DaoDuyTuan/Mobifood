@@ -22,7 +22,7 @@ class ComborViewController: UIViewController, IndicatorInfoProvider {
     var combors = [Product]()
     
     fileprivate var pageSize: CGSize {
-        let layout = self.slideCollectionView.collectionViewLayout as! UPCarouselFlowLayout
+        let layout = self.slideCollectionView.collectionViewLayout as! CarouselFlowLayout
         var pageSize = layout.itemSize
         if layout.scrollDirection == .horizontal {
             pageSize.width += layout.minimumLineSpacing
@@ -51,12 +51,11 @@ class ComborViewController: UIViewController, IndicatorInfoProvider {
     }
     
     @objc func reloadPageWhenNetworkChange(notification: NSNotification) {
-        Utils.warning(title: "Success", message: "Connected Internet", addActionOk: true, addActionCancel: false)
         self.loadCombor()
     }
     
     private func settingWidthAndHeightForView() {
-        let layout = UPCarouselFlowLayout()
+        let layout = CarouselFlowLayout()
         
         self.setSizeForLayout(layout: layout)
         layout.scrollDirection = .horizontal
@@ -69,7 +68,7 @@ class ComborViewController: UIViewController, IndicatorInfoProvider {
         self.slideCollectionView.dataSource = self
     }
     
-    private func setSizeForLayout(layout: UPCarouselFlowLayout) {
+    private func setSizeForLayout(layout: CarouselFlowLayout) {
         let screen = (width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height)
         if screen.height >= 667 {
             if screen.height > 1000 {
@@ -108,7 +107,7 @@ extension ComborViewController: UICollectionViewDelegate, UICollectionViewDataSo
     }
     
     func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
-        let layout = self.slideCollectionView.collectionViewLayout as! UPCarouselFlowLayout
+        let layout = self.slideCollectionView.collectionViewLayout as! CarouselFlowLayout
         let pageSide = (layout.scrollDirection == .horizontal) ? self.pageSize.width : self.pageSize.height
         let offset = (layout.scrollDirection == .horizontal) ? scrollView.contentOffset.x : scrollView.contentOffset.y
         currentPage = Int(floor((offset - pageSide / 2) / pageSide) + 1)
@@ -119,7 +118,7 @@ extension ComborViewController {
     private func loadCombor()  {
         self.combors = [Product]()
         let paramsCombor = ["collection_id" : "1001307930"]
-        SKActivityIndicator.show("Loading...", userInteractionStatus: false)
+        LoadingIndicator.show("Loading...", userInteractionStatus: false)
         
         firstly {
             Alamofire.request(url, method: .get,parameters: paramsCombor, headers: headers).responseDecodable(ProductList.self)
@@ -127,7 +126,8 @@ extension ComborViewController {
                 self.combors = products.products
             }.ensure {
                 self.slideCollectionView.reloadData()
-                SKActivityIndicator.dismiss()
+                self.slideCollectionView.scrollToItem(at: IndexPath(row: 1, section: 0), at: .centeredHorizontally, animated: false)
+                LoadingIndicator.dismiss()
             }.catch { error in
                 Utils.warning(title: "Thông báo", message: "Lỗi dữ liệu", addActionOk: true, addActionCancel: false)
         }

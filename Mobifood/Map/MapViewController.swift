@@ -28,7 +28,7 @@ class MapViewController: UIViewController, IndicatorInfoProvider {
     override func viewDidLoad() {
         super.viewDidLoad()
         NetworkManager.whenNoConnection()
-        SKActivityIndicator.show("Loading")
+        LoadingIndicator.show("Loading")
         self.mapView.isMyLocationEnabled = true
         self.mapView.settings.myLocationButton = true
         self.mapView.settings.zoomGestures = true
@@ -56,9 +56,9 @@ class MapViewController: UIViewController, IndicatorInfoProvider {
                     self.reverseLocationToMarker(placemarksArray: places[index], location: value)
                 }
             }.ensure {
-                SKActivityIndicator.dismiss()
+                LoadingIndicator.dismiss()
             }.catch { error in
-                SKActivityIndicator.dismiss()
+                LoadingIndicator.dismiss()
                 Utils.warning(title: "Thông báo", message: "Lỗi vị trí", addActionOk: true, addActionCancel: false)
         }
     }

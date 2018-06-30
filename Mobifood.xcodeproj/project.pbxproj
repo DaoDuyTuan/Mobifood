@@ -38,10 +38,11 @@
 		1804A0C420C52BEF00E2C9DF /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1804A0C320C52BEF00E2C9DF /* Utils.swift */; };
 		18321E9120C7FF9700BA10B2 /* AboutUsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18321E8F20C7FF9700BA10B2 /* AboutUsViewController.swift */; };
 		18321E9220C7FF9700BA10B2 /* AboutUsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18321E9020C7FF9700BA10B2 /* AboutUsViewController.xib */; };
+		18439D6D20E745C50096A627 /* MyAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18439D6C20E745C50096A627 /* MyAlert.swift */; };
 		1848904A20CD1A1400E78A23 /* NetWorkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1848904920CD1A1400E78A23 /* NetWorkManager.swift */; };
 		186095E120C635D200EBD26F /* ComborCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 186095DF20C635D200EBD26F /* ComborCollectionViewCell.swift */; };
 		186095E220C635D200EBD26F /* ComborCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 186095E020C635D200EBD26F /* ComborCollectionViewCell.xib */; };
-		186095E420C63A0400EBD26F /* UPCarouselFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 186095E320C63A0400EBD26F /* UPCarouselFlowLayout.swift */; };
+		186095E420C63A0400EBD26F /* CarouselFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 186095E320C63A0400EBD26F /* CarouselFlowLayout.swift */; };
 		186095E820C66B1D00EBD26F /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 186095E620C66B1D00EBD26F /* MenuViewController.swift */; };
 		186095EC20C66FBE00EBD26F /* menuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 186095EA20C66FBE00EBD26F /* menuTableViewCell.swift */; };
 		186095ED20C66FBE00EBD26F /* menuTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 186095EB20C66FBE00EBD26F /* menuTableViewCell.xib */; };
@@ -107,10 +108,11 @@
 		1804A0C320C52BEF00E2C9DF /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		18321E8F20C7FF9700BA10B2 /* AboutUsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutUsViewController.swift; sourceTree = "<group>"; };
 		18321E9020C7FF9700BA10B2 /* AboutUsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AboutUsViewController.xib; sourceTree = "<group>"; };
+		18439D6C20E745C50096A627 /* MyAlert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyAlert.swift; sourceTree = "<group>"; };
 		1848904920CD1A1400E78A23 /* NetWorkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetWorkManager.swift; sourceTree = "<group>"; };
 		186095DF20C635D200EBD26F /* ComborCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComborCollectionViewCell.swift; sourceTree = "<group>"; };
 		186095E020C635D200EBD26F /* ComborCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ComborCollectionViewCell.xib; sourceTree = "<group>"; };
-		186095E320C63A0400EBD26F /* UPCarouselFlowLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UPCarouselFlowLayout.swift; sourceTree = "<group>"; };
+		186095E320C63A0400EBD26F /* CarouselFlowLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CarouselFlowLayout.swift; sourceTree = "<group>"; };
 		186095E620C66B1D00EBD26F /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		186095EA20C66FBE00EBD26F /* menuTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = menuTableViewCell.swift; sourceTree = "<group>"; };
 		186095EB20C66FBE00EBD26F /* menuTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = menuTableViewCell.xib; sourceTree = "<group>"; };
@@ -316,7 +318,7 @@
 				186095DE20C6355C00EBD26F /* ComborCell */,
 				1804A0BE20C5245600E2C9DF /* ComborViewController.swift */,
 				1804A0BF20C5245600E2C9DF /* ComborViewController.xib */,
-				186095E320C63A0400EBD26F /* UPCarouselFlowLayout.swift */,
+				186095E320C63A0400EBD26F /* CarouselFlowLayout.swift */,
 			);
 			path = Combor;
 			sourceTree = "<group>";
@@ -324,6 +326,7 @@
 		1804A0C220C52BB500E2C9DF /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				18439D6C20E745C50096A627 /* MyAlert.swift */,
 				18BD3AC520C5A3F2002DCE22 /* iCarousel.h */,
 				18BD3AC620C5A3F2002DCE22 /* iCarousel.m */,
 				187509A320CC3ADE004B0C56 /* CheckInternet.swift */,
@@ -664,9 +667,10 @@
 				186095E120C635D200EBD26F /* ComborCollectionViewCell.swift in Sources */,
 				18704EFF20C8373B000F0CFD /* ContactView.swift in Sources */,
 				1802465820CAD6AA00B343A6 /* MyComborTableViewCell.swift in Sources */,
-				186095E420C63A0400EBD26F /* UPCarouselFlowLayout.swift in Sources */,
+				186095E420C63A0400EBD26F /* CarouselFlowLayout.swift in Sources */,
 				18BD3AC720C5A3F2002DCE22 /* iCarousel.m in Sources */,
 				1804A09520C4E56E00E2C9DF /* ViewController.swift in Sources */,
+				18439D6D20E745C50096A627 /* MyAlert.swift in Sources */,
 				1804A0C420C52BEF00E2C9DF /* Utils.swift in Sources */,
 				1804A09320C4E56E00E2C9DF /* AppDelegate.swift in Sources */,
 				186095F020C77D8500EBD26F /* Global.swift in Sources */,

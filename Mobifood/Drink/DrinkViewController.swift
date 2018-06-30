@@ -18,13 +18,17 @@ class DrinkViewController: UIViewController, IndicatorInfoProvider {
         return IndicatorInfo(image: UIImage(named: "ic_drink"))
     }
     
-    @IBOutlet weak var loadingIndicator: UIActivityIndicatorView!
-    @IBOutlet weak var drinkTableView: UITableView!
     @IBOutlet weak var drinkCollectionView: UICollectionView!
+    fileprivate var isScrollDelecrateAtTop = false
+    fileprivate var refreshTable: UIRefreshControl!
     var drinks = [Product]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.refreshTable = Utils.MyRefreshControl
+        self.refreshTable.addTarget(self, action: #selector(conrolRefresh), for: .valueChanged)
+        self.drinkCollectionView.addSubview(self.refreshTable)
+        
         let nib = UINib(nibName: "DrinkCollectionViewCell", bundle: nil)
         self.drinkCollectionView.register(nib, forCellWithReuseIdentifier: "drinkCollectionCell")
         NotificationCenter.default.addObserver(self, selector: #selector(reloadPageWhenNetworkChange), name: .drink, object: nil)
@@ -35,6 +39,10 @@ class DrinkViewController: UIViewController, IndicatorInfoProvider {
         self.drinkCollectionView.collectionViewLayout = layout
         
         self.checkNetworkState()
+    }
+    
+    @objc func conrolRefresh() {
+        self.refreshTable.endRefreshing()
     }
     
     @objc func reloadPageWhenNetworkChange(notification: NSNotification) {
@@ -61,6 +69,9 @@ extension DrinkViewController: UICollectionViewDelegate, UICollectionViewDataSou
     }
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let width = (self.view.frame.width / 2) - 15
+        if Utils.heightScreen < 667 {
+            return CGSize(width: width, height: self.view.frame.height * 0.50)
+        }
         return CGSize(width: width, height: self.view.frame.height * 0.48)
     }
     
@@ -79,20 +90,19 @@ extension DrinkViewController: UICollectionViewDelegate, UICollectionViewDataSou
             self.present(vc, animated: false, completion: nil)
         })
     }
-    
 }
 extension DrinkViewController {
     private func loadDrink()  {
         self.drinks = [Product]()
         let paramsDrink = ["collection_id" : "1001165720"]
-        SKActivityIndicator.show("Loading...", userInteractionStatus: false)
+        LoadingIndicator.show("Loading...", userInteractionStatus: false)
         firstly {
             Alamofire.request(url, method: .get,parameters: paramsDrink, headers: headers).responseDecodable(ProductList.self)
         }.done { products in
             self.drinks = products.products
         }.ensure {
             self.drinkCollectionView.reloadData()
-            SKActivityIndicator.dismiss()
+            LoadingIndicator.dismiss()
         }.catch { error in
             Utils.warning(title: "Thông báo", message: "Lỗi dữ liệu", addActionOk: true, addActionCancel: false)
         }

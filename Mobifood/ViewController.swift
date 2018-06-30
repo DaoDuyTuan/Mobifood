@@ -10,11 +10,11 @@ import UIKit
 import SlideMenuControllerSwift
 import Alamofire
 
-class ViewController: SlideMenuController {
+class ViewController: MenuController {
     override func awakeFromNib() {
         self.mainViewController = HomeViewController(nibName: "HomeViewController", bundle: nil)
         self.leftViewController = MenuViewController(nibName: "MenuViewController", bundle: nil)
-        SlideMenuOptions.leftViewWidth = self.view.frame.width * 0.7
+        MenuOptions.leftViewWidth = self.view.frame.width * 0.7
         super.awakeFromNib()
     }
     

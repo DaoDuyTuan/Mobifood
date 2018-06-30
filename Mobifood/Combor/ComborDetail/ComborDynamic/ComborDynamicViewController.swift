@@ -58,7 +58,7 @@ class ComborDynamicViewController: UIViewController {
                     MyComborViewController.myCombor[index].items = self.itemsSeleted
                 }
             }
-            Utils.alert(title: "Thành công", message: "Thêm thành công!", addActionOk: true, addActionCancel: false, vc: self)
+            let _ = MyAlert().showAlert("Thêm thành công!", subTitle: "Đã thêm vào combor của bạn !", style: AlertStyle.success)
         } else {
             Utils.alert(title: "Thông báo", message: "Bạn chưa chọn nước ép!", addActionOk: true, addActionCancel: false, vc: self)
         }
@@ -148,14 +148,14 @@ extension ComborDynamicViewController {
     private func loadDrink()  {
         self.drinks = [Product]()
         let paramsDrink = ["collection_id" : "1001165720"]
-        SKActivityIndicator.show("Loading...", userInteractionStatus: false)
+        LoadingIndicator.show("Loading...", userInteractionStatus: false)
         firstly {
             Alamofire.request(url, method: .get,parameters: paramsDrink, headers: headers).responseDecodable(ProductList.self)
             }.done { products in
                 self.drinks = products.products
             }.ensure {
                 self.listComborCollectionView.reloadData()
-                SKActivityIndicator.dismiss()
+                LoadingIndicator.dismiss()
             }.catch { error in
                 Utils.alert(title: "Thông báo", message: "Lỗi dữ liệu", addActionOk: true, addActionCancel: false, vc: self)
         }
