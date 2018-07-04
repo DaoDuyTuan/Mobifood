@@ -16,4 +16,15 @@ struct MyCombor {
     var items: [Product] = []
     var date: String?
     
+    init(id: String, name: String, price: String, date: String, image: String) {
+        self.idCombor = id
+        self.name = name
+        self.price = price
+        self.date = date
+        self.image = image
+    }
+    
+    init() {
+        
+    }
 }

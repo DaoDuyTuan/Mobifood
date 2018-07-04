@@ -118,8 +118,8 @@
                                         <action selector="addToCard:" destination="-1" eventType="touchUpInside" id="Ae0-87-Apw"/>
                                     </connections>
                                 </button>
-                                <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wwg-CP-eQR">
-                                    <rect key="frame" x="145.5" y="56" width="37.5" height="26"/>
+                                <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Đã thêm!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wwg-CP-eQR">
+                                    <rect key="frame" x="133" y="56" width="62.5" height="26"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="26" id="lr6-fx-JRe">
                                             <variation key="heightClass=regular-widthClass=regular" constant="30"/>

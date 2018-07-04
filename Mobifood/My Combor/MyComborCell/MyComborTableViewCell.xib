@@ -85,7 +85,7 @@
                         </constraints>
                     </view>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SCu-Re-zPS">
-                        <rect key="frame" x="362" y="132.5" width="30" height="33"/>
+                        <rect key="frame" x="316" y="132.5" width="30" height="33"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <state key="normal" title="Đặt">
                             <color key="titleColor" red="1" green="0.57810515169999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -97,9 +97,19 @@
                             <action selector="bookCombor:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="40c-cd-dFu"/>
                         </connections>
                     </button>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WDh-io-tzy">
+                        <rect key="frame" x="362" y="135" width="30" height="30"/>
+                        <state key="normal" title="Xoá">
+                            <color key="titleColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </state>
+                        <connections>
+                            <action selector="remove:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="jmu-Ml-0LV"/>
+                        </connections>
+                    </button>
                 </subviews>
                 <constraints>
                     <constraint firstItem="A65-nx-T5H" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" constant="-20" id="6Wo-PO-MKG"/>
+                    <constraint firstItem="WDh-io-tzy" firstAttribute="leading" secondItem="SCu-Re-zPS" secondAttribute="trailing" constant="16" id="8am-PV-Sfg"/>
                     <constraint firstAttribute="trailing" secondItem="A65-nx-T5H" secondAttribute="trailing" constant="10" id="B4m-zk-zWW"/>
                     <constraint firstItem="QYA-bg-U9S" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="I6a-Qw-fvd"/>
                     <constraint firstAttribute="bottom" secondItem="SCu-Re-zPS" secondAttribute="bottom" id="UfW-hR-zfO">
@@ -108,9 +118,8 @@
                     <constraint firstItem="A65-nx-T5H" firstAttribute="height" secondItem="QYA-bg-U9S" secondAttribute="height" id="XKR-Wa-7TW"/>
                     <constraint firstItem="A65-nx-T5H" firstAttribute="leading" secondItem="QYA-bg-U9S" secondAttribute="trailing" constant="6" id="abr-aS-o0P"/>
                     <constraint firstItem="QYA-bg-U9S" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="h3f-YS-xQf"/>
-                    <constraint firstAttribute="trailing" secondItem="SCu-Re-zPS" secondAttribute="trailing" constant="12" id="mtI-3S-ebx">
-                        <variation key="heightClass=regular-widthClass=regular" constant="20"/>
-                    </constraint>
+                    <constraint firstAttribute="trailing" secondItem="WDh-io-tzy" secondAttribute="trailing" constant="12" id="h9I-je-oR3"/>
+                    <constraint firstAttribute="bottom" secondItem="WDh-io-tzy" secondAttribute="bottom" id="pf2-Jp-soV"/>
                 </constraints>
             </tableViewCellContentView>
             <constraints>
@@ -119,6 +128,7 @@
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
                 <outlet property="btnBook" destination="SCu-Re-zPS" id="sVm-Lx-o8W"/>
+                <outlet property="btnRemove" destination="WDh-io-tzy" id="rHb-QI-XEW"/>
                 <outlet property="lblComborName" destination="NZz-pa-oBR" id="kPA-RN-VQq"/>
                 <outlet property="lblComborPrice" destination="GrN-Sn-ItY" id="oUN-ei-rJu"/>
                 <outlet property="myComborImage" destination="QYA-bg-U9S" id="kQl-Js-0OM"/>

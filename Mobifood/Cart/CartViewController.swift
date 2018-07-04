@@ -17,9 +17,13 @@ class CartViewController: UIViewController {
     @IBOutlet weak var MyCartHeader: UIView!
     @IBOutlet weak var btnBuy: UIButton!
     private var isCheckAll = false
+    @IBOutlet weak var lblIsHaveCombor: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        if CartViewController.cart.count > 0 {
+            self.lblIsHaveCombor.isHidden = true
+        }
         let cartCell = UINib(nibName: "CartTableViewCell", bundle: nil)
         self.cartTableView.register(cartCell, forCellReuseIdentifier: "cartCell")
     }
@@ -31,6 +35,22 @@ class CartViewController: UIViewController {
         self.lblIsSelectedAll.layer.backgroundColor = UIColor.clear.cgColor
         Utils.setHeader(view: MyCartHeader)
         Utils.setHeader(view: footerCartView)
+    }
+    
+    @IBAction func removeProductInCart(_ sender: Any) {
+        let itemsWillRemoveFromCart = CartViewController.cart.filter({ $0.isCheckedProduct == false })
+        let itemsRetainAfterDelete = CartViewController.cart.filter({ $0.isCheckedProduct == true })
+        
+        CartViewController.cart = itemsWillRemoveFromCart
+        if CartViewController.cart.count == 0 {
+            self.lblIsHaveCombor.isHidden = false
+            self.lblIsSelectedAll.layer.backgroundColor = UIColor.clear.cgColor            
+        }
+        self.cartTableView.reloadData()
+        
+        for product in itemsRetainAfterDelete {
+            ManagerLocalData.shareData.deleteData(productWillDelete: product)
+        }
     }
     
     @IBAction func back(_ sender: Any) {
@@ -76,7 +96,7 @@ extension CartViewController: UITableViewDelegate, UITableViewDataSource {
         cell.isItemSelected.tag = indexPath.row
         cell.delegate = self
         cell.itemImageView.sd_setImage(with: URL(string: product.productImage[0].src), placeholderImage: UIImage(named: "notimage"))
-        cell.lblAmount.text = "\(product.amount!)"
+        cell.lblAmount.text = "\(product.amount ?? 1)"
         
         if  product.isCheckedProduct {
             cell.isItemSelected.backgroundColor = UIColor.myGreen
@@ -103,6 +123,14 @@ extension CartViewController: UITableViewDelegate, UITableViewDataSource {
 
 extension CartViewController: ChooseProduct {
     func chooseProduct(index: Int, isChecked: Bool) {
-//        CartViewController.cart[index].isChecked = isChecked
+        guard isChecked else {
+            return
+        }
+        
+        if CartViewController.cart.filter({$0.isCheckedProduct == false}).count > 0 {
+            self.lblIsSelectedAll.layer.backgroundColor = UIColor.clear.cgColor
+        } else {
+            self.lblIsSelectedAll.layer.backgroundColor = UIColor.myGreen.cgColor
+        }
     }
 }

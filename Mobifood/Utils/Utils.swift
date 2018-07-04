@@ -57,6 +57,10 @@ class Utils: NSObject {
             view.removeFromSuperview()
         }
     }
+    
+    static func setView(view: UIView, hidden: Bool, time: TimeInterval) {
+        UIView.transition(with: view, duration: time, options: .showHideTransitionViews, animations: nil)
+    }
 
     static func warning(title: String, message: String, addActionOk: Bool, addActionCancel: Bool) {
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)

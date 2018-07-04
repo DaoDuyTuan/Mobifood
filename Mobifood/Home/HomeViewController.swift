@@ -11,6 +11,7 @@ import XLPagerTabStrip
 import SlideMenuControllerSwift
 import Alamofire
 import SystemConfiguration
+import CoreData
 
 class HomeViewController: ButtonBarPagerTabStripViewController {
 
@@ -22,6 +23,7 @@ class HomeViewController: ButtonBarPagerTabStripViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // when select tab
+        
         NetworkManager.whenNoConnection()
         changeCurrentIndexProgressive = { (oldCell: ButtonBarViewCell?, newCell: ButtonBarViewCell?, progressPercentage: CGFloat, changeCurrentIndex: Bool, animated: Bool) -> Void in
             guard changeCurrentIndex == true else { return }

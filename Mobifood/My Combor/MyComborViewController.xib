@@ -14,6 +14,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MyComborViewController" customModule="Mobifood" customModuleProvider="target">
             <connections>
                 <outlet property="headerMyCombor" destination="Bwd-5G-WBc" id="wC2-Gf-H8Z"/>
+                <outlet property="lblIsHaveCombor" destination="GYy-Pv-3ou" id="92H-25-4gR"/>
                 <outlet property="myComborTableView" destination="osJ-je-vuq" id="91K-3V-KVe"/>
                 <outlet property="view" destination="9PZ-cy-vZQ" id="RaV-sB-0jY"/>
             </connections>
@@ -66,14 +67,22 @@
                         <outlet property="delegate" destination="-1" id="2u3-xJ-07M"/>
                     </connections>
                 </tableView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bạn chưa có combor nào!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GYy-Pv-3ou">
+                    <rect key="frame" x="89" y="323" width="196" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" red="0.66422420739999999" green="0.66424006219999998" blue="0.66423153879999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="osJ-je-vuq" firstAttribute="top" secondItem="Bwd-5G-WBc" secondAttribute="bottom" constant="4" id="6Fc-GG-7C7"/>
                 <constraint firstItem="Bwd-5G-WBc" firstAttribute="leading" secondItem="wg2-Qd-aB5" secondAttribute="leading" id="9OY-HV-eDW"/>
+                <constraint firstItem="GYy-Pv-3ou" firstAttribute="centerY" secondItem="9PZ-cy-vZQ" secondAttribute="centerY" id="D9I-7t-xIm"/>
                 <constraint firstItem="osJ-je-vuq" firstAttribute="leading" secondItem="wg2-Qd-aB5" secondAttribute="leading" constant="4" id="KGu-XJ-sn2"/>
                 <constraint firstAttribute="trailing" secondItem="osJ-je-vuq" secondAttribute="trailing" constant="4" id="YLj-mw-xQV"/>
                 <constraint firstItem="Bwd-5G-WBc" firstAttribute="trailing" secondItem="wg2-Qd-aB5" secondAttribute="trailing" id="gcQ-Ry-bj1"/>
+                <constraint firstItem="GYy-Pv-3ou" firstAttribute="centerX" secondItem="9PZ-cy-vZQ" secondAttribute="centerX" id="kSc-A9-1cH"/>
                 <constraint firstItem="Bwd-5G-WBc" firstAttribute="top" secondItem="9PZ-cy-vZQ" secondAttribute="top" id="sJW-fp-5Aw"/>
                 <constraint firstItem="Bwd-5G-WBc" firstAttribute="height" secondItem="9PZ-cy-vZQ" secondAttribute="height" multiplier="0.1" id="ux7-oz-8bs"/>
                 <constraint firstItem="wg2-Qd-aB5" firstAttribute="bottom" secondItem="osJ-je-vuq" secondAttribute="bottom" constant="4" id="xSX-A2-rbV"/>

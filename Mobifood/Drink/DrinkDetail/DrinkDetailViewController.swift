@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreData
 
 class DrinkDetailViewController: UIViewController {
     @IBOutlet weak var lblIsAddedState: UILabel!
@@ -22,6 +23,8 @@ class DrinkDetailViewController: UIViewController {
     var images: [String] = []
     private var newAmount: Int = 0
     private var newPrice: Int = 0
+    private var isCheckedAmount = false
+    
     @IBOutlet weak var bgAlertView: UIView!
     var drinkDetail: Product!
     
@@ -36,6 +39,8 @@ class DrinkDetailViewController: UIViewController {
         }
         numberPickerView.selectRow(images.count / 2 - 1, inComponent: 0, animated: true)
         self.newAmount = 1
+        self.newPrice = self.newAmount * drinkDetail.productVariants.price
+        self.isCheckedAmount = true
         
         self.btnClose.layer.cornerRadius = self.btnClose.frame.width/2
         self.btnClose.layer.masksToBounds = true
@@ -49,30 +54,36 @@ class DrinkDetailViewController: UIViewController {
     
     override func viewDidLayoutSubviews() {
         let height = UIScreen.main.bounds.height
-        if height < 667 || (height > 1000 && height < 1300){
+        if height < 667 || (height > 1000 && height < 1300) {
             heightAlertView.constant = 20
         }
     }
 
     @IBAction func addToCard(_ sender: Any) {
-        newPrice = newPrice == 0 ? drinkDetail.productVariants.price : newPrice
-        drinkDetail.productVariants = Variant(price: newPrice)
-        drinkDetail.amount = self.newAmount
-        
-        if CartViewController.cart.filter({ $0.productID == self.drinkDetail.productID }).count == 0 {
-            CartViewController.cart.append(drinkDetail)
-        } else {
-            for (index, product) in CartViewController.cart.enumerated() {
-                if product.productID == self.drinkDetail.productID {
-                    CartViewController.cart[index] = self.drinkDetail
+        if isCheckedAmount {
+            var productWillAdd = Product()
+            productWillAdd = self.drinkDetail
+            productWillAdd.productVariants = Variant(price: self.newPrice)
+            productWillAdd.amount = self.newAmount
+            
+            if CartViewController.cart.filter({ $0.productID == self.drinkDetail.productID }).count == 0 {
+                CartViewController.cart.append(drinkDetail)
+                ManagerLocalData.shareData.saveProduct(product: productWillAdd)
+            } else {
+                for (index, product) in CartViewController.cart.enumerated() {
+                    if product.productID == self.drinkDetail.productID {
+                        CartViewController.cart[index] = productWillAdd
+                        ManagerLocalData.shareData.updateData(productWillUpdate: productWillAdd)
+                        print(ManagerLocalData.shareData.fetchDataFromLocal(entity: "Products")[index].value(forKey: "amount") as Any)
+                    }
                 }
             }
-        }
-        
-        UIView.animate(withDuration: 1.0, animations: {
             self.lblIsAddedState.isHidden = false
-            self.lblIsAddedState.text = "Đã thêm!"
-        })
+            DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
+                self.lblIsAddedState.isHidden = true
+            }
+            self.isCheckedAmount = false
+        }
     }
     
     var price: String = "" {
@@ -121,8 +132,8 @@ extension DrinkDetailViewController: UIPickerViewDelegate, UIPickerViewDataSourc
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         self.newPrice = (Int(images[row])! * drinkDetail.productVariants.price)
         self.newAmount = Int(images[row])!
-        self.lblPrice.text = "\(Utils.formmatCurrentcy(fommater: "", price: newPrice as NSNumber))"
-        
+        self.lblPrice.text = "\(Utils.formmatCurrentcy(fommater: "", price: self.newPrice as NSNumber))"
+        self.isCheckedAmount = true
     }
     func pickerView(_ pickerView: UIPickerView, viewForRow row: Int, forComponent component: Int, reusing view: UIView?) -> UIView {
         let view = UIView()
@@ -134,5 +145,11 @@ extension DrinkDetailViewController: UIPickerViewDelegate, UIPickerViewDataSourc
         view.addSubview(label)
         view.transform = CGAffineTransform(rotationAngle: -90 * (.pi / 180))
         return view
+    }
+}
+
+extension DrinkViewController {
+    func checkPriceAndAmountWillAddToCart() {
+        
     }
 }

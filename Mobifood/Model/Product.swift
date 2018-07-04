@@ -30,8 +30,7 @@ struct Product: Codable {
     private var variants: [Variant]?
     private var images: [Image]?
     var amount: Int?
-    var isChecked: Bool?
-    
+    var isChecked: Bool?    
     var isCheckedProduct: Bool {
         get {
             if let check = self.isChecked {
@@ -41,9 +40,22 @@ struct Product: Codable {
         }
     }
     
-    var productID: Double {
+    init(id: Double, title: String, variants: [Variant], images: [Image], amount: Int, isChecked: Bool) {
+        self.id = id
+        self.title = title
+        self.variants = variants
+        self.images = images
+        self.amount = amount
+        self.isChecked = isChecked
+    }
+    
+    init() {
+        
+    }
+    
+    var productID: Double? {
         get {
-            return id!
+            return id ?? nil
         }
     }
     

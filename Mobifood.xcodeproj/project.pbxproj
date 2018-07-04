@@ -52,6 +52,7 @@
 		186095FC20C78BE400EBD26F /* DrinkCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 186095FA20C78BE400EBD26F /* DrinkCollectionViewCell.xib */; };
 		1860960520C7D81E00EBD26F /* DrinkDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1860960320C7D81E00EBD26F /* DrinkDetailViewController.swift */; };
 		1860960620C7D81E00EBD26F /* DrinkDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1860960420C7D81E00EBD26F /* DrinkDetailViewController.xib */; };
+		186F89E420ECA49700A6B8CF /* ManagerLocalData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 186F89E320ECA49700A6B8CF /* ManagerLocalData.swift */; };
 		18704EFF20C8373B000F0CFD /* ContactView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18704EFE20C8373B000F0CFD /* ContactView.swift */; };
 		18704F0120C83744000F0CFD /* ContactView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18704F0020C83744000F0CFD /* ContactView.xib */; };
 		18704F0620C8418D000F0CFD /* CartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18704F0420C8418D000F0CFD /* CartViewController.swift */; };
@@ -70,6 +71,9 @@
 		1894FD0D20C931E60020F7C1 /* ComborDynamicViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1894FD0B20C931E60020F7C1 /* ComborDynamicViewController.xib */; };
 		18A8628620E164BF00A4AD1B /* MyCombor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A8628520E164BF00A4AD1B /* MyCombor.swift */; };
 		18BD3AC720C5A3F2002DCE22 /* iCarousel.m in Sources */ = {isa = PBXBuildFile; fileRef = 18BD3AC620C5A3F2002DCE22 /* iCarousel.m */; };
+		18C96F5620EA178C008FC13F /* ArchieUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C96F5520EA178C008FC13F /* ArchieUtil.swift */; };
+		18C96F5820EA1B72008FC13F /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C96F5720EA1B72008FC13F /* Person.swift */; };
+		18E2300F20EC756B00DE44F5 /* Product.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 18E2300D20EC756B00DE44F5 /* Product.xcdatamodeld */; };
 		18F7278120D61D0B00D9722D /* CustormerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F7277F20D61D0B00D9722D /* CustormerViewController.swift */; };
 		18F7278220D61D0B00D9722D /* CustormerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18F7278020D61D0B00D9722D /* CustormerViewController.xib */; };
 /* End PBXBuildFile section */
@@ -122,6 +126,7 @@
 		186095FA20C78BE400EBD26F /* DrinkCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DrinkCollectionViewCell.xib; sourceTree = "<group>"; };
 		1860960320C7D81E00EBD26F /* DrinkDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinkDetailViewController.swift; sourceTree = "<group>"; };
 		1860960420C7D81E00EBD26F /* DrinkDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DrinkDetailViewController.xib; sourceTree = "<group>"; };
+		186F89E320ECA49700A6B8CF /* ManagerLocalData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManagerLocalData.swift; sourceTree = "<group>"; };
 		18704EFE20C8373B000F0CFD /* ContactView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactView.swift; sourceTree = "<group>"; };
 		18704F0020C83744000F0CFD /* ContactView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ContactView.xib; sourceTree = "<group>"; };
 		18704F0420C8418D000F0CFD /* CartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartViewController.swift; sourceTree = "<group>"; };
@@ -142,6 +147,9 @@
 		18BD3AC420C5A3F1002DCE22 /* Mobifood-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Mobifood-Bridging-Header.h"; sourceTree = "<group>"; };
 		18BD3AC520C5A3F2002DCE22 /* iCarousel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iCarousel.h; sourceTree = "<group>"; };
 		18BD3AC620C5A3F2002DCE22 /* iCarousel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iCarousel.m; sourceTree = "<group>"; };
+		18C96F5520EA178C008FC13F /* ArchieUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArchieUtil.swift; sourceTree = "<group>"; };
+		18C96F5720EA1B72008FC13F /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
+		18E2300E20EC756B00DE44F5 /* Product.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Product.xcdatamodel; sourceTree = "<group>"; };
 		18F7277F20D61D0B00D9722D /* CustormerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustormerViewController.swift; sourceTree = "<group>"; };
 		18F7278020D61D0B00D9722D /* CustormerViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustormerViewController.xib; sourceTree = "<group>"; };
 		3429BEC4352140C1F6CF9971 /* Pods-Mobifood.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mobifood.release.xcconfig"; path = "Pods/Target Support Files/Pods-Mobifood/Pods-Mobifood.release.xcconfig"; sourceTree = "<group>"; };
@@ -165,6 +173,8 @@
 			children = (
 				1802464620CA7DB600B343A6 /* Product.swift */,
 				18A8628520E164BF00A4AD1B /* MyCombor.swift */,
+				18C96F5520EA178C008FC13F /* ArchieUtil.swift */,
+				186F89E320ECA49700A6B8CF /* ManagerLocalData.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -209,6 +219,7 @@
 		1802465A20CADF3100B343A6 /* QRCode */ = {
 			isa = PBXGroup;
 			children = (
+				18C96F5720EA1B72008FC13F /* Person.swift */,
 				1802465B20CADF5200B343A6 /* QRCodeViewController.swift */,
 				1802465C20CADF5200B343A6 /* QRCodeViewController.xib */,
 			);
@@ -236,6 +247,7 @@
 		1804A09120C4E56E00E2C9DF /* Mobifood */ = {
 			isa = PBXGroup;
 			children = (
+				18E2300C20EC755500DE44F5 /* DataLocal */,
 				18F7277E20D61CCD00D9722D /* Customer Information */,
 				1804A0C220C52BB500E2C9DF /* Utils */,
 				1802464820CA803F00B343A6 /* Service */,
@@ -459,6 +471,14 @@
 			path = ComborDynamic;
 			sourceTree = "<group>";
 		};
+		18E2300C20EC755500DE44F5 /* DataLocal */ = {
+			isa = PBXGroup;
+			children = (
+				18E2300D20EC756B00DE44F5 /* Product.xcdatamodeld */,
+			);
+			path = DataLocal;
+			sourceTree = "<group>";
+		};
 		18F7277E20D61CCD00D9722D /* Customer Information */ = {
 			isa = PBXGroup;
 			children = (
@@ -680,13 +700,16 @@
 				1802464720CA7DB600B343A6 /* Product.swift in Sources */,
 				1804A0AA20C4FC7600E2C9DF /* HomeViewController.swift in Sources */,
 				18704F0B20C843D9000F0CFD /* CartTableViewCell.swift in Sources */,
+				18E2300F20EC756B00DE44F5 /* Product.xcdatamodeld in Sources */,
 				1802465D20CADF5200B343A6 /* QRCodeViewController.swift in Sources */,
 				1804A0AF20C5237900E2C9DF /* DrinkViewController.swift in Sources */,
 				1894FD0C20C931E60020F7C1 /* ComborDynamicViewController.swift in Sources */,
 				1804A0B420C523BD00E2C9DF /* FruitViewController.swift in Sources */,
+				18C96F5620EA178C008FC13F /* ArchieUtil.swift in Sources */,
 				1804A0C020C5245600E2C9DF /* ComborViewController.swift in Sources */,
 				18A8628620E164BF00A4AD1B /* MyCombor.swift in Sources */,
 				18704F0620C8418D000F0CFD /* CartViewController.swift in Sources */,
+				186F89E420ECA49700A6B8CF /* ManagerLocalData.swift in Sources */,
 				1802464E20CA987900B343A6 /* SettingViewController.swift in Sources */,
 				1804A0B920C523E600E2C9DF /* MapViewController.swift in Sources */,
 				187509A220CBDB76004B0C56 /* AlertAddSuccessFull.swift in Sources */,
@@ -694,6 +717,7 @@
 				186095FB20C78BE400EBD26F /* DrinkCollectionViewCell.swift in Sources */,
 				1802465320CAD4FE00B343A6 /* MyComborViewController.swift in Sources */,
 				1894FD0620C92EC90020F7C1 /* ComborNameCollectionViewCell.swift in Sources */,
+				18C96F5820EA1B72008FC13F /* Person.swift in Sources */,
 				18F7278120D61D0B00D9722D /* CustormerViewController.swift in Sources */,
 				1848904A20CD1A1400E78A23 /* NetWorkManager.swift in Sources */,
 			);
@@ -902,6 +926,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		18E2300D20EC756B00DE44F5 /* Product.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				18E2300E20EC756B00DE44F5 /* Product.xcdatamodel */,
+			);
+			currentVersion = 18E2300E20EC756B00DE44F5 /* Product.xcdatamodel */;
+			path = Product.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 1804A08720C4E56E00E2C9DF /* Project object */;
 }

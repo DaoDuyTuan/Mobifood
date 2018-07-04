@@ -102,7 +102,7 @@ extension ComborViewController: UICollectionViewDelegate, UICollectionViewDataSo
         comborDetailVC.combor.name = drink.productTitle
         comborDetailVC.combor.price = drink.productPrice.isString
         comborDetailVC.combor.image = drink.productImage.count > 0 ? drink.productImage[0].src : nil
-        comborDetailVC.combor.idCombor = "\(drink.productID)"
+        comborDetailVC.combor.idCombor = "\(drink.productID ?? 0)"
         self.present(comborDetailVC, animated: true, completion: nil)
     }
     

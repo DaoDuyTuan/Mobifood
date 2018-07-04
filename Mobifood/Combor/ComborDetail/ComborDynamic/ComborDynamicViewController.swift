@@ -58,6 +58,7 @@ class ComborDynamicViewController: UIViewController {
                     MyComborViewController.myCombor[index].items = self.itemsSeleted
                 }
             }
+            
             let _ = MyAlert().showAlert("Thêm thành công!", subTitle: "Đã thêm vào combor của bạn !", style: AlertStyle.success)
         } else {
             Utils.alert(title: "Thông báo", message: "Bạn chưa chọn nước ép!", addActionOk: true, addActionCancel: false, vc: self)

@@ -10,12 +10,17 @@ import UIKit
 
 class MyComborViewController: UIViewController {
 
+    @IBOutlet weak var lblIsHaveCombor: UILabel!
     @IBOutlet weak var headerMyCombor: UIView!
     @IBOutlet weak var myComborTableView: UITableView!
     static var myCombor: [MyCombor] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        if MyComborViewController.myCombor.count > 0 {
+            self.lblIsHaveCombor.isHidden = true
+        }
         
         let cartCell = UINib(nibName: "MyComborTableViewCell", bundle: nil)
         self.myComborTableView.register(cartCell, forCellReuseIdentifier: "myCombor")
@@ -58,7 +63,15 @@ extension MyComborViewController: UITableViewDelegate, UITableViewDataSource {
     }
 }
 
-extension MyComborViewController: BuyCombor {
+extension MyComborViewController: ComborState {
+    func remove(index: Int) {
+        MyComborViewController.myCombor.remove(at: index)
+        self.myComborTableView.reloadData()
+        if MyComborViewController.myCombor.count == 0 {
+            self.lblIsHaveCombor.isHidden = false
+        }
+    }
+    
     func buy(index: Int) {
         let myCombor = ComborDetailViewController(nibName: "ComborDetailViewController", bundle: nil)
         myCombor.comborDetail = MyComborViewController.myCombor[index]

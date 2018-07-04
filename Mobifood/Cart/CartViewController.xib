@@ -18,6 +18,7 @@
                 <outlet property="btnBuy" destination="wrF-ok-CT3" id="rhd-Sr-wOS"/>
                 <outlet property="cartTableView" destination="CbW-m9-NKF" id="CDY-1Y-wMg"/>
                 <outlet property="footerCartView" destination="6Ch-OS-elF" id="60c-bX-hx3"/>
+                <outlet property="lblIsHaveCombor" destination="Pud-UK-OQE" id="ny9-CU-cEs"/>
                 <outlet property="lblIsSelectedAll" destination="0Xx-mG-XxY" id="Nar-SW-CQv"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -31,8 +32,8 @@
                     <rect key="frame" x="0.0" y="0.0" width="375" height="66.5"/>
                     <subviews>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q5A-mt-51d">
-                            <rect key="frame" x="16" y="25.5" width="30" height="36"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                            <rect key="frame" x="16" y="24" width="30" height="39"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="22"/>
                             <state key="normal" title="←">
                                 <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </state>
@@ -52,13 +53,26 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="40"/>
                             </variation>
                         </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ooF-GM-lMX">
+                            <rect key="frame" x="341.5" y="32" width="23.5" height="23.5"/>
+                            <constraints>
+                                <constraint firstAttribute="width" secondItem="ooF-GM-lMX" secondAttribute="height" multiplier="1:1" id="Y7N-JC-R4z"/>
+                            </constraints>
+                            <state key="normal" image="garbage"/>
+                            <connections>
+                                <action selector="removeProductInCart:" destination="-1" eventType="touchUpInside" id="EbP-xK-sBi"/>
+                            </connections>
+                        </button>
                     </subviews>
-                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <color key="backgroundColor" red="0.83741801979999997" green="0.83743780850000005" blue="0.83742713930000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
                         <constraint firstItem="q5A-mt-51d" firstAttribute="leading" secondItem="je7-kV-wju" secondAttribute="leading" constant="16" id="9ux-bE-b5o"/>
+                        <constraint firstAttribute="trailing" secondItem="ooF-GM-lMX" secondAttribute="trailing" constant="10" id="CVx-hx-Buu"/>
                         <constraint firstItem="ece-th-qGg" firstAttribute="centerY" secondItem="je7-kV-wju" secondAttribute="centerY" constant="10" id="amV-NX-wRC"/>
                         <constraint firstItem="q5A-mt-51d" firstAttribute="centerY" secondItem="je7-kV-wju" secondAttribute="centerY" constant="10" id="eQt-g8-Oex"/>
+                        <constraint firstItem="ooF-GM-lMX" firstAttribute="centerY" secondItem="je7-kV-wju" secondAttribute="centerY" constant="10" id="m7D-3M-uBH"/>
                         <constraint firstItem="ece-th-qGg" firstAttribute="centerX" secondItem="je7-kV-wju" secondAttribute="centerX" id="rzF-8k-3fc"/>
+                        <constraint firstItem="ooF-GM-lMX" firstAttribute="height" secondItem="je7-kV-wju" secondAttribute="height" multiplier="0.35" id="yHQ-43-0MG"/>
                     </constraints>
                 </view>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="CbW-m9-NKF">
@@ -157,6 +171,12 @@
                         <constraint firstItem="qfr-dq-yUj" firstAttribute="centerY" secondItem="6Ch-OS-elF" secondAttribute="centerY" id="zmC-Od-p6o"/>
                     </constraints>
                 </view>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bạn chưa có combor nào!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pud-UK-OQE">
+                    <rect key="frame" x="83.5" y="323" width="207" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                    <color key="textColor" red="0.66422420739999999" green="0.66424006219999998" blue="0.66423153879999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
@@ -165,6 +185,7 @@
                 <constraint firstItem="6Ch-OS-elF" firstAttribute="top" secondItem="CbW-m9-NKF" secondAttribute="bottom" id="Cqf-Tb-a3R"/>
                 <constraint firstItem="je7-kV-wju" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="0.1" id="M3o-et-Hlz"/>
                 <constraint firstItem="CbW-m9-NKF" firstAttribute="top" secondItem="je7-kV-wju" secondAttribute="bottom" constant="4" id="Ozh-4x-n9C"/>
+                <constraint firstItem="Pud-UK-OQE" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="UMs-11-Kp4"/>
                 <constraint firstItem="je7-kV-wju" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="avJ-pH-3da"/>
                 <constraint firstAttribute="bottomMargin" secondItem="6Ch-OS-elF" secondAttribute="bottom" id="dVb-FJ-jWM"/>
                 <constraint firstItem="je7-kV-wju" firstAttribute="trailing" secondItem="i5M-Pr-FkT" secondAttribute="trailing" id="fd9-Gy-3gw"/>
@@ -173,9 +194,13 @@
                 <constraint firstItem="wrF-ok-CT3" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" multiplier="0.16" constant="5" id="nnt-YA-V3u"/>
                 <constraint firstItem="6Ch-OS-elF" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="0.1" id="qle-VX-Ai8"/>
                 <constraint firstAttribute="trailing" secondItem="CbW-m9-NKF" secondAttribute="trailing" constant="4" id="xX3-2B-Y5b"/>
+                <constraint firstItem="Pud-UK-OQE" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="xYi-Oo-EMD"/>
                 <constraint firstItem="je7-kV-wju" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="ydb-0V-d1f"/>
             </constraints>
             <point key="canvasLocation" x="33.5" y="53.5"/>
         </view>
     </objects>
+    <resources>
+        <image name="garbage" width="32" height="32"/>
+    </resources>
 </document>
