@@ -52,13 +52,19 @@ class ComborDynamicViewController: UIViewController {
             
             if !self.checkComborDidSelected() {
                 MyComborViewController.myCombor.append(self.combor)
+                ManagerLocalData.shareData.saveCombor(mycombor: self.combor)
+                
             } else {
                 let index = self.getIndexOfComborAdded(combor: self.combor)
                 if let index = index?.byteSwapped {
                     MyComborViewController.myCombor[index].items = self.itemsSeleted
                 }
             }
-            
+            for item in self.itemsSeleted {
+                if !ManagerLocalData.shareData.checkDataExist(productWillCheck: item) {
+                    ManagerLocalData.shareData.saveProduct(product: item)
+                }
+            }
             let _ = MyAlert().showAlert("Thêm thành công!", subTitle: "Đã thêm vào combor của bạn !", style: AlertStyle.success)
         } else {
             Utils.alert(title: "Thông báo", message: "Bạn chưa chọn nước ép!", addActionOk: true, addActionCancel: false, vc: self)
@@ -102,11 +108,12 @@ extension ComborDynamicViewController: UICollectionViewDelegate, UICollectionVie
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let drink = self.drinks[indexPath.row]
+        var drink = self.drinks[indexPath.row]
         self.lblIsSetelected.isHidden = true
         if self.itemsSeleted.filter({$0.productID == drink.productID}).count > 0 {
             Utils.alert(title: "Thông báo", message: "Bạn đã chọn nước ép này rồi", addActionOk: true, addActionCancel: false, vc: self)
         } else {
+            drink.idCombor = self.combor.idCombor ?? ""
             self.itemsSeleted.append(drink)
         }
         self.listSelectedCombor.reloadData()
@@ -196,6 +203,7 @@ extension ComborDynamicViewController {
 
 extension ComborDynamicViewController: DeleteDrinkInCombor {
     func deleteDrink(index: Int) {
+        ManagerLocalData.shareData.deleteData(productWillDelete: self.itemsSeleted[index])
         self.itemsSeleted.remove(at: index)
         if self.itemsSeleted.count == 0 {
             self.lblIsSetelected.isHidden = false

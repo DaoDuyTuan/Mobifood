@@ -19,7 +19,6 @@
                 <outlet property="fruitImageView" destination="7aK-3v-6Ug" id="epE-BI-bt7"/>
                 <outlet property="heightAlertView" destination="WVV-Yu-0aG" id="YSN-nc-MGC"/>
                 <outlet property="lblFruitName" destination="05x-sW-Gf2" id="ONn-sD-nXs"/>
-                <outlet property="lblIsAddedState" destination="wwg-CP-eQR" id="378-Wh-2ld"/>
                 <outlet property="lblPrice" destination="67a-DQ-Qas" id="QgF-f3-ngd"/>
                 <outlet property="numberPickerView" destination="xyQ-ei-L14" id="zMq-Gb-dqf"/>
                 <outlet property="view" destination="vab-4U-L8g" id="plH-UG-bmb"/>
@@ -105,7 +104,7 @@
                             <rect key="frame" x="8" y="373" width="327" height="94"/>
                             <subviews>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dz5-H7-NWe">
-                                    <rect key="frame" x="16" y="3" width="295" height="48"/>
+                                    <rect key="frame" x="16" y="13" width="295" height="48"/>
                                     <color key="backgroundColor" red="1" green="0.57810515169999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                     <state key="normal" title="THÊM VÀO GIỎ HÀNG">
@@ -118,28 +117,12 @@
                                         <action selector="addToCard:" destination="-1" eventType="touchUpInside" id="Ae0-87-Apw"/>
                                     </connections>
                                 </button>
-                                <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Đã thêm!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wwg-CP-eQR">
-                                    <rect key="frame" x="133" y="56" width="62.5" height="26"/>
-                                    <constraints>
-                                        <constraint firstAttribute="height" constant="26" id="lr6-fx-JRe">
-                                            <variation key="heightClass=regular-widthClass=regular" constant="30"/>
-                                        </constraint>
-                                    </constraints>
-                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                    <color key="textColor" red="0.0" green="0.56284224989999998" blue="0.31881666180000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                    <nil key="highlightedColor"/>
-                                    <variation key="heightClass=regular-widthClass=regular">
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
-                                    </variation>
-                                </label>
                             </subviews>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
-                                <constraint firstItem="wwg-CP-eQR" firstAttribute="top" secondItem="Dz5-H7-NWe" secondAttribute="bottom" constant="5" id="BuI-Oz-zOZ"/>
-                                <constraint firstItem="wwg-CP-eQR" firstAttribute="centerX" secondItem="8Vw-7J-Vd9" secondAttribute="centerX" id="Bw9-z5-BYD"/>
                                 <constraint firstAttribute="trailing" secondItem="Dz5-H7-NWe" secondAttribute="trailing" constant="16" id="FqH-Td-Xm6"/>
                                 <constraint firstItem="Dz5-H7-NWe" firstAttribute="leading" secondItem="8Vw-7J-Vd9" secondAttribute="leading" constant="16" id="WKG-eD-l08"/>
-                                <constraint firstItem="Dz5-H7-NWe" firstAttribute="centerY" secondItem="8Vw-7J-Vd9" secondAttribute="centerY" constant="-20" id="fQJ-X6-b5T"/>
+                                <constraint firstItem="Dz5-H7-NWe" firstAttribute="centerY" secondItem="8Vw-7J-Vd9" secondAttribute="centerY" constant="-10" id="fQJ-X6-b5T"/>
                             </constraints>
                         </view>
                     </subviews>

@@ -70,8 +70,8 @@
 		1894FD0C20C931E60020F7C1 /* ComborDynamicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1894FD0A20C931E60020F7C1 /* ComborDynamicViewController.swift */; };
 		1894FD0D20C931E60020F7C1 /* ComborDynamicViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1894FD0B20C931E60020F7C1 /* ComborDynamicViewController.xib */; };
 		18A8628620E164BF00A4AD1B /* MyCombor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A8628520E164BF00A4AD1B /* MyCombor.swift */; };
+		18B414DD20F124220002323E /* DrinkDetailModelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B414DC20F124220002323E /* DrinkDetailModelView.swift */; };
 		18BD3AC720C5A3F2002DCE22 /* iCarousel.m in Sources */ = {isa = PBXBuildFile; fileRef = 18BD3AC620C5A3F2002DCE22 /* iCarousel.m */; };
-		18C96F5620EA178C008FC13F /* ArchieUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C96F5520EA178C008FC13F /* ArchieUtil.swift */; };
 		18C96F5820EA1B72008FC13F /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C96F5720EA1B72008FC13F /* Person.swift */; };
 		18E2300F20EC756B00DE44F5 /* Product.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 18E2300D20EC756B00DE44F5 /* Product.xcdatamodeld */; };
 		18F7278120D61D0B00D9722D /* CustormerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F7277F20D61D0B00D9722D /* CustormerViewController.swift */; };
@@ -144,10 +144,10 @@
 		1894FD0A20C931E60020F7C1 /* ComborDynamicViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComborDynamicViewController.swift; sourceTree = "<group>"; };
 		1894FD0B20C931E60020F7C1 /* ComborDynamicViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ComborDynamicViewController.xib; sourceTree = "<group>"; };
 		18A8628520E164BF00A4AD1B /* MyCombor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCombor.swift; sourceTree = "<group>"; };
+		18B414DC20F124220002323E /* DrinkDetailModelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinkDetailModelView.swift; sourceTree = "<group>"; };
 		18BD3AC420C5A3F1002DCE22 /* Mobifood-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Mobifood-Bridging-Header.h"; sourceTree = "<group>"; };
 		18BD3AC520C5A3F2002DCE22 /* iCarousel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iCarousel.h; sourceTree = "<group>"; };
 		18BD3AC620C5A3F2002DCE22 /* iCarousel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iCarousel.m; sourceTree = "<group>"; };
-		18C96F5520EA178C008FC13F /* ArchieUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArchieUtil.swift; sourceTree = "<group>"; };
 		18C96F5720EA1B72008FC13F /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
 		18E2300E20EC756B00DE44F5 /* Product.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Product.xcdatamodel; sourceTree = "<group>"; };
 		18F7277F20D61D0B00D9722D /* CustormerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustormerViewController.swift; sourceTree = "<group>"; };
@@ -173,7 +173,6 @@
 			children = (
 				1802464620CA7DB600B343A6 /* Product.swift */,
 				18A8628520E164BF00A4AD1B /* MyCombor.swift */,
-				18C96F5520EA178C008FC13F /* ArchieUtil.swift */,
 				186F89E320ECA49700A6B8CF /* ManagerLocalData.swift */,
 			);
 			path = Model;
@@ -265,7 +264,7 @@
 				1804A0B120C5239200E2C9DF /* Fruit */,
 				1804A0AC20C5231400E2C9DF /* Drink */,
 				1804A0A720C4FC4B00E2C9DF /* Home */,
-				1804A0A420C4EE6600E2C9DF /* Gioi Thieu */,
+				1804A0A420C4EE6600E2C9DF /* Introduction */,
 				1804A09220C4E56E00E2C9DF /* AppDelegate.swift */,
 				1804A09420C4E56E00E2C9DF /* ViewController.swift */,
 				1804A09620C4E56E00E2C9DF /* Main.storyboard */,
@@ -276,13 +275,13 @@
 			path = Mobifood;
 			sourceTree = "<group>";
 		};
-		1804A0A420C4EE6600E2C9DF /* Gioi Thieu */ = {
+		1804A0A420C4EE6600E2C9DF /* Introduction */ = {
 			isa = PBXGroup;
 			children = (
 				1804A0A520C4EE9D00E2C9DF /* IntroduceViewController.swift */,
 				1802465F20CAE91100B343A6 /* gioithieu.xib */,
 			);
-			path = "Gioi Thieu";
+			path = Introduction;
 			sourceTree = "<group>";
 		};
 		1804A0A720C4FC4B00E2C9DF /* Home */ = {
@@ -399,6 +398,7 @@
 			children = (
 				1860960320C7D81E00EBD26F /* DrinkDetailViewController.swift */,
 				1860960420C7D81E00EBD26F /* DrinkDetailViewController.xib */,
+				18B414DC20F124220002323E /* DrinkDetailModelView.swift */,
 			);
 			path = DrinkDetail;
 			sourceTree = "<group>";
@@ -685,6 +685,7 @@
 				1804A0A620C4EE9D00E2C9DF /* IntroduceViewController.swift in Sources */,
 				1894FCFE20C926CB0020F7C1 /* ComborDetailCellTableViewCell.swift in Sources */,
 				186095E120C635D200EBD26F /* ComborCollectionViewCell.swift in Sources */,
+				18B414DD20F124220002323E /* DrinkDetailModelView.swift in Sources */,
 				18704EFF20C8373B000F0CFD /* ContactView.swift in Sources */,
 				1802465820CAD6AA00B343A6 /* MyComborTableViewCell.swift in Sources */,
 				186095E420C63A0400EBD26F /* CarouselFlowLayout.swift in Sources */,
@@ -705,7 +706,6 @@
 				1804A0AF20C5237900E2C9DF /* DrinkViewController.swift in Sources */,
 				1894FD0C20C931E60020F7C1 /* ComborDynamicViewController.swift in Sources */,
 				1804A0B420C523BD00E2C9DF /* FruitViewController.swift in Sources */,
-				18C96F5620EA178C008FC13F /* ArchieUtil.swift in Sources */,
 				1804A0C020C5245600E2C9DF /* ComborViewController.swift in Sources */,
 				18A8628620E164BF00A4AD1B /* MyCombor.swift in Sources */,
 				18704F0620C8418D000F0CFD /* CartViewController.swift in Sources */,
@@ -866,14 +866,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = KNPSWR43QN;
+				DEVELOPMENT_TEAM = 4PJ437387M;
 				INFOPLIST_FILE = Mobifood/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.da2.app.Mobifood;
+				PRODUCT_BUNDLE_IDENTIFIER = com.app.Mobifood;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "Mobifood/Utils/Mobifood-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -889,14 +889,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = KNPSWR43QN;
+				DEVELOPMENT_TEAM = 4PJ437387M;
 				INFOPLIST_FILE = Mobifood/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.da2.app.Mobifood;
+				PRODUCT_BUNDLE_IDENTIFIER = com.app.Mobifood;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "Mobifood/Utils/Mobifood-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;

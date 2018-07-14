@@ -98,11 +98,13 @@ extension ComborViewController: UICollectionViewDelegate, UICollectionViewDataSo
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let comborDetailVC = ComborDynamicViewController(nibName: "ComborDynamicViewController", bundle: nil)
-        let drink = self.combors[indexPath.row]
-        comborDetailVC.combor.name = drink.productTitle
-        comborDetailVC.combor.price = drink.productPrice.isString
-        comborDetailVC.combor.image = drink.productImage.count > 0 ? drink.productImage[0].src : nil
-        comborDetailVC.combor.idCombor = "\(drink.productID ?? 0)"
+        let drinkCombor = self.combors[indexPath.row]
+        
+        comborDetailVC.combor = MyCombor(id: "\(drinkCombor.productID ?? 0)", name: drinkCombor.productTitle, price: drinkCombor.productPrice.isString, image: drinkCombor.productImage.count > 0 ? drinkCombor.productImage[0].src : nil)
+//        comborDetailVC.combor.name = drink.productTitle
+//        comborDetailVC.combor.price = drink.productPrice.isString
+//        comborDetailVC.combor.image = drink.productImage.count > 0 ? drink.productImage[0].src : nil
+//        comborDetailVC.combor.idCombor = "\(drink.productID ?? 0)"
         self.present(comborDetailVC, animated: true, completion: nil)
     }
     
@@ -138,4 +140,5 @@ extension Notification.Name {
     static let combor = Notification.Name("combor")
     static let fruit = Notification.Name("fruit")
     static let drink = Notification.Name("drink")
+    static let countCart = Notification.Name("countCart")
 }

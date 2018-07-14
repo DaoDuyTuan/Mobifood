@@ -29,6 +29,8 @@ struct Product: Codable {
     private var title: String?
     private var variants: [Variant]?
     private var images: [Image]?
+    
+    var idCombor: String? = ""
     var amount: Int?
     var isChecked: Bool?    
     var isCheckedProduct: Bool {
@@ -40,13 +42,14 @@ struct Product: Codable {
         }
     }
     
-    init(id: Double, title: String, variants: [Variant], images: [Image], amount: Int, isChecked: Bool) {
+    init(id: Double?, title: String?, variants: [Variant], images: [Image], amount: Int?, isChecked: Bool?, idCombor: String = "") {
         self.id = id
         self.title = title
         self.variants = variants
         self.images = images
         self.amount = amount
         self.isChecked = isChecked
+        self.idCombor = idCombor
     }
     
     init() {

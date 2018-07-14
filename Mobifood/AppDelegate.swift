@@ -18,8 +18,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         GMSServices.provideAPIKey("AIzaSyCxeD0qlWHnOIKbEDcsYoq_st1JBSwSJSg")
         self.window = UIWindow(frame: UIScreen.main.bounds)
-        let userDefault = UserDefaults.standard
         
+        let userDefault = UserDefaults.standard
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         if let _ = userDefault.object(forKey: "isLauched") as? String {
             let vc = storyboard.instantiateViewController(withIdentifier: "root")
@@ -30,22 +30,28 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             self.window?.rootViewController = initialViewController
         }
         
-        for product in ManagerLocalData.shareData.fetchDataFromLocal(entity: "Products") {
-            let id = product.value(forKey: "id") as! Double
-            let title = product.value(forKey: "title") as! String
-            let image = Image(src: "\(product.value(forKey: "images") as? String ?? "notimage")")
-            let variants = Variant(price: product.value(forKey: "variants") as! Int)
-            let isChecked = product.value(forKey: "isChecked") as! Bool
-            let amount = product.value(forKey: "amount") as! Int
-            let item = Product(id: id,
-                               title: title,
-                               variants: [variants],
-                               images: [image],
-                               amount: amount,
-                               isChecked: isChecked)
-            CartViewController.cart.append(item)
+        for combor in ManagerLocalData.shareData.fetchDataFromLocal(entity: "MyCombors") {
+            let idCombor1 = combor.value(forKey: "idCombor") as! String
+            let name = combor.value(forKey: "name") as? String
+            let price = combor.value(forKey: "price") as? String
+            let image = combor.value(forKey: "image") as? String
+            var myCombor = MyCombor(id: idCombor1, name: name, price: price, image: image)
+            for product in ManagerLocalData.shareData.fetchDataFromLocal(entity: "Products") {
+                let item = ManagerLocalData.shareData.initDataWhenOpenApp(product: product)
+                
+                if idCombor1 == item.idCombor {
+                    myCombor.items.append(item)
+                }
+            }
+            MyComborViewController.myCombor.append(myCombor)
         }
-        
+    
+        for product in ManagerLocalData.shareData.fetchDataFromLocal(entity: "Products") {
+            let item = ManagerLocalData.shareData.initDataWhenOpenApp(product: product)
+            if item.idCombor == "" {
+                CartViewController.cart.append(item)
+            }
+        }
         self.window?.makeKeyAndVisible()
         return true
     }

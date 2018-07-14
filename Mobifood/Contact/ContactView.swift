@@ -30,7 +30,6 @@ class ContactView: UIView {
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         let touchs: UITouch? = touches.first
         if touchs?.view == self.myBg {
-//            Utils.setAnimation(view: self)
             Utils.animateOut(view: self)
         }
     }

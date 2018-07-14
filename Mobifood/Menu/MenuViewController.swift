@@ -63,7 +63,7 @@ extension MenuViewController: UITableViewDelegate, UITableViewDataSource {
         slideMenuController()?.closeLeft()
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 0.15 * UIScreen.main.bounds.height
+        return 0.09 * UIScreen.main.bounds.height
     }
 }
 extension MenuViewController: BarcodeScannerCodeDelegate, BarcodeScannerErrorDelegate, BarcodeScannerDismissalDelegate {

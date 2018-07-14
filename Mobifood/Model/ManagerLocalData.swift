@@ -24,6 +24,7 @@ class ManagerLocalData: NSObject {
         person.setValue(product.productImage[0].src, forKey: "images")
         person.setValue(product.productVariants.price, forKey: "variants")
         person.setValue(product.isCheckedProduct, forKey: "isChecked")
+        person.setValue(product.idCombor, forKey: "idCombor")
         
         do{
             try managedContext.save()
@@ -41,7 +42,6 @@ class ManagerLocalData: NSObject {
         combor.setValue(mycombor.name, forKey: "name")
         combor.setValue(mycombor.price, forKey: "price")
         combor.setValue(mycombor.image, forKey: "image")
-        combor.setValue(mycombor.date, forKey: "date")
         combor.setValue(mycombor.idCombor, forKey: "idCombor")
         
         do{
@@ -83,6 +83,36 @@ class ManagerLocalData: NSObject {
         }
     }
     
+    func checkDataExist(productWillCheck: Product) -> Bool {
+        for product in self.fetchDataFromLocal(entity: "Products") {
+            if let id = product.value(forKey: "id") as? Double {
+                if id == productWillCheck.productID {
+                    return true
+                }
+            }
+        }
+        return false
+    }
+    
+    func deleteComborInLocal(combor: MyCombor) {
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        let managedContext = appDelegate.persistentContainer.viewContext
+        for (index, product) in self.fetchDataFromLocal(entity: "MyCombors").enumerated() {
+            if let id = product.value(forKey: "idCombor") as? String {
+                if combor.idCombor == id {
+                    managedContext.delete(self.fetchDataFromLocal(entity: "MyCombors")[index])
+                }
+            }
+        }
+        
+        do {
+            try managedContext.save()
+        } catch let err as NSError{
+            print(err)
+        }
+
+    }
+    
     func deleteData(productWillDelete: Product) {
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         let managedContext = appDelegate.persistentContainer.viewContext
@@ -99,6 +129,23 @@ class ManagerLocalData: NSObject {
         } catch let err as NSError{
             print(err)
         }
-
+    }
+    
+    func initDataWhenOpenApp(product: NSManagedObject) -> Product {
+        let id = product.value(forKey: "id") as? Double
+        let title = product.value(forKey: "title") as? String
+        let image = Image(src: "\(product.value(forKey: "images") as? String ?? "notimage")")
+        let variants = Variant(price: (product.value(forKey: "variants") as? Int)!)
+        let isChecked = product.value(forKey: "isChecked") as? Bool
+        let amount = product.value(forKey: "amount") as? Int
+        let idCombor = product.value(forKey: "idCombor") as? String
+        let item = Product(id: id,
+                           title: title,
+                           variants: [variants],
+                           images: [image],
+                           amount: amount,
+                           isChecked: isChecked,
+                           idCombor: idCombor ?? "")
+        return item
     }
 }

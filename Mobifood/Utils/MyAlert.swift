@@ -67,7 +67,7 @@ open class MyAlert: UIViewController {
         titleLabel.text = ""
         titleLabel.numberOfLines = 1
         titleLabel.textAlignment = .center
-        titleLabel.font = UIFont(name: kFont, size:25)
+        titleLabel.font = UIFont(name: kFont, size:17)
         titleLabel.textColor = UIColor.colorFromRGB(0x575757)
     }
     

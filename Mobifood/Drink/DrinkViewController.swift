@@ -79,18 +79,15 @@ extension DrinkViewController: UICollectionViewDelegate, UICollectionViewDataSou
         let drink = self.drinks[indexPath.row]
         let vc = DrinkDetailViewController(nibName: "DrinkDetailViewController", bundle: nil)
         vc.drinkDetail = drink
-        
+        DrinkDetailModelView.drinkDetailModelView.setViewWillShow(vc: vc)
+        DrinkDetailModelView.drinkDetailModelView.setDataForDrinkDetail(vc: vc, with: drink)
         Utils.setAnimation(view: self.view)
-        vc.modalPresentationStyle = .overCurrentContext
-        vc.view.backgroundColor = UIColor.clear
-        vc.fruitImage = drink.productImage.count > 0 ? drink.productImage[0].src : "notimage"
-        vc.fruitName = drink.productTitle
-        vc.price = "\(Utils.formmatCurrentcy(fommater: "", price: drink.productVariants.price as NSNumber) )"
         UIView.animate(withDuration: 1.5, animations: {
             self.present(vc, animated: false, completion: nil)
         })
     }
 }
+
 extension DrinkViewController {
     private func loadDrink()  {
         self.drinks = [Product]()

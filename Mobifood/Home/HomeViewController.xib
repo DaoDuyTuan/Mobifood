@@ -14,6 +14,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomeViewController" customModule="Mobifood" customModuleProvider="target">
             <connections>
+                <outlet property="btnCountProductInCart" destination="JJG-JZ-HEG" id="rhN-cw-lZP"/>
                 <outlet property="buttonBarView" destination="Rcu-4C-sb7" id="iEl-7k-kJL"/>
                 <outlet property="containerView" destination="LhB-a5-nbX" id="6yR-pC-XvQ"/>
                 <outlet property="headerHome" destination="GLt-Yh-Mz0" id="u28-ms-G42"/>
@@ -30,6 +31,17 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GLt-Yh-Mz0">
                     <rect key="frame" x="0.0" y="0.0" width="375" height="81"/>
                     <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JJG-JZ-HEG">
+                            <rect key="frame" x="351" y="30.666666666666671" width="18" height="18"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="18" id="HxX-kb-78L"/>
+                                <constraint firstAttribute="height" constant="18" id="fX8-yq-2gh"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="10"/>
+                            <state key="normal" title="0">
+                                <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </state>
+                        </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0ny-3I-90L">
                             <rect key="frame" x="16" y="35.666666666666664" width="30" height="29.999999999999993"/>
                             <constraints>
@@ -77,10 +89,12 @@
                         <constraint firstItem="Udd-Aj-B3y" firstAttribute="centerY" secondItem="GLt-Yh-Mz0" secondAttribute="centerY" constant="15" id="IzL-vh-rf5"/>
                         <constraint firstItem="0ny-3I-90L" firstAttribute="height" secondItem="GLt-Yh-Mz0" secondAttribute="height" multiplier="0.37" id="K0g-ZV-9Tj"/>
                         <constraint firstItem="Udd-Aj-B3y" firstAttribute="height" secondItem="GLt-Yh-Mz0" secondAttribute="height" multiplier="0.37" id="MJc-L7-3NV"/>
+                        <constraint firstItem="JJG-JZ-HEG" firstAttribute="trailing" secondItem="Udd-Aj-B3y" secondAttribute="trailing" constant="10" id="Oj0-bQ-n3n"/>
                         <constraint firstItem="7WE-Sa-ctu" firstAttribute="centerY" secondItem="GLt-Yh-Mz0" secondAttribute="centerY" constant="15" id="Oj8-dA-p8u"/>
                         <constraint firstAttribute="trailing" secondItem="Udd-Aj-B3y" secondAttribute="trailing" constant="16" id="Pzv-Fo-lFA"/>
                         <constraint firstItem="0ny-3I-90L" firstAttribute="leading" secondItem="GLt-Yh-Mz0" secondAttribute="leading" constant="16" id="Q5p-ZN-z6V"/>
                         <constraint firstItem="ca6-9e-Jc0" firstAttribute="centerX" secondItem="GLt-Yh-Mz0" secondAttribute="centerX" constant="-10" id="QBd-Vd-lKu"/>
+                        <constraint firstItem="JJG-JZ-HEG" firstAttribute="top" secondItem="Udd-Aj-B3y" secondAttribute="top" constant="-10" id="VoE-4S-S5f"/>
                         <constraint firstItem="0ny-3I-90L" firstAttribute="centerY" secondItem="GLt-Yh-Mz0" secondAttribute="centerY" constant="10" id="y27-wl-EqJ"/>
                     </constraints>
                 </view>

@@ -65,6 +65,7 @@ extension MyComborViewController: UITableViewDelegate, UITableViewDataSource {
 
 extension MyComborViewController: ComborState {
     func remove(index: Int) {
+        ManagerLocalData.shareData.deleteComborInLocal(combor: MyComborViewController.myCombor[index])
         MyComborViewController.myCombor.remove(at: index)
         self.myComborTableView.reloadData()
         if MyComborViewController.myCombor.count == 0 {

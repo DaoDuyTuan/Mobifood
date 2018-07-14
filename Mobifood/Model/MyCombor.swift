@@ -16,7 +16,7 @@ struct MyCombor {
     var items: [Product] = []
     var date: String?
     
-    init(id: String, name: String, price: String, date: String, image: String) {
+    init(id: String, name: String?, price: String?, date: String = "", image: String?) {
         self.idCombor = id
         self.name = name
         self.price = price

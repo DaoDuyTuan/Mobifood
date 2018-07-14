@@ -27,6 +27,7 @@ class DrinkDetailViewController: UIViewController {
     
     @IBOutlet weak var bgAlertView: UIView!
     var drinkDetail: Product!
+    var completionAfterDimiss: (() -> ())?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -60,30 +61,31 @@ class DrinkDetailViewController: UIViewController {
     }
 
     @IBAction func addToCard(_ sender: Any) {
-        if isCheckedAmount {
-            var productWillAdd = Product()
-            productWillAdd = self.drinkDetail
-            productWillAdd.productVariants = Variant(price: self.newPrice)
-            productWillAdd.amount = self.newAmount
-            
-            if CartViewController.cart.filter({ $0.productID == self.drinkDetail.productID }).count == 0 {
-                CartViewController.cart.append(drinkDetail)
-                ManagerLocalData.shareData.saveProduct(product: productWillAdd)
-            } else {
-                for (index, product) in CartViewController.cart.enumerated() {
-                    if product.productID == self.drinkDetail.productID {
-                        CartViewController.cart[index] = productWillAdd
-                        ManagerLocalData.shareData.updateData(productWillUpdate: productWillAdd)
-                        print(ManagerLocalData.shareData.fetchDataFromLocal(entity: "Products")[index].value(forKey: "amount") as Any)
-                    }
+        var productWillAdd = Product()
+        productWillAdd = self.drinkDetail
+        productWillAdd.productVariants = Variant(price: self.newPrice)
+        productWillAdd.amount = self.newAmount
+        
+        if CartViewController.cart.filter({ $0.productID == self.drinkDetail.productID }).count == 0 {
+            CartViewController.cart.append(drinkDetail)
+            ManagerLocalData.shareData.saveProduct(product: productWillAdd)
+        } else {
+            for (index, product) in CartViewController.cart.enumerated() {
+                if product.productID == self.drinkDetail.productID {
+                    CartViewController.cart[index] = productWillAdd
+                    ManagerLocalData.shareData.updateData(productWillUpdate: productWillAdd)
+                    print(ManagerLocalData.shareData.fetchDataFromLocal(entity: "Products")[index].value(forKey: "amount") as Any)
                 }
             }
-            self.lblIsAddedState.isHidden = false
-            DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
-                self.lblIsAddedState.isHidden = true
-            }
-            self.isCheckedAmount = false
         }
+        
+        Utils.setAnimation(view: self.view)
+        self.dismiss(animated: true, completion: {
+            //update countCart in view
+            if self.completionAfterDimiss != nil {
+                self.completionAfterDimiss!()
+            }
+        })
     }
     
     var price: String = "" {

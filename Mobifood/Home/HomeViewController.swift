@@ -16,15 +16,26 @@ import CoreData
 class HomeViewController: ButtonBarPagerTabStripViewController {
 
     static var index: Int = 0
+    static var countItemInCart = 0
     
+    @IBOutlet weak var btnCountProductInCart: UIButton!
     @IBOutlet weak var titleScreen: UILabel!
     @IBOutlet weak var menuBar: ButtonBarView!
     @IBOutlet weak var headerHome: UIView!
     override func viewDidLoad() {
         super.viewDidLoad()
         // when select tab
-        
         NetworkManager.whenNoConnection()
+        self.setUI()
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(updateCountCart), name: .countCart, object: nil)
+    }
+    
+    func setUI() {
+        self.btnCountProductInCart.setTitle("\(HomeViewController.countItemInCart)", for: .normal)
+        self.btnCountProductInCart.layer.cornerRadius = self.btnCountProductInCart.frame.width / 2
+        self.btnCountProductInCart.backgroundColor = UIColor.red
+        
         changeCurrentIndexProgressive = { (oldCell: ButtonBarViewCell?, newCell: ButtonBarViewCell?, progressPercentage: CGFloat, changeCurrentIndex: Bool, animated: Bool) -> Void in
             guard changeCurrentIndex == true else { return }
             
@@ -42,6 +53,10 @@ class HomeViewController: ButtonBarPagerTabStripViewController {
                 oldCell?.transform = CGAffineTransform(scaleX: 0.8, y: 0.8)
             }
         }
+    }
+    
+    @objc func updateCountCart() {
+        self.btnCountProductInCart.setTitle("\(HomeViewController.countItemInCart)", for: .normal)
     }
     
     @IBAction func viewMenu(_ sender: Any) {
@@ -114,3 +129,5 @@ extension HomeViewController: MenuControllerDelegate {
 //        self.moveToViewController(at: HomeViewController.index, animated: true)
     }
 }
+
+

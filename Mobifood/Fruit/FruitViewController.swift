@@ -70,11 +70,11 @@ extension FruitViewController: UICollectionViewDelegate, UICollectionViewDataSou
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let vc = DrinkDetailViewController(nibName: "DrinkDetailViewController", bundle: nil)
+        let fruit = self.fruits[indexPath.row]
+        vc.drinkDetail = fruit
         Utils.setAnimation(view: self.view)
         vc.modalPresentationStyle = .overCurrentContext
         vc.view.backgroundColor = UIColor.clear
-        let fruit = self.fruits[indexPath.row]
-        vc.drinkDetail = fruit
         vc.fruitImage = fruit.productImage.count > 0 ? fruit.productImage[0].src : "notimage"
         vc.fruitName = fruit.productTitle
         vc.price = "\(Utils.formmatCurrentcy(fommater: "", price: fruit.productVariants.price as NSNumber) )"

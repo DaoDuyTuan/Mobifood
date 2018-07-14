@@ -10,7 +10,12 @@ import UIKit
 
 class CartViewController: UIViewController {
 
-    static var cart: [Product] = []
+    static var cart: [Product] = [] {
+        didSet{
+            HomeViewController.countItemInCart = cart.count
+            NotificationCenter.default.post(name: .countCart, object: nil)
+        }
+    }
     @IBOutlet weak var lblIsSelectedAll: UILabel!
     @IBOutlet weak var footerCartView: UIView!
     @IBOutlet weak var cartTableView: UITableView!
@@ -57,9 +62,13 @@ class CartViewController: UIViewController {
         self.navigationController?.popViewController(animated: true)
     }
     @IBAction func buy(_ sender: Any) {
-        let vc = CustormerViewController(nibName: "CustormerViewController", bundle: nil)
-        Utils.setAnimation(view: self.view)
-        self.present(vc, animated: true, completion: nil)
+        if CartViewController.cart.count > 0 {
+            let vc = CustormerViewController(nibName: "CustormerViewController", bundle: nil)
+            Utils.setAnimation(view: self.view)
+            self.present(vc, animated: true, completion: nil)
+        } else {
+            let _ = MyAlert().showAlert("Giỏ hàng không có sản phẩm!!")
+        }
     }
     @IBAction func chooseAll(_ sender: UIButton) {
         guard CartViewController.cart.count > 0 else {
@@ -114,6 +123,18 @@ extension CartViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let cell = tableView.cellForRow(at: indexPath)
         cell?.selectionStyle = .none
+        let drink = CartViewController.cart[indexPath.row]
+        let vc = DrinkDetailViewController(nibName: "DrinkDetailViewController", bundle: nil)
+         vc.drinkDetail = drink
+        DrinkDetailModelView.drinkDetailModelView.setViewWillShow(vc: vc)
+        DrinkDetailModelView.drinkDetailModelView.setDataForDrinkDetail(vc: vc, with: drink)
+        Utils.setAnimation(view: self.view)
+        vc.completionAfterDimiss = {
+            self.cartTableView.reloadData()
+        }
+        UIView.animate(withDuration: 1.5, animations: {
+            self.present(vc, animated: false, completion: nil)
+        })
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
