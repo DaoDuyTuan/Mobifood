@@ -29,6 +29,7 @@ class HomeViewController: ButtonBarPagerTabStripViewController {
         self.setUI()
         
         NotificationCenter.default.addObserver(self, selector: #selector(updateCountCart), name: .countCart, object: nil)
+        print("aksjdf;aksjdfs")
     }
     
     func setUI() {
