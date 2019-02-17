@@ -21,6 +21,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         let userDefault = UserDefaults.standard
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        
         if let _ = userDefault.object(forKey: "isLauched") as? String {
             let vc = storyboard.instantiateViewController(withIdentifier: "root")
             self.window?.rootViewController = UINavigationController(rootViewController: vc)
