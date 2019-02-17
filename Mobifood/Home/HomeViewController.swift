@@ -29,11 +29,6 @@ class HomeViewController: ButtonBarPagerTabStripViewController {
         self.setUI()
         
         NotificationCenter.default.addObserver(self, selector: #selector(updateCountCart), name: .countCart, object: nil)
-        
-        print("I recently created new branch call Ver1")
-        print("I recently created new branch call Ver1")
-        print("I recently created new branch call Ver1")
-        print("I recently created new branch call Ver1")
     }
     
     func setUI() {
